@@ -25,7 +25,7 @@ clear
 echo ""
 echo " Done Install Webmin"
 echo " $IP:10000"
-echo " AutoScriptVPS By  Bokir"
+echo " AutoScriptVPS By M AFDHAN - NezaVPN"
 }
 function restart () {
 echo " Restarting Webmin"
@@ -35,7 +35,7 @@ echo " Start Uninstall Webmin"
 clear
 echo ""
 echo " Done Restart Webmin"
-echo " AutoScriptVPS By Endka"
+echo " AutoScriptVPS By M AFDHAN - NezaVPN"
 }
 function uninstall () {
 echo " Removing Repositori Webmin"
@@ -48,7 +48,7 @@ apt autoremove --purge webmin -y > /dev/null 2>&1
 clear
 echo ""
 echo " Done Uninstall Webmin"
-echo " AutoScriptVPS By  Endka"
+echo " AutoScriptVPS By M AFDHAN - NezaVPN"
 }
 if [[ "$cek" = "perl" ]]; then
 sts="${Info}"
@@ -63,7 +63,7 @@ echo -e " Status $sts"
 echo -e "  1. Install Webmin"
 echo -e "  2. Restart Webmin"
 echo -e "  3. Uninstall Webmin"
-echo -e " AutoScriptVPS By Endka"
+echo -e " AutoScriptVPS By M AFDHAN - NezaVPN"
 echo -e " Press CTRL+C to return"
 read -rp " Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
