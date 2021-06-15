@@ -2,18 +2,20 @@
 
 clear
 echo -e "=================================================" | lolcat
-echo -e "#         Premium Auto Script         #"
+echo -e "#     AutoScript VPS By M AFDHAN - NezaVPN      #"
 echo -e "#-----------------------------------------------#"
 echo -e "# For Debian 9 & Debian 10 64 bit               #"
 echo -e "# For Ubuntu 18.04 & Ubuntu 20.04 64 bit        #"
 echo -e "# For VPS with KVM and VMWare virtualization    #"
-echo -e "# Build Up By M AFDHAN Dan NezaVPN           #"
+echo -e "# Build Up By M AFDHAN Dan NezaVPN              #"
 echo -e "#-----------------------------------------------#"
-echo -e "# Thanks To                                     #"
+echo -e "# Terima Kasih Kepada :                         #"
 echo -e "#-----------------------------------------------#"
-echo -e "#                                      #"
-echo -e "# Allah                                 #"
-echo -e "# My Family                                     #"
-echo -e "# SGDC-TEAM                                    #"
+echo -e "# Allah SWT                                     #"
+echo -e "# Orang Tua                                     #"
+echo -e "# Keluarga                                      #"
+echo -e "# Makhluk Bumi                                  #"
+echo -e "# Icipers Nusantara                             #"
+echo -e "# All Admin Dan All Member                      #"
 echo -e "#-----------------------------------------------#"
 echo -e "=================================================" | lolcat
