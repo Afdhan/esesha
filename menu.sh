@@ -2,7 +2,7 @@
 
 clear
 
-figlet M AFDHAN - NezaVPN | lolcat
+figlet M AFDHAN  NezaVPN | lolcat
 
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
