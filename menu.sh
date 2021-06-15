@@ -35,13 +35,13 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "\e[032;1mCPU Model:\e[0m $cname"
 	echo -e "\e[032;1mNumber Of Cores:\e[0m $cores"
 	echo -e "\e[032;1mCPU Frequency:\e[0m $freq MHz"
-	echo -e "\e[032;1mTotal Amount Of RAM:\e[0m $tram MB"
-	echo -e "\e[032;1mTotal Amount Of Swap:\e[0m $swap MB"
+	echo -e "\e[032;1mAmount Of RAM:\e[0m $tram MB"
+	echo -e "\e[032;1mAmount Of Swap:\e[0m $swap MB"
 	echo -e "\e[032;1mSystem Uptime:\e[0m $up"
-	echo -e "\e[032;1mIsp Name:\e[0m $ISP"
+	echo -e "\e[032;1mISP Name:\e[0m $ISP"
 	echo -e "\e[032;1mCity:\e[0m $CITY"
 	echo -e "\e[032;1mTime:\e[0m $WKT"
-	echo -e "\e[033;1mIPVPS:\e[0m $IPVPS"
+	echo -e "\e[033;1mIP-VPS:\e[0m $IPVPS"
 	date | lolcat
 	echo -e "-----------------------------------------------------"
 

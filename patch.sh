@@ -10,18 +10,6 @@ fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl http://akses.endka.ga:81/aksesku | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
-echo "Please Contact Admin"
-echo "Telegram t.me/Endka22"
-echo "WhatsApp wa.me/6281318389745"
-rm -f setup.sh
-exit 0
-fi
 echo "Start Patch"
 echo "Fix Curl IP Address"
 cd /usr/bin
