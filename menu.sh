@@ -23,7 +23,7 @@ CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 	echo "--------------- Welcome To AutoScript Premium ---------------"
-	echo "------------------------ M AFDHAN - NezaVPN -----------------------"
+	echo "--------------------- M AFDHAN - NezaVPN --------------------"
 	echo " "
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
