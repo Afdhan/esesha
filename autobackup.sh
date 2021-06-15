@@ -48,7 +48,7 @@ clear
 echo -e " ==============================" | lolcat
 echo -e "         Autobackup Data       "
 echo -e " ==============================" | lolcat
-echo -e " Status $sts"
+echo -e " Status : $sts"
 echo -e "  1. Start Autobackup"
 echo -e "  2. Stop Autobackup"
 echo -e " Press CTRL+C to return"
