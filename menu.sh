@@ -43,12 +43,11 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "\e[032;1mCity                : \e[0m $CITY"
 	echo -e "\e[032;1mTimeZone            :\e[0m $WKT"
 	echo -e "\e[033;1mIP Adress VPS       :\e[0m $IPVPS"
-	echo -e "\e[033;1mTanggal             :\e[0m" date
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
-echo -e "\e[32m════════════════════════ MENU TUNNELING ════════════════════════\e[m"
+echo -e "      MENU TUNNELING " | lolcat
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
@@ -62,7 +61,7 @@ echo -e " 4 ⸩  Panel SSTP               8 ⸩  Panel Trojan"
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
-echo -e "\e[32m═════════════════════════ MENU SYSTEM ═════════════════════════\e[m"
+echo -e "      MENU SYSTEM " | lolcat
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
@@ -100,7 +99,9 @@ echo -e " 24 ⸩  Set Multi Login SSH"
 
 echo -e " 25 ⸩  Restart Script"
 
-echo -e " 26 ⸩  Daftar Pengguna"
+echo -e " 26 ⸩  Reset Script"
+
+echo -e " 27 ⸩  Daftar Pengguna"
 
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
@@ -267,6 +268,12 @@ updatee
 ;;
 
 26)
+
+resett
+
+;;
+
+27)
 
 member
 
