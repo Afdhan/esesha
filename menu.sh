@@ -2,7 +2,7 @@
 
 clear
 
-figlet M AFDHAN | lolcat
+figlet M AFDHAN  NezaVPN | lolcat
 
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
@@ -32,7 +32,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 	
-    echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
+        echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	echo -e "\e[032;1mCPU Model           :\e[0m$cname"
 	echo -e "\e[032;1mNumber Of Cores     :\e[0m $cores"
 	echo -e "\e[032;1mCPU Frequency       :\e[0m$freq MHz"
@@ -110,7 +110,7 @@ echo -e "\e[32m═════════════════════�
 
 echo -e ""
 
-read -p "     Masukkan Nomor  [1-22 / x] :  "  num
+read -p "     Masukkan Nomor  [1-26 / x] :  "  num
 
 echo -e ""
 
