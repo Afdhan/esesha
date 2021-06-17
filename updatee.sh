@@ -11,10 +11,10 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 versi=$(cat /home/ver)
-if [[ $versi == 1.2 ]]; then
-echo "You Have The Latest Version"
-exit 0
-fi
+#if [[ $versi == 1.2 ]]; then
+#echo "You Have The Latest Version"
+#exit 0
+#fi
 echo "Memperbarui..."
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
