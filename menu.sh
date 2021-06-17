@@ -65,7 +65,7 @@ echo -e "                      MENU SYSTEM " | lolcat
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
-echo -e " 9 ⸩   Tambah Subdomain Host Untuk VPS"
+echo -e "  9 ⸩   Tambah Subdomain Host Untuk VPS"
 
 echo -e " 10 ⸩  Perbarui Sertifikat V2RAY"
 
