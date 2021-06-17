@@ -31,7 +31,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-               date | lolcat
+                                    date | lolcat
         echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	echo -e "\e[032;1mCPU Model           :\e[0m$cname"
 	echo -e "\e[032;1mNumber Of Cores     :\e[0m $cores"
