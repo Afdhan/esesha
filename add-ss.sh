@@ -30,7 +30,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		fi
 	done
 read -p "Expired (hari): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 cat > /etc/shadowsocks-libev/$user-tls.json<<END
 {   
     "server":"0.0.0.0",
@@ -78,16 +78,17 @@ port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
 	echo -e ""
-	echo -e "=======-Shadowsocks-=======" | lolcat
+	echo -e "=========[ Shadowsocks ]=========" | lolcat
 	echo -e "IP/Host        : $IP"
 	echo -e "Port OBFS TLS  : $tls"
 	echo -e "Port OBFS HTTP : $http"
 	echo -e "Password       : $user"
 	echo -e "Method         : aes-256-cfb"
-	echo -e "Expired On     : $exp"
-	echo -e "===========================" | lolcat
+	echo -e "================================" | lolcat
 	echo -e "Link OBFS TLS  : $linkss1"
-	echo -e "===========================" | lolcat
+	echo -e "================================" | lolcat
 	echo -e "Link OBFS HTTP : $linkss2"
-	echo -e "===========================" | lolcat
-	echo -e "AutoScript By M AFDHAN - NezaVPN"
+	echo -e "================================" | lolcat
+	echo -e "Aktif Selama   : $masaaktif Hari"
+    echo -e "Berakhir Pada  : $exp"
+    echo -e "Mod By M AFDHAN & NezaVPN"

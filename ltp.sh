@@ -7,17 +7,17 @@ figlet -f small Panel L2TP | lolcat
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Creating L2TP Account"
-echo -e "     [2]  Create Account PPTP"
-echo -e "     [3]  Deleting L2TP Account"
-echo -e "     [4]  Delete PPTP Account"
-echo -e "     [5]  Check User Login PPTP"
-echo -e "     [6]  Renew L2TP Account"
-echo -e "     [7]  Renew PPTP Account"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Buat Akun L2TP"
+echo -e "     [2]  Buat Akun PPTP"
+echo -e "     [3]  Hapus Akun L2TP"
+echo -e "     [4]  Hapus Akun PPTP"
+echo -e "     [5]  Cek Login PPTP"
+echo -e "     [6]  Perbarui Akun L2TP"
+echo -e "     [7]  Perbarui Akun PPTP"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-7 or x] :  " port
+read -p "     Pilih nomor  [1-7 / x] :  " port
 echo -e ""
 case $port in
 1)
@@ -46,6 +46,8 @@ clear
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
+sleep 0.5
+ltp
 ;;
 esac

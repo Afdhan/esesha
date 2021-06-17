@@ -6,18 +6,18 @@ clear
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Change Port Stunnel4"
-echo -e "     [2]  Change Port OpenVPN"
-echo -e "     [3]  Change Port Wireguard"
-echo -e "     [4]  Change Port Vmess"
-echo -e "     [5]  Change Port Vless"
-echo -e "     [6]  Change Port Trojan"
-echo -e "     [7]  Change Port Squid"
-echo -e "     [8]  Change Port SSTP"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Ubah Port Stunnel4"
+echo -e "     [2]  Ubah Port OpenVPN"
+echo -e "     [3]  Ubah Port Wireguard"
+echo -e "     [4]  Ubah Port Vmess"
+echo -e "     [5]  Ubah Port Vless"
+echo -e "     [6]  Ubah Port Trojan"
+echo -e "     [7]  Ubah Port Squid"
+echo -e "     [8]  Ubah Port SSTP"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-8 or x] :  " port
+read -p "     Pilih Nomor [1-8 / x] :  " port
 echo -e ""
 case $port in
 1)
@@ -49,6 +49,8 @@ clear
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
+sleep 0.5
+change
 ;;
 esac
