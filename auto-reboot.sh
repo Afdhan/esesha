@@ -22,10 +22,10 @@ echo "4.  Set Auto-Reboot Setiap 1 Hari"
 echo "5.  Set Auto-Reboot Setiap 1 Minggu"
 echo "6.  Set Auto-Reboot Setiap 1 Bulan"
 echo "7.  Matikan Auto-Reboot"
-echo "8.  View reboot log"
-echo "9.  Remove reboot log"
+echo "8.  Lihat reboot log"
+echo "9.  Hapus reboot log"
 echo "-------------------------------------------"
-read -p "Select options from (1-9): " x
+read -p "Pilih Nomor [1-9]: " x
 
 if test $x -eq 1; then
 echo "10 * * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis

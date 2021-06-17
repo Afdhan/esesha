@@ -7,17 +7,17 @@ echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
 echo -e ""
-echo -e "    [1] Restart All Services"
-echo -e "    [2] Restart OpenSSH"
-echo -e "    [3] Restart Dropbear"
-echo -e "    [4] Restart Stunnel4"
-echo -e "    [5] Restart OpenVPN"
-echo -e "    [6] Restart Squid"
-echo -e "    [7] Restart Nginx"
-echo -e "    [8] Restart Badvpn"
-echo -e "    [x] Exit"
+echo -e "    [1] Mulai Ulang Services"
+echo -e "    [2] Mulai Ulang OpenSSH"
+echo -e "    [3] Mulai Ulang Dropbear"
+echo -e "    [4] Mulai Ulang Stunnel4"
+echo -e "    [5] Mulai Ulang OpenVPN"
+echo -e "    [6] Mulai Ulang Squid"
+echo -e "    [7] Mulai Ulang Nginx"
+echo -e "    [8] Mulai Ulang Badvpn"
+echo -e "    [x] Keluar"
 echo -e ""
-read -p "    Select From Options [1-8 or x] :  " Restart
+read -p "    Pilih Nomor  [1-8 / x] :  " Restart
 echo -e ""
 echo -e "======================================" | lolcat
 sleep 1
@@ -39,7 +39,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "          Service/s Restarted         "
+                echo -e "          Services Diperbarui         "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -50,7 +50,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "         SSH Service Restarted        "
+                echo -e "         SSH Service Diperbarui        "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -61,7 +61,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "       Dropbear Service Restarted     "
+                echo -e "       Dropbear Service Diperbarui     "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -72,7 +72,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "        Stunnel4 Service Restarted    "
+                echo -e "        Stunnel4 Service Diperbarui    "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -83,7 +83,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "       OpenVPN Service Restarted      "
+                echo -e "       OpenVPN Service Diperbarui      "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -94,7 +94,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "        Squid3 Service Restarted      "
+                echo -e "        Squid3 Service Diperbarui      "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -105,7 +105,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "         Nginx Service Restarted      "
+                echo -e "         Nginx Service Diperbarui      "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -124,7 +124,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "    Badvpn  Badvpn Service Restarted  "
+                echo -e "    Badvpn  Badvpn Service Diperbarui  "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit

@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 clear
                hariini=`date +%d-%m-%Y`
-               echo "Thank you for removing the EXPIRED USERS"
+               echo "Terima Kasih Sudah Menghapus Akun Expired"
                echo "--------------------------------------"
                cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
                totalaccounts=`cat /tmp/expirelist.txt | wc -l`
@@ -32,10 +32,10 @@ clear
 		    	:
                else
                echo "echo "Expired- Username : $username are expired at: $tgl $bulantahun and removed : $hariini "" >> /usr/local/bin/deleteduser
-	           echo "Username $username that are expired at $tgl $bulantahun removed from the VPS $hariini"
+	           echo "Username $username Expired Pada $tgl $bulantahun Dihapus Dari VPS Pada $hariini"
                userdel $username
                fi
                done
                echo " "
                echo "--------------------------------------"
-               echo "Script are successfully run"
+               echo "Script Berhasil Dijalankan!"

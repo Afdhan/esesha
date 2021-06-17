@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 data=( `cat /var/log/trojan.log | grep -w 'authenticated as' | awk '{print $7}' | sort | uniq`);
 echo "-------------------------------";
-echo "-----=[ Trojan User Login ]=-----";
+echo "=====[ Trojan User Login ]=====";
 echo "-------------------------------";
 for akun in "${data[@]}"
 do

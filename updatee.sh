@@ -15,7 +15,7 @@ if [[ $versi == 1.2 ]]; then
 echo "You Have The Latest Version"
 exit 0
 fi
-echo "Start Update"
+echo "Memperbarui..."
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/Afdhan/esesha/main/usernew.sh"
@@ -55,7 +55,7 @@ echo "1.2" > /home/ver
 clear
 echo " Fix minor Bugs"
 echo " Now You Can Change Port Of Some Services"
-echo " Reboot 5 Sec"
+echo " Reboot 5 Detik"
 sleep 5
 rm -f update.sh
 reboot

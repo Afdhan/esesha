@@ -17,7 +17,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 read -p "Password: " pass
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 cat >> /home/sstp/sstp_account <<EOF
 $user * $pass *
 EOF
@@ -26,13 +26,15 @@ clear
 cat <<EOF
 
 ================================ | lolcat
-SSTP VPN
-
+                    SSTP VPN
+================================ | lolcat
 Server IP     : $IP
 Username      : $user
 Password      : $pass
 Port          : $sstp
 Cert          : http://$IP:81/server.crt
-Expired On    : $exp
 ================================ | lolcat
+Aktif Selama   : $masaaktif Hari
+Berakhir Pada  : $exp
+Mod By M AFDHAN & NezaVPN
 EOF

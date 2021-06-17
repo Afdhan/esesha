@@ -6,21 +6,21 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/trojan/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
-		echo "You have no existing clients!"
+		echo "Anda Tidak Memiliki Klien!"
 		exit 1
 	fi
 
 	echo ""
-	echo " Select the existing client you want to remove"
-	echo " Press CTRL+C to return"
+	echo " Pilih Klien Yang Ingin Diperbarui"
+	echo " Klik CTRL+C untuk return"
 	echo " ===============================" | lolcat
-	echo "     No  Expired   User"
+	echo "     User No  Expired  "
 	grep -E "^### " "/etc/trojan/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
-			read -rp "Select one client [1]: " CLIENT_NUMBER
+			read -rp "Pilih Salah Satu [1]: " CLIENT_NUMBER
 		else
-			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+			read -rp "Pilih Salah Satu [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
 CLIENT_NAME=$(grep -E "^### " "/etc/trojan/akun.conf" | cut -d ' ' -f 2-3 | sed -n "${CLIENT_NUMBER}"p)

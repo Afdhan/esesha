@@ -25,10 +25,10 @@ touch /var/lib/premium-script/data-user-sstp
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.endka.xyz
-organizationalunit=www.endka.xyz
-commonname=www.endka.xyz
-email=admin@endka.xyz
+organization=www.nezavpn.com
+organizationalunit=www.nezavpn.com
+commonname=www.nezavpn.com
+email=admin@nezavpn.com
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp

@@ -13,7 +13,7 @@ echo "A client with the specified name was already created, please choose anothe
 exit 1
 fi
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 lastport=$(cat /usr/local/shadowsocksr/mudb.json | grep '"port": ' | tail -n1 | awk '{print $2}' | cut -d "," -f 1 | cut -d ":" -f 1 )
 if [[ $lastport == '' ]]; then
 ssr_port=1443
@@ -41,7 +41,7 @@ ssr_link="ssr://${tmp2}"
 /etc/init.d/ssrmu restart
 service cron restart
 IP=$(wget -qO- ifconfig.co);
-clear && echo && echo "===================================================" && echo
+clear && echo && echo "=============[ SSR ]============" && echo
 echo -e " User [${ssr_user}] configuration info："
 echo -e " IP            : ${IP}"
 echo -e " Port          : ${ssr_port}"
@@ -50,7 +50,9 @@ echo -e " Encryption    : ${ssr_method}"
 echo -e " Protocol      : ${Red_font_prefix}${ssr_protocol}"
 echo -e " Obfs          : ${Red_font_prefix}${ssr_obfs}"
 echo -e " Device limit  : ${ssr_protocol_param}"
-echo -e " Expired On    : ${exp} "
-echo -e " ===================================================" | lolcat
+echo -e " =================================" | lolcat
 echo -e " Link SSR      : ${ssr_link}"
-echo -e " ===================================================" | lolcat
+echo -e " =================================" | lolcat
+echo -e "Aktif Selama   : ${masaaktif} Hari"
+echo -e "Berakhir Pada  : ${exp}"
+echo -e "Mod By M AFDHAN & NezaVPN"

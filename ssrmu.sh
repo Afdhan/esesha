@@ -726,7 +726,7 @@ case "$num" in
 	Update_Shell
 	;;
 	*)
-	echo -e "${Error} Please enter the correct number [1-10] "
+	echo -e "${Error} Pilih Nomor [1-10] "
 	;;
 esac
 fi

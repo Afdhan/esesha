@@ -42,7 +42,7 @@ fi
 	CLIENT_DNS_2="176.103.130.131"
 	MYIP=$(wget -qO- ifconfig.co);
 	read -p "Expired (days): " masaaktif
-	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+	exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 
 	# Generate key pair for the client
 	CLIENT_PRIV_KEY=$(wg genkey)
@@ -78,8 +78,10 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo Generate PresharedKey
 	clear
 	echo -e ""
-	echo -e "==========-Wireguard-==========" | lolcat
+	echo -e "=========[ Wireguard ]=========" | lolcat
 	echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf"
 	echo -e "===============================" | lolcat
-	echo -e "Expired On      : $exp"
+	echo -e "Aktif Selama   : $masaaktif Hari"
+    echo -e "Berakhir Pada  : $exp"
+    echo -e "Mod By M AFDHAN & NezaVPN"
 	rm -f /root/wg0-client-$CLIENT_NAME.conf

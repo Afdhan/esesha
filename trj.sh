@@ -7,14 +7,14 @@ figlet -f small Panel Trojan | lolcat
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Create Trojan Account"
-echo -e "     [2]  Delete Trojan Account"
-echo -e "     [3]  Renew Trojan Account"
-echo -e "     [4]  Check User Login Trojan"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Buat Akun Trojan"
+echo -e "     [2]  Hapus Akuj Trojan"
+echo -e "     [3]  Perbarui Akun Trojan"
+echo -e "     [4]  Cek Login Trojan"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-4 or x] :  " port
+read -p "     Pilih Nomor  [1-4 / x] :  " port
 echo -e ""
 case $port in
 1)
@@ -34,6 +34,8 @@ clear
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
+sleep 0.5
+trj
 ;;
 esac

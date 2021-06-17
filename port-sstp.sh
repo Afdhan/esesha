@@ -4,10 +4,10 @@ green='\e[0;32m'
 NC='\e[0m'
 clear
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
-echo -e "      Change Port $sstp"
-read -p "New Port sstp: " sstp2
+echo -e "      Ubah Port $sstp"
+read -p "Port Baru sstp: " sstp2
 if [ -z $sstp2 ]; then
-echo "Please Input Port"
+echo "Masukkan Port!"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $sstp2)
@@ -25,6 +25,6 @@ netfilter-persistent reload > /dev/null
 systemctl restart accel-ppp> /dev/null
 echo -e "\e[032;1mPort $sstp2 modified successfully\e[0m"
 else
-echo "Port $sstp2 is used"
+echo "Port $sstp2 Sudah Digunakan!"
 fi
 

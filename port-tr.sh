@@ -4,10 +4,10 @@ green='\e[0;32m'
 NC='\e[0m'
 clear
 tr="$(cat ~/log-install.txt | grep -i Trojan | cut -d: -f2|sed 's/ //g')"
-echo -e "      Change Port $tr"
-read -p "New Port Trojan: " tr2
+echo -e "      Ubah Port $tr"
+read -p "Port Baru Trojan: " tr2
 if [ -z $tr2 ]; then
-echo "Please Input Port"
+echo "Masukkan Port!"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $tr2)
@@ -25,5 +25,5 @@ netfilter-persistent reload > /dev/null
 systemctl restart trojan > /dev/null
 echo -e "\e[032;1mPort $tr2 modified successfully\e[0m"
 else
-echo "Port $tr2 is used"
+echo "Port $tr2 Sudah Digunakan!"
 fi

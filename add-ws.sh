@@ -25,7 +25,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
 sed -i '/#none$/a\### '"$user $exp"'\
@@ -49,7 +49,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "bimbel.ruangguru.com",
+      "add": "ovt.ruangguru.com",
       "port": "${none}",
       "id": "${uuid}",
       "aid": "2",
@@ -69,7 +69,7 @@ systemctl restart v2ray@none
 service cron restart
 clear
 echo -e ""
-echo -e "==========-V2RAY/VMESS-==========" | lolcat
+echo -e "=========[ V2RAY/VMESS ]=========" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "CITY           : $CITY"
 echo -e "ISP            : $ISP"
@@ -86,5 +86,6 @@ echo -e "link TLS       : ${vmesslink1}"
 echo -e "=================================" | lolcat
 echo -e "link none TLS  : ${vmesslink2}"
 echo -e "=================================" | lolcat
-echo -e "Expired On     : $exp"
-echo -e "AutoScript By M AFDHAN - NezaVPN"
+echo -e "Aktif Selama   : ${masaaktif} Hari"
+echo -e "Berakhir Pada  : ${exp}"
+echo -e "Mod By M AFDHAN & NezaVPN"

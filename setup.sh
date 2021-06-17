@@ -102,8 +102,8 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "-------------------------------------------------------------------------------" | tee -a log-install.txt
-echo "----------------------------------M AFDHAN - NezaVPN--------------------------" | tee -a log-install.txt
+echo "-----------------------------------------------------------------------------------------------" | tee -a log-install.txt
+echo "----------------------------------M AFDHAN-NezaVPN-------------------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 15 Sec"
 sleep 15

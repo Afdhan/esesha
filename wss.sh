@@ -7,14 +7,14 @@ figlet -f small Panel V2ray | lolcat
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Create Vmess Websocket Account"
-echo -e "     [2]  Delete Vmess Websocket Account"
-echo -e "     [3]  Renew Vmess Account"
-echo -e "     [4]  Check User Login Vmess"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Buat Akun Vmess Websocket"
+echo -e "     [2]  Hapus Akun Vmess Websocket"
+echo -e "     [3]  Perbarui Akun Vmess"
+echo -e "     [4]  Cek Login Vmess"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-4 or x] :  " port
+read -p "     Pilih Nomor  [1-4 / x] :  " port
 echo -e ""
 case $port in
 1)
@@ -34,6 +34,8 @@ clear
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
+sleep 0.5
+wss
 ;;
 esac

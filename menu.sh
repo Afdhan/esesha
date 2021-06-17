@@ -2,7 +2,7 @@
 
 clear
 
-figlet M AFDHAN  NezaVPN | lolcat
+figlet M AFDHAN | lolcat
 
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
@@ -22,9 +22,9 @@ ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
-	echo -e "\e[32m══════════════════════════════════════════\e[m"
-	echo -e "                                M AFDHAN - NEZAVPN            " | lolcat
-	echo -e "\e[32m══════════════════════════════════════════\e[m"
+	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
+	echo -e "\e[32m══════════════════════[ M AFDHAN - NEZAVPN ]══════════════════════\e[m"
+	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
@@ -32,25 +32,25 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 	
-    echo -e "\e[32m══════════════════════════════════════════\e[m"
-	echo -e "\e[032;1mCPU Model           : \e[0m $cname"
-	echo -e "\e[032;1mNumber Of Cores     : \e[0m $cores"
-	echo -e "\e[032;1mCPU Frequency       : \e[0m $freq MHz"
-	echo -e "\e[032;1mAmount Of RAM       : \e[0m $tram MB"
-	echo -e "\e[032;1mAmount Of Swap      : \e[0m $swap MB"
-	echo -e "\e[032;1mSystem Uptime       : \e[0m $up"
-	echo -e "\e[032;1mISP Name            : \e[0m $ISP"
+    echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
+	echo -e "\e[032;1mCPU Model           :\e[0m$cname"
+	echo -e "\e[032;1mNumber Of Cores     :\e[0m $cores"
+	echo -e "\e[032;1mCPU Frequency       :\e[0m$freq MHz"
+	echo -e "\e[032;1mAmount Of RAM       :\e[0m $tram MB"
+	echo -e "\e[032;1mAmount Of Swap      :\e[0m $swap MB"
+	echo -e "\e[032;1mSystem Uptime       :\e[0m$up"
+	echo -e "\e[032;1mISP Name            :\e[0m $ISP"
 	echo -e "\e[032;1mCity                : \e[0m $CITY"
-	echo -e "\e[032;1mTimeZone            : \e[0m $WKT"
-	echo -e "\e[033;1mIP Adress VPS       : \e[0m $IPVPS"
-	echo -e "\e[033;1mTanggal             : \e[0m $date"
-	echo -e "\e[32m══════════════════════════════════════════\e[m"
+	echo -e "\e[032;1mTimeZone            :\e[0m $WKT"
+	echo -e "\e[033;1mIP Adress VPS       :\e[0m $IPVPS"
+	echo -e "\e[033;1mTanggal             :\e[0m" date
+	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
-echo -e "\e[32m═════════════════════════════════\e[m"
+echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
-echo -e "                      MENU TUNNELING" | lolcat
+echo -e "\e[32m════════════════════════ MENU TUNNELING ════════════════════════\e[m"
 
-echo -e "\e[32m═════════════════════════════════\e[m"
+echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
 echo -e " 1 ⸩  Panel SSH & OVPN         5 ⸩  Panel SSR & Shadowsocks"
 
@@ -60,11 +60,11 @@ echo -e " 3 ⸩  Panel L2TP & PPTP        7 ⸩  Panel Vless"
 
 echo -e " 4 ⸩  Panel SSTP               8 ⸩  Panel Trojan"
 
-echo -e "\e[32m═════════════════════════════════\e[m"
+echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
-echo -e "                      MENU SYSTEM" | lolcat
+echo -e "\e[32m═════════════════════════ MENU SYSTEM ═════════════════════════\e[m"
 
-echo -e "\e[32m═════════════════════════════════\e[m"
+echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
 echo -e " 9 ⸩   Tambah Subdomain Host Untuk VPS"
 
@@ -98,11 +98,15 @@ echo -e " 23 ⸩  Set Auto Reboot"
 
 echo -e " 24 ⸩  Set Multi Login SSH"
 
-echo -e "\e[32m══════════════════════════════════════════\e[m"
+echo -e " 25 ⸩  Restart Script"
+
+echo -e " 26 ⸩  Daftar Pengguna"
+
+echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
 echo -e "  x ⸩   Keluar Dari Putty/JuiceSSH/Termux"
 
-echo -e "\e[32m══════════════════════════════════════════\e[m"
+echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
 echo -e ""
 
@@ -256,6 +260,18 @@ autokill
 
 ;;
 
+25)
+
+updatee
+
+;;
+
+26)
+
+member
+
+;;
+
 x)
 
 exit
@@ -272,4 +288,3 @@ menu
 ;;
 
 esac
-

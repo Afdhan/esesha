@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 clear
 echo "-------------------------------";
-echo "---=[ SS - OBFS User Login ]=---";
+echo "===[ SS - OBFS User Login ]===";
 echo "-------------------------------";
 echo ""
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);

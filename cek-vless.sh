@@ -5,7 +5,7 @@ NC='\e[0m'
 echo -n > /tmp/other.txt
 data=( `cat /etc/v2ray/vless.json | grep '^###' | cut -d ' ' -f 2`);
 echo "-------------------------------";
-echo "-----=[ Vless User Login ]=-----";
+echo "=====[ Vless User Login ]=====";
 echo "-------------------------------";
 for akun in "${data[@]}"
 do

@@ -30,7 +30,7 @@ clear
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "        Username Doesnt Exist        "
+echo -e "        Username Tidak Ditemukan!        "
 echo -e ""
 echo -e "======================================" | lolcat
 fi

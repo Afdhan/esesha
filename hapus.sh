@@ -3,11 +3,11 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-read -p "Username SSH to Delete : " Pengguna
+read -p "Masukkan Username SSH Untuk Menghapus : " Pengguna
 
 if getent passwd $Pengguna > /dev/null 2>&1; then
         userdel $Pengguna
-        echo -e "User $Pengguna was removed."
+        echo -e "Username $Pengguna Berhasil Dihapus."
 else
-        echo -e "Failure: User $Pengguna Not Exist."
+        echo -e "Gagal, Username $Pengguna Tidak Ditemukan!."
 fi

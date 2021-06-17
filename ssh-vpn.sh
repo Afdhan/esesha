@@ -14,10 +14,10 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.endka.xyz
-organizationalunit=www.endka.xyz
-commonname=www.endka.xyz
-email=admin@endka.xyz
+organization=www.nezavpn.com
+organizationalunit=www.nezavpn.com
+commonname=www.nezavpn.com
+email=admin@nezavpn.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Afdhan/esesha/main/password"

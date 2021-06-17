@@ -21,7 +21,7 @@ until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 read -p "Password: " VPN_PASSWORD
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 clear
 
 # Add or update VPN user
@@ -35,11 +35,13 @@ echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-pptp"
 cat <<EOF
 
 ================================ | lolcat
-PPTP VPN
-
+                    PPTP VPN
+================================ | lolcat
 Server IP    : $PUBLIC_IP
 Username     : $VPN_USER
 Password     : $VPN_PASSWORD
-Expired On   : $exp
-================================= | lolcat
+================================ | lolcat
+Aktif Selama   : $masaaktif Hari
+Berakhir Pada  : $exp
+Mod By M AFDHAN & NezaVPN
 EOF

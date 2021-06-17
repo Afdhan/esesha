@@ -7,14 +7,14 @@ figlet -f small Panel WG | lolcat
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Create Wireguard Account"
-echo -e "     [2]  Delete Wireguard Account"
-echo -e "     [3]  Check User Login Wireguard"
-echo -e "     [4]  Renew Wireguard Account"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Buat Akun Wireguard"
+echo -e "     [2]  Hapus Akun Wireguard"
+echo -e "     [3]  Cek Login Wireguard"
+echo -e "     [4]  Perbarui Wireguard"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-4 or x] :  " port
+read -p "     Pilih Nomor  [1-4 / x] :  " port
 echo -e ""
 case $port in
 1)
@@ -34,6 +34,8 @@ clear
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
+sleep 0.5
+wgg
 ;;
 esac

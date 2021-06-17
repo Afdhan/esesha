@@ -25,7 +25,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vless.json
 sed -i '/#none$/a\### '"$user $exp"'\
@@ -36,7 +36,7 @@ systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
 clear
 echo -e ""
-echo -e "==========-V2RAY/VLESS-==========" | lolcat
+echo -e "=========[ V2RAY/VLESS ]=========" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "CITY           : $CITY"
 echo -e "ISP            : $ISP"
@@ -52,5 +52,6 @@ echo -e "link TLS       : ${vlesslink1}"
 echo -e "=================================" | lolcat
 echo -e "link none TLS  : ${vlesslink2}"
 echo -e "=================================" | lolcat
-echo -e "Expired On     : $exp"
-echo -e "AutoScript By M AFDHAN - NezaVPN"
+echo -e "Aktif Selama   : ${masaaktif} Hari"
+echo -e "Berakhir Pada  : ${exp}"
+echo -e "Mod By M AFDHAN & NezaVPN"

@@ -8,18 +8,18 @@ ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | c
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Change Port TCP $ovpn"
-echo -e "     [2]  Change Port UDP $ovpn2"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Ubah Port TCP $ovpn"
+echo -e "     [2]  Ubah Port UDP $ovpn2"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-2 or x] :  " prot
+read -p "     Pilih Nomor  [1-2 / x] :  " prot
 echo -e ""
 case $prot in
 1)
-read -p "New Port OpenVPN: " vpn
+read -p "Port Baru OpenVPN: " vpn
 if [ -z $vpn ]; then
-echo "Please Input Port"
+echo "Masukkan Port"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $vpn)
@@ -74,13 +74,13 @@ sed -i "s/   - OpenVPN                 : TCP $ovpn, UDP $ovpn2, SSL 442/   - Ope
 sed -i "s/$ovpn/$vpn/g" /etc/stunnel/stunnel.conf
 echo -e "\e[032;1mPort $vpn modified successfully\e[0m"
 else
-echo "Port $vpn is used"
+echo "Port $vpn Sudah Digunakan!"
 fi
 ;;
 2)
-read -p "New Port OpenVPN: " vpn
+read -p "Port Baru OpenVPN: " vpn
 if [ -z $vpn ]; then
-echo "Please Input Port"
+echo "Masukkan Port!"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $vpn)
@@ -135,7 +135,7 @@ systemctl enable --now openvpn-server@server-udp-$vpn > /dev/null
 sed -i "s/   - OpenVPN                 : TCP $ovpn, UDP $ovpn2, SSL 442/   - OpenVPN                 : TCP $ovpn, UDP $vpn, SSL 442/g" /root/log-install.txt
 echo -e "\e[032;1mPort $vpn modified successfully\e[0m"
 else
-echo "Port $vpn is used"
+echo "Port $vpn Sudah Digunakan!"
 fi
 ;;
 x)
@@ -143,7 +143,7 @@ exit
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
 ;;
 esac
 

@@ -14,7 +14,7 @@ if [ -e "/var/log/secure" ]; then
 fi
                 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
-echo "-----=[ Dropbear User Login ]=-----";
+echo "=====[ Dropbear User Login ]=====";
 echo "ID  |  Username  |  IP Address";
 echo "-------------------------------------";
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
@@ -29,7 +29,7 @@ do
                 fi
 done
 echo " "
-echo "-----=[ OpenSSH User Login ]=-----";
+echo "=====[ OpenSSH User Login ]=====";
 echo "ID  |  Username  |  IP Address";
 echo "-------------------------------------";
 cat $LOG | grep -i sshd | grep -i "Accepted password for" > /tmp/login-db.txt
@@ -47,7 +47,7 @@ do
 done
 if [ -f "/etc/openvpn/server/openvpn-tcp.log" ]; then
         echo " "
-        echo "-----=[ OpenVPN TCP User Login ]=-----";
+        echo "=====[ OpenVPN TCP User Login ]=====";
         echo "Username  |  IP Address  |  Connected Since";
         echo "-------------------------------------";
         cat /etc/openvpn/server/openvpn-tcp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-tcp.txt
@@ -57,7 +57,7 @@ echo "-------------------------------------"
 
 if [ -f "/etc/openvpn/server/openvpn-udp.log" ]; then
         echo " "
-        echo "-----=[ OpenVPN UDP User Login ]=-----";
+        echo "=====[ OpenVPN UDP User Login ]=====";
         echo "Username  |  IP Address  |  Connected Since";
         echo "-------------------------------------";
         cat /etc/openvpn/server/openvpn-udp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-udp.txt

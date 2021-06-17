@@ -42,15 +42,15 @@ echo -e " ==============================" | lolcat
 echo -e " Status $sts"
 echo -e "  1. Start Limit"
 echo -e "  2. Stop Limit"
-echo -e " Press CTRL+C to return"
-read -rp " Please Enter The Correct Number : " -e num
+echo -e " Klik CTRL+C untuk return"
+read -rp " Masukkan Nomor : " -e num
 if [[ "$num" = "1" ]]; then
 start
 elif [[ "$num" = "2" ]]; then
 stop
 else
 clear
-echo " You Entered The Wrong Number"
+echo " Nomor Yang Anda Masukkan Salah!"
 menu
 fi
 

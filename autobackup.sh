@@ -14,7 +14,7 @@ fi
 function start() {
 email=$(cat /home/email)
 if [[ "$email" = "" ]]; then
-echo "Please enter your email"
+echo "Masukkan Email"
 read -rp "Email: " -e email
 cat <<EOF>>/home/email
 $email
@@ -27,10 +27,10 @@ cat << EOF >> /etc/crontab
 EOF
 service cron restart
 sleep 1
-echo " Please Wait"
+echo " Harap Tunggu"
 clear
-echo " Autobackup Has Been Started"
-echo " Data Will Be Backed Up Automatically at 00:05 GMT +7"
+echo " Autobackup Dimulai"
+echo " Data Otomatis Dibackup Pada Pukul 00:05 GMT +7"
 exit 0
 }
 function stop() {
@@ -39,26 +39,26 @@ sed -i "/^$email/d" /home/email
 sed -i "/^# BEGIN_Backup/,/^# END_Backup/d" /etc/crontab
 service cron restart
 sleep 1
-echo " Please Wait"
+echo " Harap Tunggu"
 clear
-echo " Autobackup Has Been Stopped"
+echo " Autobackup Dihentikan"
 exit 0
 }
 clear
 echo -e " ==============================" | lolcat
-echo -e "         Autobackup Data       "
+echo -e "          Autobackup Data       "
 echo -e " ==============================" | lolcat
 echo -e " Status : $sts"
 echo -e "  1. Start Autobackup"
 echo -e "  2. Stop Autobackup"
-echo -e " Press CTRL+C to return"
-read -rp " Please Enter The Correct Number : " -e num
+echo -e " Klik CTRL+C untuk return"
+read -rp " Pilih Nomor : " -e num
 if [[ "$num" = "1" ]]; then
 start
 elif [[ "$num" = "2" ]]; then
 stop
 else
 clear
-echo " You Entered The Wrong Number"
+echo " Nomor Yang Anda Masukkan Salah"
 menu
 fi

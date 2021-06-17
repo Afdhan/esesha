@@ -1,7 +1,3 @@
-#!/bin/bash
-#
-# By Horasss
-# ==================================================
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive

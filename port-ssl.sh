@@ -7,18 +7,18 @@ ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 
 ssl2="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $2}')"
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Change Port $ssl"
-echo -e "     [2]  Change Port $ssl2"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Ubah Port $ssl"
+echo -e "     [2]  Ubah Port $ssl2"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-2 or x] :  " prot
+read -p "     Pilih Nomor  [1-2 / x] :  " prot
 echo -e ""
 case $prot in
 1)
-read -p "New Port Stunnel4: " stl
+read -p "Port Baru Stunnel4: " stl
 if [ -z $stl ]; then
-echo "Please Input Port"
+echo "Masukkan Port!"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $stl)
@@ -28,13 +28,13 @@ sed -i "s/   - Stunnel4                : $ssl, $ssl2/   - Stunnel4              
 /etc/init.d/stunnel4 restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
-echo "Port $stl is used"
+echo "Port $stl Sudah Digunakan!"
 fi
 ;;
 2)
-read -p "New Port Stunnel4: " stl
+read -p "Port Baru Stunnel4: " stl
 if [ -z $stl ]; then
-echo "Please Input Port"
+echo "Masukkan Port"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $stl)
@@ -44,7 +44,7 @@ sed -i "s/   - Stunnel4                : $ssl, $ssl2/   - Stunnel4              
 /etc/init.d/stunnel4 restart > /dev/null
 echo -e "\e[032;1mPort $stl modified successfully\e[0m"
 else
-echo "Port $stl is used"
+echo "Port $stl Sudah Digunakan!"
 fi
 ;;
 x)
@@ -52,6 +52,6 @@ exit
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
 ;;
 esac

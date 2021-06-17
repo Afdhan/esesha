@@ -25,11 +25,12 @@ sleep 0.5
 echo Setting Password: $Pass
 sleep 0.5
 clear
-useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
+useradd -e `date -d "$masaaktif days" +"%d-%m-%Y"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "Informasi Trial SSH & OpenVPN"
+echo -e "Berikut Informasi Trial SSH & OpenVPN"
+echo -e "===============================" | lolcat
 echo -e "Username       : $Login "
 echo -e "Password       : $Pass"
 echo -e "===============================" | lolcat
@@ -38,13 +39,14 @@ echo -e "CITY           : $CITY"
 echo -e "ISP            : $ISP"
 echo -e "OpenSSH        : 22"
 echo -e "Dropbear       : 109, 143"
-echo -e "SSL/TLS        :$ssl"
+echo -e "Stunnel        :$ssl"
 echo -e "Port Squid     :$sqd"
 echo -e "OpenVPN        : TCP $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
 echo -e "OpenVPN        : UDP $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
 echo -e "OpenVPN        : SSL 442 http://$IP:81/client-tcp-ssl.ovpn"
 echo -e "badvpn         : 7100-7300"
 echo -e "===============================" | lolcat
-echo -e "Aktif Sampai   : $exp"
-echo -e "AutoScript By M AFDHAN - NezaVPN"
+echo -e "Aktif Selama   : $masaaktif Hari"
+echo -e "Berakhir Pada  : $exp"
+echo -e "Mod By M AFDHAN & NezaVPN"
 

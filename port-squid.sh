@@ -7,18 +7,18 @@ sqd="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | head -
 sqd2="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | tail -n1)"
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Change Port $sqd"
-echo -e "     [2]  Change Port $sqd2"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Ubah Port $sqd"
+echo -e "     [2]  Ubah Port $sqd2"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-2 or x] :  " prot
+read -p "     Pilih Nomor  [1-2 / x] :  " prot
 echo -e ""
 case $prot in
 1)
-read -p "New Port Squid: " squid
+read -p "Port Baru Squid: " squid
 if [ -z $squid ]; then
-echo "Please Input Port"
+echo "Masukkan Port"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $squid)
@@ -28,13 +28,13 @@ sed -i "s/$sqd/$squid/g" /root/log-install.txt
 /etc/init.d/squid restart > /dev/null
 echo -e "\e[032;1mPort $squid modified successfully\e[0m"
 else
-echo "Port $squid is used"
+echo "Port $squid Sudah Digunakan!"
 fi
 ;;
 2)
-read -p "New Port Squid: " squid
+read -p "Port Baru Squid: " squid
 if [ -z $squid ]; then
-echo "Please Input Port"
+echo "Masukkan Port"
 exit 0
 fi
 cek=$(netstat -nutlp | grep -w $squid)
@@ -44,7 +44,7 @@ sed -i "s/$sqd2/$squid/g" /root/log-install.txt
 /etc/init.d/squid restart > /dev/null
 echo -e "\e[032;1mPort $squid modified successfully\e[0m"
 else
-echo "Port $squid is used"
+echo "Port $squid Sudah Digunakan!"
 fi
 ;;
 x)
@@ -52,7 +52,7 @@ exit
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
 ;;
 esac
 

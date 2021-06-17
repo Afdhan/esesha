@@ -7,18 +7,18 @@ figlet -f small Panel SSR | lolcat
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Create SSR Account"
-echo -e "     [2]  Create Shadowsocks Account"
-echo -e "     [3]  Deleting SSR Account"
-echo -e "     [4]  Delete Shadowsocks Account"
-echo -e "     [5]  Renew SSR Account Active"
-echo -e "     [6]  Renew Shadowsocks Active"
-echo -e "     [7]  Check User Login Shadowsocks"
-echo -e "     [8]  Show Other SSR Menu"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Buat Akun SSR"
+echo -e "     [2]  Buat Akun Shadowsocks"
+echo -e "     [3]  Hapus Akun SSR"
+echo -e "     [4]  Hapus Akun Shadowsocks"
+echo -e "     [5]  Perbarui Akun SSR Aktif"
+echo -e "     [6]  Perbarui Akun Shadowsocks Aktif"
+echo -e "     [7]  Cek Login Shadowsocks"
+echo -e "     [8]  Lihat Menu Lengkap SSR"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-8 or x] :  " port
+read -p "     Pilih Nomor  [1-8 / x] :  " port
 echo -e ""
 case $port in
 1)
@@ -50,6 +50,8 @@ clear
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
+sleep 0.5
+sssr
 ;;
 esac

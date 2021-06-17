@@ -7,20 +7,20 @@ figlet -f small Panel SSH | lolcat
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Create SSH & OpenVPN Account"
-echo -e "     [2]  Trial Account SSH & OpenVPN"
-echo -e "     [3]  Renew SSH & OpenVPN Account"
-echo -e "     [4]  Delete SSH & OpenVPN Account"
-echo -e "     [5]  Check User Login SSH & OpenVPN"
-echo -e "     [6]  Daftar Member SSH & OpenVPN"
-echo -e "     [7]  Delete User Expired SSH & OpenVPN"
-echo -e "     [8]  Set up Autokill SSH"
-echo -e "     [9]  Cek Users Who Do Multi Login SSH"
+echo -e "     [1]  Buat Akun SSH & OpenVPN"
+echo -e "     [2]  Trial Akun SSH & OpenVPN"
+echo -e "     [3]  Perbarui Akun SSH & OpenVPN"
+echo -e "     [4]  Hapus Akun SSH & OpenVPN"
+echo -e "     [5]  Cek Login SSH & OpenVPN"
+echo -e "     [6]  Daftar Pengguna SSH & OpenVPN"
+echo -e "     [7]  Hapus Akun Expired SSH & OpenVPN"
+echo -e "     [8]  Pengaturan AutoKill SSH"
+echo -e "     [9]  Cek User Multi Login SSH"
 echo -e "     [10] Restart Service Dropbear, Squid3"
-echo -e "     [x]  Exit"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat
 echo -e ""
-read -p "     Select From Options [1-10 or x] :  " port
+read -p "     Pilih Nomor  [1-10 / x] :  " port
 echo -e ""
 case $port in
 1)
@@ -58,6 +58,8 @@ clear
 menu
 ;;
 *)
-echo "Please enter an correct number"
+echo "Masukkan Nomor Yang Ada!"
+sleep 0.5
+tessh
 ;;
 esac

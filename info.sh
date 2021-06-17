@@ -4,4 +4,5 @@ clear
 neofetch
 cat /root/log-install.txt
 echo ""
-echo "AutoScript By M AFDHAN - NezaVPN"
+echo "AutoScript Hasil Modifikasi"
+echo "Oleh M AFDHAN & NEZA VPN"
