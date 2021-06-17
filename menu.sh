@@ -23,7 +23,7 @@ CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
-	echo -e "        M AFDHAN - NEZAVPN " | lolcat
+	echo -e "                M AFDHAN - NEZAVPN " | lolcat
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -31,7 +31,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-	date | lolcat
+               date | lolcat
         echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	echo -e "\e[032;1mCPU Model           :\e[0m$cname"
 	echo -e "\e[032;1mNumber Of Cores     :\e[0m $cores"
@@ -47,7 +47,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
-echo -e "      MENU TUNNELING " | lolcat
+echo -e "                    MENU TUNNELING " | lolcat
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
@@ -61,7 +61,7 @@ echo -e " 4 ⸩  Panel SSTP               8 ⸩  Panel Trojan"
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
-echo -e "      MENU SYSTEM " | lolcat
+echo -e "                      MENU SYSTEM " | lolcat
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
