@@ -23,7 +23,7 @@ CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
-	echo -e "\e[32m══════════════════════[ M AFDHAN - NEZAVPN ]══════════════════════\e[m"
+	echo -e "        M AFDHAN - NEZAVPN " | lolcat
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -31,7 +31,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-	
+	date | lolcat
         echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	echo -e "\e[032;1mCPU Model           :\e[0m$cname"
 	echo -e "\e[032;1mNumber Of Cores     :\e[0m $cores"
@@ -40,7 +40,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "\e[032;1mAmount Of Swap      :\e[0m $swap MB"
 	echo -e "\e[032;1mSystem Uptime       :\e[0m$up"
 	echo -e "\e[032;1mISP Name            :\e[0m $ISP"
-	echo -e "\e[032;1mCity                : \e[0m $CITY"
+	echo -e "\e[032;1mCity                :\e[0m $CITY"
 	echo -e "\e[032;1mTimeZone            :\e[0m $WKT"
 	echo -e "\e[033;1mIP Adress VPS       :\e[0m $IPVPS"
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
@@ -105,7 +105,7 @@ echo -e " 27 ⸩  Daftar Pengguna"
 
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
-echo -e "  x ⸩   Keluar Dari Putty/JuiceSSH/Termux"
+echo -e "  x ⸩   Keluar Dari Putty / JuiceSSH / Termux"
 
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
