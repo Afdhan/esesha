@@ -26,7 +26,7 @@ sleep 0.5
 echo Setting Password $Pass
 sleep 0.5
 clear
-useradd -e `date -d "$masaaktif days" +"%d-%m-%Y"` -s /bin/false -M $Login
+useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
