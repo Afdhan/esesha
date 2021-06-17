@@ -7,14 +7,6 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-versi=$(cat /home/ver)
-#if [[ $versi == 1.2 ]]; then
-#echo "You Have The Latest Version"
-#exit 0
-#fi
 echo "Memperbarui..."
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
@@ -53,8 +45,8 @@ echo "0 0 * * * root xp" > /etc/crontab
 cd
 echo "1.2" > /home/ver
 clear
-echo " Fix minor Bugs"
-echo " Now You Can Change Port Of Some Services"
+echo " Script Berhasil Di Restart"
+echo " Sekarang Kamu Bisa Ubah Port Di Beberapa Layanan VPN"
 echo " Reboot 5 Detik"
 sleep 5
 rm -f update.sh
