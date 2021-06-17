@@ -23,7 +23,7 @@ CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
-	echo -e "                M AFDHAN - NEZAVPN " | lolcat
+	echo -e "                 M AFDHAN - NEZAVPN " | lolcat
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
