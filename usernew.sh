@@ -49,7 +49,7 @@ echo -e "Payload Websocket :"
 echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "===============================" | lolcat
 echo -e "Setting SSH Websocket :"
-echo -e "bimbel.ruangguru.com:2082@$Login:Pass"
+echo -e "bimbel.ruangguru.com:2082@$Login:$Pass"
 echo -e "===============================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Berakhir Pada  : $exp"
