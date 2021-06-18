@@ -7,15 +7,19 @@ read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
 
-IP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ipinfo.io/ip);
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
+else
+domain=$IP
+fi
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-sleep 0.5
 echo Membuat Akun $Login
 sleep 0.5
 echo Setting Password $Pass
@@ -32,7 +36,7 @@ echo -e "Username       : $Login "
 echo -e "Password       : $Pass"
 echo -e "Domain         : $domain"
 echo -e "===============================" | lolcat
-echo -e "Host           : $IP"
+echo -e "Host           : $MYIP"
 echo -e "ISP            : $ISP"
 echo -e "CITY           : $CITY"
 echo -e "OpenSSH        : 22"
