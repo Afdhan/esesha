@@ -78,7 +78,7 @@ port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
 	echo -e ""
-	echo -e "=========[ Shadowsocks ]=========" | lolcat
+	echo -e "=========[ Shadowsocks ]========" | lolcat
 	echo -e "IP/Host        : $IP"
 	echo -e "Port OBFS TLS  : $tls"
 	echo -e "Port OBFS HTTP : $http"
@@ -90,5 +90,5 @@ clear
 	echo -e "Link OBFS HTTP : $linkss2"
 	echo -e "================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
-    echo -e "Berakhir Pada  : $exp"
-    echo -e "Mod By M AFDHAN & NezaVPN"
+        echo -e "Berakhir Pada  : $exp"
+        echo -e "Mod By M AFDHAN & NezaVPN"
