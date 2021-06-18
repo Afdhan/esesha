@@ -20,7 +20,6 @@ ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | 
 Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
 Pass=1
-sleep 0.5
 echo Membuat Akun: $Login
 sleep 0.5
 echo Setting Password: $Pass
