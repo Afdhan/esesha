@@ -25,7 +25,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
+			echo "Nama Client Sudah Pernah Dibuat, Pilihlah Nama Yang Lain!."
 			exit 1
 		fi
 	done
@@ -78,17 +78,17 @@ port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
 	echo -e ""
-	echo -e "=========[ Shadowsocks ]========" | lolcat
+	echo -e "==========[ Shadowsocks ]==========" | lolcat
 	echo -e "IP/Host        : $IP"
 	echo -e "Port OBFS TLS  : $tls"
 	echo -e "Port OBFS HTTP : $http"
 	echo -e "Password       : $user"
 	echo -e "Method         : aes-256-cfb"
-	echo -e "================================" | lolcat
+	echo -e "===================================" | lolcat
 	echo -e "Link OBFS TLS  : $linkss1"
-	echo -e "================================" | lolcat
+	echo -e "===================================" | lolcat
 	echo -e "Link OBFS HTTP : $linkss2"
-	echo -e "================================" | lolcat
+	echo -e "===================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
         echo -e "Berakhir Pada  : $exp"
         echo -e "Mod By M AFDHAN & NezaVPN"
