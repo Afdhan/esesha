@@ -3,11 +3,16 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-IP=$(wget -qO- ipinfo.io/ip);
+
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 MYIP=$(wget -qO- ipinfo.io/ip);
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
+else
+domain=$IP
+fi
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
@@ -31,7 +36,7 @@ echo -e "Username       : $Login "
 echo -e "Password       : $Pass"
 echo -e "Domain         : $domain"
 echo -e "===============================" | lolcat
-echo -e "Host           : $IP"
+echo -e "Host           : $MYIP"
 echo -e "CITY           : $CITY"
 echo -e "ISP            : $ISP"
 echo -e "OpenSSH        : 22"
@@ -50,6 +55,6 @@ echo -e "===============================" | lolcat
 echo -e "Setting SSH Websocket :"
 echo -e "bimbel.ruangguru.com:2082@$Login:$Pass"
 echo -e "===============================" | lolcat
-echo -e "Aktif Selama   : $masaaktif Hari"
+echo -e "Aktif Selama   : 1 Hari"
 echo -e "Berakhir Pada  : $exp"
 echo -e "Mod By M AFDHAN & NezaVPN"
