@@ -3,11 +3,11 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 apt install jq curl -y
-DOMAIN=vmess.my.id
+DOMAIN=nezavpn.com
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.vmess.my.id
-CF_ID=pradiasangindraswari@gmail.com
-CF_KEY=75b54a5c9fd50751003abac0fefee534528c0
+SUB_DOMAIN=${sub}.nezavpn.com
+CF_ID=muhammad.neizam@gmail.com
+CF_KEY=10da726480584a601ecc58b12621f0b0102ec
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
