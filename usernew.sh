@@ -2,12 +2,21 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Memeriksa Hak Akses VPS..."
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Akses Diizinkan...${NC}"
+else
+echo -e "${red}Akses Diblokir!${NC}";
+echo "Hanya Untuk Pengguna Berbayar!"
+echo "Silahkan Hubungi Admin"
+exit 0
+fi
 clear
 read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
 
-MYIP=$(wget -qO- ipinfo.io/ip);
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 source /var/lib/premium-script/ipvps.conf
