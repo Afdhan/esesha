@@ -2,6 +2,17 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl http://afdhan.github.io/izin.sh | grep $MYIP )
+echo "Memeriksa Hak Akses VPS..."
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Akses Diizinkan...${NC}"
+else
+echo -e "${red}Akses Diblokir!${NC}";
+echo "Hanya Untuk Pengguna Berbayar!"
+echo "Silahkan Hubungi Admin"
+exit 0
+fi
 clear
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -35,7 +46,7 @@ echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-pptp"
 cat <<EOF
 
 ================================ | lolcat
-                    PPTP VPN
+           PPTP VPN
 ================================ | lolcat
 Server IP    : $PUBLIC_IP
 Username     : $VPN_USER
