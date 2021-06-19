@@ -5,7 +5,7 @@ NC='\e[0m'
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl http://afdhan.github.io/sc/izin.sh | grep $MYIP )
+IZIN=$( curl https://afdhan.github.io/sc/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Akses Diizinkan...${NC}"
