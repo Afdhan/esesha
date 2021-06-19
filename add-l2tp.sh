@@ -51,7 +51,7 @@ echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-l2tp"
 cat <<EOF
 
 ================================ | lolcat
-            L2TP/IPSEC PSK VPN
+       L2TP/IPSEC PSK VPN
 ================================ | lolcat
 Server IP    : $PUBLIC_IP
 IPsec PSK    : myvpn
