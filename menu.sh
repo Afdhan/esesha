@@ -105,13 +105,13 @@ echo -e " 27 ⸩  Daftar Pengguna"
 
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
-echo -e "  x ⸩   Keluar Dari Putty / JuiceSSH / Termux"
+echo -e "  x ⸩  Keluar Dari Putty / JuiceSSH / Termux"
 
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
 echo -e ""
 
-read -p "     Masukkan Nomor  [1-26 / x] :  "  num
+read -p "       Masukkan Nomor  [1-26 / x] :  "  num
 
 echo -e ""
 
