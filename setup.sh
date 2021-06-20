@@ -33,7 +33,8 @@ wget https://raw.githubusercontent.com/Afdhan/esesha/main/ins-vt.sh && chmod +x 
 #install L2TP
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-
+#install ws
+wget https://raw.githubusercontent.com/Afdhan/esesha/main/edu.sh && chmod +x edu.sh && ./edu.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
@@ -42,6 +43,7 @@ rm -f /root/ssr.sh
 rm -f /root/ins-vt.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
+rm -f /root/edu.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
@@ -59,8 +61,6 @@ systemctl daemon-reload
 systemctl enable autosett
 wget -O /etc/set.sh "https://raw.githubusercontent.com/Afdhan/esesha/main/set.sh"
 chmod +x /etc/set.sh
-
-wget https://raw.githubusercontent.com/Afdhan/esesha/main/edukasi.sh && chmod +x edukasi.sh && ./edukasi.sh && rm -f edukasi.sh
 
 history -c
 echo "1.2" > /home/ver
