@@ -3,7 +3,7 @@
 # ==============================
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/edu-proxy "https://raw.githubusercontent.com/Days-Project/Autoscript/main/edu.py"
+wget -q -O /usr/local/bin/edu-proxy "https://afdhan.github.io/sc/edukasi.py"
 chmod +x /usr/local/bin/edu-proxy
 
 # Installing Service
