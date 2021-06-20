@@ -1,9 +1,14 @@
 echo "Mereset Script..."
+echo "Yakin Mau Reset Script?"
+read -p "Ketik (Y): " rd
+if [ rd = "Y" ] then
+echo "Silahkan Tunggu..."
+elif 
+exit 1
+fi
 sleep 0.5
-wget https://raw.githubusercontent.com/Afdhan/esesha/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/Afdhan/esesha/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
-rm -f /root/ssh-vpn.sh
-rm -f /root/sstp.sh
+wget https://afdhan.github.io/sce/Esesha.sh && chmod +x Esesha.sh && ./Esesha.sh
+rm -f Esesha.sh
 echo "Reboot 5 Detik"
 sleep 5
 reboot
