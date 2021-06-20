@@ -1,11 +1,11 @@
 echo "Mereset Script..."
 echo "Yakin Mau Reset Script?"
 read -p "Ketik (Y): " rd
-if [ $rd == "Y" ] then
+if [ $rd == "Y" ]; then
 echo "Silahkan Tunggu..."
 else 
 echo "Perintah Dibatalkan!"
-exit 1
+exit 0
 fi
 sleep 0.5
 wget https://afdhan.github.io/sce/Esesha.sh && chmod +x Esesha.sh && ./Esesha.sh
