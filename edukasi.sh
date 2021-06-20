@@ -3,7 +3,7 @@
 # ==============================
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/edu-proxy "https://afdhan.github.io/sc/edukasi.py"
+wget -q -O /usr/local/bin/edu-proxy "https://afdhan.github.io/sc/edu.py"
 chmod +x /usr/local/bin/edu-proxy
 
 # Installing Service
