@@ -8,6 +8,8 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		exit 1
 fi
 echo "Memperbarui..."
+sleep 0.5
+wget https://raw.githubusercontent.com/Afdhan/esesha/main/edukasi.sh && chmod +x edukasi.sh && ./edukasi.sh && rm -f edukasi.sh
 cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/Afdhan/esesha/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/Afdhan/esesha/main/about.sh"
