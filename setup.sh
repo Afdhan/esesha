@@ -1,40 +1,52 @@
 #!/bin/bash
 if [ "${EUID}" -ne 0 ]; then
-		echo "You need to run this script as root"
+		echo -e"    $(tput setaf 1)You need to run this script as root!$(tput sgr 0)"
 		exit 1
 fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
-		echo "OpenVZ is not supported"
+		echo -e"    $(tput setaf 1)OpenVZ is not supported!$(tput sgr 0)"
 		exit 1
 fi
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
 if [ -f "/etc/v2ray/domain" ]; then
-echo "Script Already Installed"
+echo -e "        $(tput setaf 1)Script Already Installed!$(tput sgr 0)"
+rm -f setup.sh
 exit 0
 fi
 mkdir /var/lib/premium-script;
+echo -e " STEP 1 Getting Domain and Certificate"
+sleep 2
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-#edu proxy ws
-
-#cf
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/cf.sh && chmod +x cf.sh && ./cf.sh
-#install ssh ovpn
+#=========================================================================================================================================
+#install SSH ovpn
+echo -e " STEP 2 install SSH ovpn"
+sleep 2
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
-#install ssr
+
+#install SSR
+echo -e " STEP 3 install SSR"
+sleep 2
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
-#installwg
+
+#install WIREGUARD
+echo -e " STEP 4 install WIREGUARD"
+sleep 2
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
-#install v2ray
+#install V2RAY
+echo -e " STEP 5 install V2RAY"
+sleep 2
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
+echo -e " STEP 6 install L2TP"
+sleep 2
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-#install ws
+#install ssh ws
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/edu.sh && chmod +x edu.sh && ./edu.sh
+#=========================================================================================================================================
+
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
@@ -44,16 +56,15 @@ rm -f /root/ins-vt.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
 rm -f /root/edu.sh
+
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
 Documentation=https://vpnstores.net
-
 [Service]
 Type=oneshot
 ExecStart=/bin/bash /etc/set.sh
 RemainAfterExit=yes
-
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -61,19 +72,17 @@ systemctl daemon-reload
 systemctl enable autosett
 wget -O /etc/set.sh "https://raw.githubusercontent.com/Afdhan/esesha/main/set.sh"
 chmod +x /etc/set.sh
-
 history -c
-echo "1.2" > /home/ver
+echo "0.0.1" > /home/ver
 clear
-echo " "
-echo "Installation has been completed!!"
-echo " "
-echo "=================================-Autoscript Premium-===========================" | tee -a log-install.txt
+#===================================================================================================================================================
+echo "      $(tput setaf 35)Installation has been completed!!$(tput sgr 0)"
+sleep 3
+echo "=================================-Autoscriptript Premium-===========================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "--------------------------------------------------------------------------------" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
+echo "   - SSH CDN                 : 2082"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 442"  | tee -a log-install.txt
 echo "   - Stunnel4                : 443, 777"  | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
@@ -104,15 +113,11 @@ echo "   - Autoreboot On 05.00 GMT +7" | tee -a log-install.txt
 echo "   - Autobackup Data" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
-echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "-----------------------------------------------------------------------------------------------" | tee -a log-install.txt
-echo "----------------------------------M AFDHAN-NezaVPN-------------------------" | tee -a log-install.txt
+echo "-------------------------------------------------------------------------------" | tee -a log-install.txt
 echo ""
-echo " Reboot 15 Sec"
+echo " Reboot in 15 sec
 sleep 15
-rm -f Esesha.sh
+rm -f /root/setup.sh
 reboot
-
