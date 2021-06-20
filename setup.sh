@@ -119,5 +119,5 @@ echo "--------------------------------------------------------------------------
 echo ""
 echo " Reboot in 15 sec
 sleep 15
-rm -f /root/setup.sh
+rm -f setup.sh
 reboot
