@@ -52,7 +52,7 @@ echo -e "CITY           : $CITY"
 echo -e "OpenSSH        : 22"
 echo -e "Dropbear       : 109, 143"
 echo -e "Stunnel        :$ssl"
-echo -e "WebSocket      : 2082
+echo -e "WebSocket      : 2082"
 echo -e "Port Squid     :$sqd"
 echo -e "OpenVPN        : TCP $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
 echo -e "OpenVPN        : UDP $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
