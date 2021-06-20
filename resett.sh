@@ -1,9 +1,10 @@
 echo "Mereset Script..."
 echo "Yakin Mau Reset Script?"
 read -p "Ketik (Y): " rd
-if [ rd = "Y" ] then
+if [ $rd == "Y" ] then
 echo "Silahkan Tunggu..."
-elif 
+else 
+echo "Perintah Dibatalkan!"
 exit 1
 fi
 sleep 0.5
