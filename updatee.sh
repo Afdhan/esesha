@@ -96,7 +96,7 @@ chmod +x auto-reboot
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 cd
-echo "1.2" > /home/ver
+echo "1.0.1" > /home/ver
 clear
 echo " Script Berhasil Di Restart"
 echo " Sekarang Kamu Bisa Ubah Port Di Beberapa Layanan VPN"
