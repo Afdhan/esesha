@@ -14,13 +14,13 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.nezavpn.com
-organizationalunit=www.nezavpn.com
-commonname=www.nezavpn.com
-email=admin@nezavpn.com
+organization=www.endka.xyz
+organizationalunit=www.endka.xyz
+commonname=www.endka.xyz
+email=admin@endka.xyz
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Afdhan/esesha/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -92,14 +92,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Afdhan/esesha/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Afdhan/esesha/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Afdhan/esesha/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -129,7 +129,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Afdhan/esesha/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -187,7 +187,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Afdhan/esesha/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -220,7 +220,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Afdhan/esesha/main/bannerssh.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/bannerssh.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -243,47 +243,46 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/Afdhan/esesha/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/Afdhan/esesha/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/Afdhan/esesha/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Afdhan/esesha/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/Afdhan/esesha/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/Afdhan/esesha/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Afdhan/esesha/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/Afdhan/esesha/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/Afdhan/esesha/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Afdhan/esesha/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/Afdhan/esesha/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/Afdhan/esesha/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/Afdhan/esesha/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/Afdhan/esesha/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Afdhan/esesha/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Afdhan/esesha/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/Afdhan/esesha/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/Afdhan/esesha/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Afdhan/esesha/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/Afdhan/esesha/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/Afdhan/esesha/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/Afdhan/esesha/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/Afdhan/esesha/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/Afdhan/esesha/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/Afdhan/esesha/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/Afdhan/esesha/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/Afdhan/esesha/main/xp.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/Afdhan/esesha/main/kernel-update.sh"
-wget -O tessh "https://raw.githubusercontent.com/Afdhan/esesha/main/tessh.sh"
-wget -O ssstp "https://raw.githubusercontent.com/Afdhan/esesha/main/ssstp.sh"
-wget -O sssr "https://raw.githubusercontent.com/Afdhan/esesha/main/sssr.sh"
-wget -O ltp "https://raw.githubusercontent.com/Afdhan/esesha/main/ltp.sh"
-wget -O wgg "https://raw.githubusercontent.com/Afdhan/esesha/main/wgg.sh"
-wget -O trj "https://raw.githubusercontent.com/Afdhan/esesha/main/trj.sh"
-wget -O wss "https://raw.githubusercontent.com/Afdhan/esesha/main/wss.sh"
-wget -O vls "https://raw.githubusercontent.com/Afdhan/esesha/main/vls.sh"
-wget -O updatee "https://raw.githubusercontent.com/Afdhan/esesha/main/updatee.sh"
-wget -O resett "https://raw.githubusercontent.com/Afdhan/esesha/main/resett.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/Afdhan/esesha/main/auto-reboot.sh"
+wget -O add-host "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/xp.sh"
+wget -O kernel-updt "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/kernel-update.sh"
+wget -O tessh "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/tessh.sh"
+wget -O ssstp "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/ssstp.sh"
+wget -O sssr "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/sssr.sh"
+wget -O ltp "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/ltp.sh"
+wget -O wgg "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/wgg.sh"
+wget -O trj "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/trj.sh"
+wget -O wss "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/wss.sh"
+wget -O vls "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/vls.sh"
+wget -O updatee "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/updatee.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/Endka22/Autoscriptvps/main/auto-reboot.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
@@ -323,7 +322,6 @@ chmod +x trj
 chmod +x wss
 chmod +x vls
 chmod +x updatee
-chmod +x resett
 chmod +x auto-reboot
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
