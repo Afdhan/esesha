@@ -99,9 +99,7 @@ echo -e " 24 ⸩  Set Multi Login SSH"
 
 echo -e " 25 ⸩  Restart Script"
 
-echo -e " 26 ⸩  Reset Script"
-
-echo -e " 27 ⸩  Daftar Pengguna"
+echo -e " 26 ⸩  Daftar Pengguna"
 
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
@@ -269,12 +267,6 @@ updatee
 
 26)
 
-resett
-
-;;
-
-27)
-
 member
 
 ;;
@@ -288,7 +280,7 @@ exit
 *)
 
 echo "Nomor Yang Anda Masukkan Salah!"
-sleep 0.5
+sleep 1
 clear
 menu
 
