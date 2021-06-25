@@ -22,6 +22,12 @@ ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/v2ray/domain)
+else
+domain=$IP
+fi
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 	echo -e "                 M AFDHAN - NEZAVPN " | lolcat
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
@@ -42,7 +48,8 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "\e[032;1mISP Name            :\e[0m $ISP"
 	echo -e "\e[032;1mCity                :\e[0m $CITY"
 	echo -e "\e[032;1mTimeZone            :\e[0m $WKT"
-	echo -e "\e[033;1mIP Adress VPS       :\e[0m $IPVPS"
+	echo -e "\e[033;1mIP VPS              :\e[0m $IPVPS"
+	echo -e "\e[033;1mDomain              :\e[0m $domain"
 	echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
