@@ -15,7 +15,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-pptp")
 	echo " Pilih Klien Yang Ingin Diperbarui"
 	echo " Klik CTRL+C untuk return"
 	echo " ===============================" | lolcat
-	echo "     User No  Expired  "
+	echo "     No User Expired  "
 	grep -E "^### " "/var/lib/premium-script/data-user-pptp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -35,6 +35,6 @@ chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 clear
 echo " Akun PPTP Berhasil Dihapus"
 echo " ==========================" | lolcat
-echo " Client Name : $VPN_USER"
-echo " Expired On  : $exp"
+echo " Nama : $VPN_USER"
+echo " Exp  : $exp"
 echo " ==========================" | lolcat
