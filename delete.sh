@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-               hariini=`date +%d-%m-%Y`
+               hariini=`date +%Y-%m-%d`
                echo "Terima Kasih Sudah Menghapus Akun Expired"
                echo "--------------------------------------"
                cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
