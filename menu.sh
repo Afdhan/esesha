@@ -106,8 +106,6 @@ echo -e " 24 ⸩  Set Multi Login SSH"
 
 echo -e " 25 ⸩  Restart Script"
 
-echo -e " 26 ⸩  Daftar Pengguna"
-
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
 echo -e "  x ⸩  Keluar Dari Putty / JuiceSSH / Termux"
@@ -116,7 +114,7 @@ echo -e "\e[32m═════════════════════�
 
 echo -e ""
 
-read -p "       Masukkan Nomor  [1-26 / x] :  "  num
+read -p "       Masukkan Nomor  [1-25 / x] :  "  num
 
 echo -e ""
 
@@ -269,12 +267,6 @@ autokill
 25)
 
 updatee
-
-;;
-
-26)
-
-member
 
 ;;
 
