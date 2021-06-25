@@ -18,7 +18,7 @@ source /etc/wireguard/params
 	echo " Pilih Klien Yang Ingin Diperbarui"
 	echo " Klik CTRL+C untuk return"
 	echo " ===============================" | lolcat
-	echo "     User No  Expired  "
+	echo "     No User Expired  "
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -44,6 +44,6 @@ source /etc/wireguard/params
 clear
 echo " Akun Wireguard Berhasil Dihapus"
 echo " ==========================" | lolcat
-echo " Client Name : $user"
-echo " Expired  On : $exp"
+echo " Nama : $user"
+echo " Exp : $exp"
 echo " ==========================" | lolcat
