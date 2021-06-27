@@ -90,21 +90,23 @@ echo -e " 16 ⸩  Limit Bandwith Speed Server"
 
 echo -e " 17 ⸩  Cek Penggunaan Ram VPS"
 
-echo -e " 18 ⸩  Reboot VPS"
+echo -e " 18 ⸩  Ganti Password VPS"
 
-echo -e " 19 ⸩  Speedtest VPS"
+echo -e " 19 ⸩  Reboot VPS"
 
-echo -e " 20 ⸩  Informasi Display System"
+echo -e " 20 ⸩  Speedtest VPS"
 
-echo -e " 21 ⸩  Info Script Auto Install"
+echo -e " 21 ⸩  Informasi Display System"
 
-echo -e " 22 ⸩  Restart All Service"
+echo -e " 22 ⸩  Info Script Auto Install"
 
-echo -e " 23 ⸩  Set Auto Reboot"
+echo -e " 23 ⸩  Restart All Service"
 
-echo -e " 24 ⸩  Set Multi Login SSH"
+echo -e " 24 ⸩  Set Auto Reboot"
 
-echo -e " 25 ⸩  Restart Script"
+echo -e " 25 ⸩  Set Multi Login SSH"
+
+echo -e " 26 ⸩  Restart Script"
 
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
@@ -224,47 +226,53 @@ ram
 
 18)
 
-reboot
+passwd
 
 ;;
 
 19)
 
-speedtest
+reboot
 
 ;;
 
 20)
 
-info
+speedtest
 
 ;;
 
 21)
 
-about
+info
 
 ;;
 
 22)
 
-restart
+about
 
 ;;
 
 23)
 
-auto-reboot
+restart
 
 ;;
 
 24)
 
-autokill
+auto-reboot
 
 ;;
 
 25)
+
+autokill
+
+;;
+
+26)
 
 updatee
 
