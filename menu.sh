@@ -72,41 +72,43 @@ echo -e "                      MENU SYSTEM " | lolcat
 
 echo -e "\e[32m═══════════════════════════════════════════════════════════\e[m"
 
-echo -e "  9 ⸩  Tambah Subdomain Host Untuk VPS"
+echo -e "  9 ⸩  Masukkan Domain/Host Pribadi"
 
-echo -e " 10 ⸩  Perbarui Sertifikat V2RAY"
+echo -e " 10 ⸩  Masukkan Subdomain Untuk Host Bawaan"
 
-echo -e " 11 ⸩  Ubah Port All VPN"
+echo -e " 11 ⸩  Perbarui Sertifikat V2RAY"
 
-echo -e " 12 ⸩  Autobackup Data VPS"
+echo -e " 12 ⸩  Ubah Port All VPN"
 
-echo -e " 13 ⸩  Backup Data VPS"
+echo -e " 13 ⸩  Autobackup Data VPS"
 
-echo -e " 14 ⸩  Restore Data VPS"
+echo -e " 14 ⸩  Backup Data VPS"
 
-echo -e " 15 ⸩  Menu Webmin"
+echo -e " 15 ⸩  Restore Data VPS"
 
-echo -e " 16 ⸩  Limit Bandwith Speed Server"
+echo -e " 16 ⸩  Menu Webmin"
 
-echo -e " 17 ⸩  Cek Penggunaan Ram VPS"
+echo -e " 17 ⸩  Limit Bandwith Speed Server"
 
-echo -e " 18 ⸩  Ganti Password VPS"
+echo -e " 18 ⸩  Cek Penggunaan Ram VPS"
 
-echo -e " 19 ⸩  Reboot VPS"
+echo -e " 19 ⸩  Ganti Password VPS"
 
-echo -e " 20 ⸩  Speedtest VPS"
+echo -e " 20 ⸩  Reboot VPS"
 
-echo -e " 21 ⸩  Informasi Display System"
+echo -e " 21 ⸩  Speedtest VPS"
 
-echo -e " 22 ⸩  Info Script Auto Install"
+echo -e " 22 ⸩  Informasi Display System"
 
-echo -e " 23 ⸩  Restart All Service"
+echo -e " 23 ⸩  Info Script Auto Install"
 
-echo -e " 24 ⸩  Set Auto Reboot"
+echo -e " 24 ⸩  Restart All Service"
 
-echo -e " 25 ⸩  Set Multi Login SSH"
+echo -e " 25 ⸩  Set Auto Reboot"
 
-echo -e " 26 ⸩  Restart Script"
+echo -e " 26 ⸩  Set Multi Login SSH"
+
+echo -e " 27 ⸩  Restart Script"
 
 echo -e "\e[32m══════════════════════════════════════════════════════════\e[m"
 
@@ -116,7 +118,7 @@ echo -e "\e[32m═════════════════════�
 
 echo -e ""
 
-read -p "       Masukkan Nomor  [1-25 / x] :  "  num
+read -p "       Masukkan Nomor  [1-27 / x] :  "  num
 
 echo -e ""
 
@@ -178,101 +180,107 @@ add-host
 
 10)
 
-certv2ray
+host
 
 ;;
 
 11)
 
-change-port
+certv2ray
 
 ;;
 
 12)
 
-autobackup
+change-port
 
 ;;
 
 13)
 
-backup
+autobackup
 
 ;;
 
 14)
 
-restore
+backup
 
 ;;
 
 15)
 
-wbmn
+restore
 
 ;;
 
 16)
 
-limit-speed
+wbmn
 
 ;;
 
 17)
 
-ram
+limit-speed
 
 ;;
 
 18)
 
-passwd
+ram
 
 ;;
 
 19)
 
-reboot
+passwd
 
 ;;
 
 20)
 
-speedtest
+reboot
 
 ;;
 
 21)
 
-info
+speedtest
 
 ;;
 
 22)
 
-about
+info
 
 ;;
 
 23)
 
-restart
+about
 
 ;;
 
 24)
 
-auto-reboot
+restart
 
 ;;
 
 25)
 
-autokill
+auto-reboot
 
 ;;
 
 26)
+
+autokill
+
+;;
+
+27)
 
 updatee
 
