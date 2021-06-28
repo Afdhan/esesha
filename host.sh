@@ -1,4 +1,5 @@
 #!/bin/bash
+
 DOMAIN=nezavpn.com
 echo "Domain: ${DOMAIN}" 
 echo ""
