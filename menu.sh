@@ -180,7 +180,7 @@ add-host
 
 10)
 
-host
+hostnya
 
 ;;
 
