@@ -50,7 +50,7 @@ wget -O trj "https://raw.githubusercontent.com/Afdhan/esesha/main/trj.sh"
 wget -O wss "https://raw.githubusercontent.com/Afdhan/esesha/main/wss.sh"
 wget -O vls "https://raw.githubusercontent.com/Afdhan/esesha/main/vls.sh"
 wget -O updatee "https://raw.githubusercontent.com/Afdhan/esesha/main/updatee.sh"
-wget -O host "https://raw.githubusercontent.com/Afdhan/esesha/main/host.sh"
+wget -O hostnya "https://raw.githubusercontent.com/Afdhan/esesha/main/host.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/Afdhan/esesha/main/auto-reboot.sh"
 chmod +x add-host
 chmod +x menu
@@ -91,7 +91,7 @@ chmod +x trj
 chmod +x wss
 chmod +x vls
 chmod +x updatee
-chmod +x host
+chmod +x hostnya
 chmod +x auto-reboot
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
