@@ -1,15 +1,19 @@
 #!/bin/bash
-
-DOMAIN=nezavpn.com
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+clear
+read -rp "Masukkan Domain: " -e DOMAIN
+echo ""
 echo "Domain: ${DOMAIN}" 
 echo ""
 read -rp "Masukkan Subdomain: " -e sub
-SUB_DOMAIN=${sub}.nezavpn.com
+SUB_DOMAIN=${sub}.${DOMAIN}
 CF_ID=muhammad.neizam@gmail.com
 CF_KEY=10da726480584a601ecc58b12621f0b0102ec
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
-echo "Pointing DNS Untuk Domain: ${SUB_DOMAIN}..."
+echo "Pointing DNS Untuk Domain ${SUB_DOMAIN}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
