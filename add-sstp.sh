@@ -14,10 +14,15 @@ echo "Silahkan Hubungi Admin"
 exit 0
 fi
 clear
-IP=$(wget -qO- ipinfo.io/ip);
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/stopwibu/domain)
+else
+domain=$IP
+fi
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-		read -rp "Usernew: " -e user
+		read -rp "Username: " -e user
 		CLIENT_EXISTS=$(grep -w $user /var/lib/premium-script/data-user-sstp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
@@ -28,7 +33,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 read -p "Password: " pass
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
+exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
+tnggl=$(date +"%d-%B-%Y")
 cat >> /home/sstp/sstp_account <<EOF
 $user * $pass *
 EOF
@@ -37,15 +43,17 @@ clear
 cat <<EOF
 
 ================================ | lolcat
-            SSTP VPN
+                     SSTP VPN
 ================================ | lolcat
-Server IP     : $IP
-Username      : $user
-Password      : $pass
-Port          : $sstp
-Cert          : http://$IP:81/server.crt
+Server IP/Host    : $domain
+Username       : $user
+Password       : $pass
+Port           : $sstp
+Cert           : http://$domain:85/server.crt
 ================================ | lolcat
 Aktif Selama   : $masaaktif Hari
-Berakhir Pada  : $exp
-Mod By M AFDHAN & NezaVPN
+Dibuat Pada : $tnggl
+Berakhir Pada : $exp
+---------------------------------
+- Mod By M AFDHAN & NezaVPN
 EOF

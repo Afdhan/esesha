@@ -26,13 +26,14 @@ until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
+			echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
 			exit 1
 		fi
 	done
 read -p "Password: " VPN_PASSWORD
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
+exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
+tnggl=$(date +"%d-%B-%Y")
 clear
 
 # Add or update VPN user
@@ -53,6 +54,8 @@ Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 ================================ | lolcat
 Aktif Selama   : $masaaktif Hari
-Berakhir Pada  : $exp
-Mod By M AFDHAN & NezaVPN
+Dibuat Pada : $tnggl
+Berakhir Pada : $exp
+---------------------------------
+- Mod By M AFDHAN & NezaVPN
 EOF

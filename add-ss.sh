@@ -14,16 +14,21 @@ echo "Silahkan Hubungi Admin"
 exit 0
 fi
 clear
-IP=$(wget -qO- ipinfo.io/ip);
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/stopwibu/domain)
+else
+domain=$IP
+fi
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
-tls=2443
+tls=5443
 else
 tls="$((lastport1+1))"
 fi
 if [[ $lastport2 == '' ]]; then
-http=3443
+http=7443
 else
 http="$((lastport2+1))"
 fi
@@ -36,12 +41,13 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "Nama Client Sudah Pernah Dibuat, Pilihlah Nama Yang Lain!."
+			echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
 			exit 1
 		fi
 	done
 read -p "Expired (hari): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
+exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
+tnggl=$(date +"%d-%B-%Y")
 cat > /etc/shadowsocks-libev/$user-tls.json<<END
 {   
     "server":"0.0.0.0",
@@ -81,25 +87,33 @@ systemctl start shadowsocks-libev-server@$user-http.service
 systemctl enable shadowsocks-libev-server@$user-http.service
 tmp1=$(echo -n "aes-256-cfb:${user}@${IP}:$tls" | base64 -w0)
 tmp2=$(echo -n "aes-256-cfb:${user}@${IP}:$http" | base64 -w0)
-linkss1="ss://${tmp1}?plugin=obfs-local;obfs=tls;obfs-host=bing.com"
-linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bing.com"
+linkss1="ss://${tmp1}?plugin=obfs-local;obfs=tls;obfs-host=bug-anda.com"
+linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bug-anda.com"
 echo -e "### $user $exp
 port_tls $tls
 port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
 	echo -e ""
-	echo -e "==========[ Shadowsocks ]==========" | lolcat
-	echo -e "IP/Host        : $IP"
-	echo -e "Port OBFS TLS  : $tls"
-	echo -e "Port OBFS HTTP : $http"
+	echo -e "=================================" | lolcat
+    echo -e "                 SHADOWSOCKS"
+    echo -e "=================================" | lolcat
+	echo -e "Domain/Host   : $domain"
+	echo -e "OBFS TLS  : $tls"
+	echo -e "OBFS HTTP : $http"
 	echo -e "Password       : $user"
 	echo -e "Method         : aes-256-cfb"
 	echo -e "===================================" | lolcat
-	echo -e "Link OBFS TLS  : $linkss1"
+	echo -e "                     OBFS TLS  "
+	echo -e "---------------------------------" | lolcat
+    echo -e "  $linkss1"
 	echo -e "===================================" | lolcat
-	echo -e "Link OBFS HTTP : $linkss2"
+	echo -e "                    OBFS HTTP"
+	echo -e "---------------------------------" | lolcat
+    echo -e "  $linkss2"
 	echo -e "===================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
-        echo -e "Berakhir Pada  : $exp"
-        echo -e "Mod By M AFDHAN & NezaVPN"
+    echo -e "Dibuat Pada : $tnggl"
+    echo -e "Berakhir Pada : $exp"
+    echo -e "---------------------------------" | lolcat
+    echo -e "- Mod By M AFDHAN & NezaVPN"
