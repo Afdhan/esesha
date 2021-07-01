@@ -27,8 +27,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
-			exit 1
+			echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
+                        exit 1
 		fi
 	done
 read -p "Password: " pass
@@ -43,7 +43,7 @@ clear
 cat <<EOF
 
 ================================ | lolcat
-                     SSTP VPN
+           SSTP VPN
 ================================ | lolcat
 Server IP/Host : $domain
 Username       : $user
