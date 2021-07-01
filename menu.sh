@@ -83,13 +83,13 @@ echo -e " 4 ⸩  Panel SSTP               8 ⸩  Panel Trojan"
 
 echo -e "${green}══════════════════════════════════════════════════════════${NC}"
 
-echo -e " 0 ⸩ Masuk Ke Menu System     x ⸩  Keluar Dari Terminal"
+echo -e " 0 ⸩ Masuk Ke Menu System      x ⸩  Keluar Dari Terminal"
 
 echo -e "${green}══════════════════════════════════════════════════════════${NC}"
 
 echo -e ""
 
-read -p "[ ${spin} ] Masukkan Nomor Pilihanmu :  "  num
+read -p " [ ${spin} ] Masukkan Nomor Pilihanmu :  "  num
 
 echo -e ""
 
