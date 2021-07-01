@@ -42,33 +42,33 @@ exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
 echo -e "=================================" | lolcat
-echo -e "             Trial SSH & OpenVPN "
+echo -e "       Trial SSH & OpenVPN "
 echo -e "=================================" | lolcat
 echo -e "Username       : $Login "
 echo -e "Password       : $Pass"
 echo -e "Domain         : $domain"
 echo -e "=================================" | lolcat
-echo -e "Host/IP           : $MYIP"
+echo -e "Host/IP        : $MYIP"
 echo -e "OpenSSH        : 22"
 echo -e "Dropbear       : $drop"
-echo -e "Stunnel        :$ssl"
+echo -e "Stunnel        : $ssl"
 echo -e "WebSocket      : $ws"
-echo -e "Squid       :$sqd"
+echo -e "Squid          : $sqd"
 echo -e "BadVPN         : $bad"
 echo -e "=================================" | lolcat
-echo -e "                Config OpenVPN"
+echo -e "          Config OpenVPN"
 echo -e "=================================" | lolcat
-echo -e "TCP $ovpn        : http://$domain:85/OpenVPN-TCP-$ovpn.ovpn"
-echo -e "UDP $ovpn2         : http://$domain:85/OpenVPN-UDP-$ovpn2.ovpn"
+echo -e "TCP $ovpn      : http://$domain:85/OpenVPN-TCP-$ovpn.ovpn"
+echo -e "UDP $ovpn2     : http://$domain:85/OpenVPN-UDP-$ovpn2.ovpn"
 echo -e "SSL 442        : http://$domain:85/OpenVPN-TCP-SSL.ovpn"
-echo -e "ZIP FILE        : http://$domain:85/Configs-OpenVPN.zip"
+echo -e "ZIP FILE       : http://$domain:85/Configs-OpenVPN.zip"
 echo -e "=================================" | lolcat
-echo -e "              Setting WebSocket"
+echo -e "        Setting WebSocket"
 echo -e "=================================" | lolcat
-echo -e "Setting Payload :"
+echo -e "Setting Payload "
 echo -e "GET / [protocol][crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf*2]"
 echo -e ""
-echo -e "Setting SSH :"
+echo -e "Setting SSH "
 echo -e "bimbel.ruangguru.com:$ws@$Login:$Pass"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : 1 Hari"
