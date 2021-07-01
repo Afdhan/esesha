@@ -96,24 +96,24 @@ service cron restart
 clear
 	echo -e ""
 	echo -e "=================================" | lolcat
-    echo -e "                 SHADOWSOCKS"
-    echo -e "=================================" | lolcat
+        echo -e "           SHADOWSOCKS"
+        echo -e "=================================" | lolcat
 	echo -e "Domain/Host   : $domain"
-	echo -e "OBFS TLS  : $tls"
-	echo -e "OBFS HTTP : $http"
-	echo -e "Password       : $user"
-	echo -e "Method         : aes-256-cfb"
+	echo -e "OBFS TLS      : $tls"
+	echo -e "OBFS HTTP     : $http"
+	echo -e "Password      : $user"
+	echo -e "Method        : aes-256-cfb"
 	echo -e "===================================" | lolcat
-	echo -e "                     OBFS TLS  "
+	echo -e "             OBFS TLS  "
 	echo -e "---------------------------------" | lolcat
-    echo -e "  $linkss1"
+        echo -e "  $linkss1"
 	echo -e "===================================" | lolcat
-	echo -e "                    OBFS HTTP"
+	echo -e "             OBFS HTTP"
 	echo -e "---------------------------------" | lolcat
-    echo -e "  $linkss2"
+        echo -e "  $linkss2"
 	echo -e "===================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
-    echo -e "Dibuat Pada : $tnggl"
-    echo -e "Berakhir Pada : $exp"
-    echo -e "---------------------------------" | lolcat
-    echo -e "- Mod By M AFDHAN & NezaVPN"
+        echo -e "Dibuat Pada    : $tnggl"
+        echo -e "Berakhir Pada  : $exp"
+        echo -e "---------------------------------" | lolcat
+        echo -e "- Mod By M AFDHAN & NezaVPN"
