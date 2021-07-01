@@ -90,13 +90,13 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	clear
 	echo -e ""
 	echo -e "=================================" | lolcat
-    echo -e "                   WIREGUARD"
-    echo -e "=================================" | lolcat
+        echo -e "             WIREGUARD"
+        echo -e "=================================" | lolcat
 	echo -e "Wireguard 	: http://$MYIP:85/$CLIENT_NAME.conf"
 	echo -e "===============================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
-    echo -e "Dibuat Pada : $tnggl"
-    echo -e "Berakhir Pada : $exp"
-    echo -e "---------------------------------" | lolcat
-    echo -e "- Mod By M AFDHAN & NezaVPN"
+        echo -e "Dibuat Pada    : $tnggl"
+        echo -e "Berakhir Pada  : $exp"
+        echo -e "---------------------------------" | lolcat
+        echo -e "- Mod By M AFDHAN & NezaVPN"
 	rm -f /root/wg0-client-$CLIENT_NAME.conf
