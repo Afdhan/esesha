@@ -44,17 +44,17 @@ trojanlink="trojan://${user}@${domain}:${tr}?sni=bug-anda.com#trojan"
 clear
 echo -e ""
 echo -e "=================================" | lolcat
-echo -e "                    TROJAN VPN"
+echo -e "           TROJAN VPN"
 echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
-echo -e "IP               : ${MYIP}"
-echo -e "Host         : ${domain}"
+echo -e "IP             : ${MYIP}"
+echo -e "Host           : ${domain}"
 echo -e "port           : ${tr}"
 echo -e "Key            : ${user}"
 echo -e "link           : ${trojanlink}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
-echo -e "Dibuat Pada : $tnggl"
-echo -e "Berakhir Pada : $exp"
+echo -e "Dibuat Pada    : $tnggl"
+echo -e "Berakhir Pada  : $exp"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
