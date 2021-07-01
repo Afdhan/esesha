@@ -45,15 +45,15 @@ cat <<EOF
 ================================ | lolcat
                      SSTP VPN
 ================================ | lolcat
-Server IP/Host    : $domain
+Server IP/Host : $domain
 Username       : $user
 Password       : $pass
 Port           : $sstp
 Cert           : http://$domain:85/server.crt
 ================================ | lolcat
 Aktif Selama   : $masaaktif Hari
-Dibuat Pada : $tnggl
-Berakhir Pada : $exp
+Dibuat Pada    : $tnggl
+Berakhir Pada  : $exp
 ---------------------------------
 - Mod By M AFDHAN & NezaVPN
 EOF
