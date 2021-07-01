@@ -23,12 +23,12 @@ fi
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
-tls=5443
+tls=2443
 else
 tls="$((lastport1+1))"
 fi
 if [[ $lastport2 == '' ]]; then
-http=7443
+http=3443
 else
 http="$((lastport2+1))"
 fi
@@ -105,15 +105,15 @@ clear
 	echo -e "Method        : aes-256-cfb"
 	echo -e "===================================" | lolcat
 	echo -e "             OBFS TLS  "
-	echo -e "---------------------------------" | lolcat
-        echo -e "  $linkss1"
+	echo -e "-----------------------------------" | lolcat
+        echo -e "$linkss1"
 	echo -e "===================================" | lolcat
 	echo -e "             OBFS HTTP"
-	echo -e "---------------------------------" | lolcat
-        echo -e "  $linkss2"
+	echo -e "-----------------------------------" | lolcat
+        echo -e "$linkss2"
 	echo -e "===================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
         echo -e "Dibuat Pada    : $tnggl"
         echo -e "Berakhir Pada  : $exp"
-        echo -e "---------------------------------" | lolcat
+        echo -e "-----------------------------------" | lolcat
         echo -e "- Mod By M AFDHAN & NezaVPN"
