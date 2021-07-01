@@ -12,6 +12,7 @@ echo -e "     [2]  Hapus Akuj Trojan"
 echo -e "     [3]  Perbarui Akun Trojan"
 echo -e "     [4]  Cek Login Trojan"
 echo -e "     [x]  Keluar"
+echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
 read -p "     Pilih Nomor  [1-4 / x] :  " port
@@ -34,7 +35,7 @@ clear
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada!"
+echo "Nomor Yang Anda Masukkan Salah!"
 sleep 0.5
 trj
 ;;

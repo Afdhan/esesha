@@ -12,9 +12,9 @@ echo '/sbin/shutdown -r now' >> /usr/local/bin/reboot_otomatis
 chmod +x /usr/local/bin/reboot_otomatis
 fi
 
-echo "-------------------------------------------"
+echo "================================";
 echo "          System Auto Reboot Menu          "
-echo "-------------------------------------------"
+echo "================================";
 echo "1.  Set Auto-Reboot Setiap 1 Jam"
 echo "2.  Set Auto-Reboot Setiap 6 Jam"
 echo "3.  Set Auto-Reboot Setiap 12 Jam"
@@ -24,7 +24,7 @@ echo "6.  Set Auto-Reboot Setiap 1 Bulan"
 echo "7.  Matikan Auto-Reboot"
 echo "8.  Lihat reboot log"
 echo "9.  Hapus reboot log"
-echo "-------------------------------------------"
+echo "================================";
 read -p "Pilih Nomor [1-9]: " x
 
 if test $x -eq 1; then

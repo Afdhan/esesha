@@ -101,6 +101,8 @@ clear
 echo " Script Berhasil Di Restart"
 echo " Sekarang Kamu Bisa Ubah Port Di Beberapa Layanan VPN"
 echo " Reboot 5 Detik"
+echo ""
+echo "AFDHAN - NezaVPN" | lolcat
 sleep 5
 rm -f update.sh
 reboot

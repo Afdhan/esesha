@@ -1,20 +1,18 @@
 #!/bin/bash
-# Debian 9 & 10 64bit
-# Ubuntu 18.04 & 20.04 bit
-# Centos 7 & 8 64bit 
-# ==================================================
-
-
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
 	source /etc/os-release
-	OS=$ID # debian or ubuntu
+	OS=$ID
 elif [[ -e /etc/centos-release ]]; then
 	source /etc/os-release
 	OS=centos
 fi
 
-Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
+Green_font_prefix="\033[32m"
+Red_font_prefix="\033[31m"
+Green_background_prefix="\033[42;37m"
+Red_background_prefix="\033[41;37m"
+Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[information]${Font_color_suffix}"
 
 if [[ -e /etc/wireguard/params ]]; then

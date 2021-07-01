@@ -1,5 +1,5 @@
 #!/bin/bash
-#shadowsocks-libev obfs install by Bokittampan
+#shadowsocks-libev obfs install by Horasss
 source /etc/os-release
 OS=$ID
 ver=$VERSION_ID

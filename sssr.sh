@@ -16,6 +16,7 @@ echo -e "     [6]  Perbarui Akun Shadowsocks Aktif"
 echo -e "     [7]  Cek Login Shadowsocks"
 echo -e "     [8]  Lihat Menu Lengkap SSR"
 echo -e "     [x]  Keluar"
+echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
 read -p "     Pilih Nomor  [1-8 / x] :  " port
@@ -50,7 +51,7 @@ clear
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada!"
+echo "Nomor Yang Anda Masukkan Salah!"
 sleep 0.5
 sssr
 ;;

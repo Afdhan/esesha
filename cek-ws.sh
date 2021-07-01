@@ -4,14 +4,14 @@ green='\e[0;32m'
 NC='\e[0m'
 clear
 echo -n > /tmp/other.txt
-data=( `cat /etc/v2ray/config.json | grep '^###' | cut -d ' ' -f 2`);
-echo "-------------------------------";
-echo "=====[ Vmess User Login ]=====";
-echo "-------------------------------";
+data=( `cat /etc/stopwibu/config.json | grep '^###' | cut -d ' ' -f 2`);
+echo "============================";
+echo "         VMESS USER LOGIN" | lolcat
+echo "============================";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
-akun="tidakada"
+akun="Gaada"
 fi
 echo -n > /tmp/ipvmess.txt
 data2=( `netstat -anp | grep ESTABLISHED | grep tcp6 | grep v2ray | awk '{print $5}' | cut -d: -f1 | sort | uniq`);
@@ -33,12 +33,12 @@ else
 jum2=$(cat /tmp/ipvmess.txt | nl)
 echo "user : $akun";
 echo "$jum2";
-echo "-------------------------------"
+echo "============================"
 fi
 rm -rf /tmp/ipvmess.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
-echo "-------------------------------"
+echo "============================"
 rm -rf /tmp/other.txt

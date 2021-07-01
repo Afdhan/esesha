@@ -32,12 +32,12 @@ fi
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
+			echo "Nama Sudah Ada, Harap Masukkan Nama Lain!"
 			exit 1
 		fi
 	done
 
-	echo "IPv4 Detected"
+	echo "IPv4 Terdeteksi"
 	ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
 	WG_CONFIG="/etc/wireguard/wg0.conf"
 	LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
@@ -53,8 +53,8 @@ fi
 	CLIENT_DNS_2="176.103.130.131"
 	MYIP=$(wget -qO- ifconfig.co);
 	read -p "Expired (days): " masaaktif
-	exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
-
+	exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
+    tnggl=$(date +"%d-%B-%Y")
 	# Generate key pair for the client
 	CLIENT_PRIV_KEY=$(wg genkey)
 	CLIENT_PUB_KEY=$(echo "$CLIENT_PRIV_KEY" | wg pubkey)
@@ -89,10 +89,14 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo Generate PresharedKey
 	clear
 	echo -e ""
-	echo -e "=========[ Wireguard ]=========" | lolcat
-	echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf"
+	echo -e "=================================" | lolcat
+    echo -e "                   WIREGUARD"
+    echo -e "=================================" | lolcat
+	echo -e "Wireguard 	: http://$MYIP:85/$CLIENT_NAME.conf"
 	echo -e "===============================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
-    echo -e "Berakhir Pada  : $exp"
-    echo -e "Mod By M AFDHAN & NezaVPN"
+    echo -e "Dibuat Pada : $tnggl"
+    echo -e "Berakhir Pada : $exp"
+    echo -e "---------------------------------" | lolcat
+    echo -e "- Mod By M AFDHAN & NezaVPN"
 	rm -f /root/wg0-client-$CLIENT_NAME.conf

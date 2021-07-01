@@ -5,3 +5,4 @@ NC='\e[0m'
 clear
 accel-cmd show sessions
 echo ""
+echo "============================";

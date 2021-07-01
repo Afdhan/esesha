@@ -3,14 +3,14 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 echo -n > /tmp/other.txt
-data=( `cat /etc/v2ray/vless.json | grep '^###' | cut -d ' ' -f 2`);
-echo "-------------------------------";
-echo "=====[ Vless User Login ]=====";
-echo "-------------------------------";
+data=( `cat /etc/stopwibu/vless.json | grep '^###' | cut -d ' ' -f 2`);
+echo "============================";
+echo "        VLESS USER LOGIN" | lolcat
+echo "============================";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
-akun="tidakada"
+akun="Gaada"
 fi
 echo -n > /tmp/ipvless.txt
 data2=( `netstat -anp | grep ESTABLISHED | grep tcp6 | grep v2ray | awk '{print $5}' | cut -d: -f1 | sort | uniq`);
@@ -30,15 +30,15 @@ if [[ -z "$jum" ]]; then
 echo > /dev/null
 else
 jum2=$(cat /tmp/ipvless.txt | nl)
-echo "user : $akun";
+echo "User : $akun";
 echo "$jum2";
-echo "-------------------------------"
+echo "============================";
 fi
 rm -rf /tmp/ipvmess.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
-echo "other";
+echo "Other";
 echo "$oth";
-echo "-------------------------------"
+echo "============================";
 rm -rf /tmp/other.txt
 

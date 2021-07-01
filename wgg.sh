@@ -12,6 +12,7 @@ echo -e "     [2]  Hapus Akun Wireguard"
 echo -e "     [3]  Cek Login Wireguard"
 echo -e "     [4]  Perbarui Wireguard"
 echo -e "     [x]  Keluar"
+echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
 read -p "     Pilih Nomor  [1-4 / x] :  " port
@@ -34,7 +35,7 @@ clear
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada!"
+echo "Nomor Yang Anda Masukkan Salah!"
 sleep 0.5
 wgg
 ;;

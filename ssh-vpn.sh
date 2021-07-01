@@ -1,6 +1,4 @@
 #!/bin/bash
-#
-# ==================================================
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -23,7 +21,6 @@ email=admin@nezavpn.com
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Afdhan/esesha/main/password"
 chmod +x /etc/pam.d/common-password
 
-# go to root
 cd
 # Edit file /etc/systemd/system/rc-local.service
 cat > /etc/systemd/system/rc-local.service <<-END
@@ -100,9 +97,10 @@ wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Afdhan/ese
 cd
 wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Afdhan/esesha/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
+sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7000 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500' /etc/rc.local
+sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 500' /etc/rc.local
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7000 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
@@ -162,12 +160,16 @@ accept = 443
 connect = 127.0.0.1:109
 
 [dropbear]
-accept = 222
+accept = 110
+connect = 127.0.0.1:143
+
+[dropbear]
+accept = 990
 connect = 127.0.0.1:22
 
 [dropbear]
-accept = 777
-connect = 127.0.0.1:22
+accept = 445
+connect = 127.0.0.1:109
 
 [openvpn]
 accept = 442
@@ -218,10 +220,10 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
-# banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Afdhan/esesha/main/bannerssh.conf"
-echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
+# banner /etc/banner.net
+wget -O /etc/banner.net "https://raw.githubusercontent.com/Afdhan/esesha/main/bannerssh.conf"
+echo "Banner /etc/banner.net" >>/etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/banner.net"@g' /etc/default/dropbear
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -246,6 +248,7 @@ wget -O hostnya "https://raw.githubusercontent.com/Afdhan/esesha/main/host.sh"
 wget -O add-host "https://raw.githubusercontent.com/Afdhan/esesha/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/Afdhan/esesha/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
+wget -O menuu "https://raw.githubusercontent.com/Afdhan/esesha/main/menuu.sh"
 wget -O usernew "https://raw.githubusercontent.com/Afdhan/esesha/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/Afdhan/esesha/main/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/Afdhan/esesha/main/hapus.sh"
@@ -286,6 +289,7 @@ wget -O auto-reboot "https://raw.githubusercontent.com/Afdhan/esesha/main/auto-r
 chmod +x hostnya
 chmod +x add-host
 chmod +x menu
+chmod +x menuu
 chmod +x usernew
 chmod +x trial
 chmod +x hapus

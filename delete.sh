@@ -5,7 +5,7 @@ NC='\e[0m'
 clear
                hariini=`date +%Y-%m-%d`
                echo "Terima Kasih Sudah Menghapus Akun Expired"
-               echo "--------------------------------------"
+               echo "============================";
                cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
                totalaccounts=`cat /tmp/expirelist.txt | wc -l`
                for((i=1; i<=$totalaccounts; i++ ))
@@ -37,5 +37,5 @@ clear
                fi
                done
                echo " "
-               echo "--------------------------------------"
+               echo "============================";
                echo "Script Berhasil Dijalankan!"

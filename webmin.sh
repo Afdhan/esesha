@@ -2,7 +2,11 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
+Green_font_prefix="\033[32m"
+Red_font_prefix="\033[31m"
+Green_background_prefix="\033[42;37m"
+Red_background_prefix="\033[41;37m"
+Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[Installed]${Font_color_suffix}"
 Error="${Red_font_prefix}[Not Installed]${Font_color_suffix}"
 cek=$(netstat -ntlp | grep 10000 | awk '{print $7}' | cut -d'/' -f2)
@@ -25,7 +29,7 @@ clear
 echo ""
 echo " Berhasil Install Webmin"
 echo " $IP:10000"
-echo " AutoScriptVPS By M AFDHAN"
+echo " AutoScriptVPS By M AFDHAN - NezaVPN"
 }
 function restart () {
 echo " Mulai Webmin"
@@ -35,7 +39,7 @@ echo " Mulai Uninstall Webmin"
 clear
 echo ""
 echo " Berhasil Restart Webmin"
-echo " AutoScriptVPS By M AFDHAN"
+echo " AutoScriptVPS By M AFDHAN - NezaVPN"
 }
 function uninstall () {
 echo " Menghapus Repositori Webmin"
@@ -48,7 +52,7 @@ apt autoremove --purge webmin -y > /dev/null 2>&1
 clear
 echo ""
 echo " Berhasil Uninstall Webmin"
-echo " AutoScriptVPS By M AFDHAN"
+echo " AutoScriptVPS By M AFDHAN - NezaVPN"
 }
 if [[ "$cek" = "perl" ]]; then
 sts="${Info}"
@@ -64,7 +68,7 @@ echo -e "  1. Install Webmin"
 echo -e "  2. Restart Webmin"
 echo -e "  3. Uninstall Webmin"
 echo -e " "
-echo -e " AutoScript By M AFDHAN"
+echo -e " AutoScript By M AFDHAN - NezaVPN"
 echo -e " Press CTRL+C to return"
 read -rp " Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then

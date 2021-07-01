@@ -3,9 +3,9 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 data=( `cat /var/log/trojan.log | grep -w 'authenticated as' | awk '{print $7}' | sort | uniq`);
-echo "-------------------------------";
-echo "=====[ Trojan User Login ]=====";
-echo "-------------------------------";
+echo "============================";
+echo "      TROJAN USER LOGIN" | lolcat
+echo "============================";
 for akun in "${data[@]}"
 do
 data2=( `lsof -n | grep -i ESTABLISHED | grep trojan | awk '{print $9}' | cut -d':' -f2 | grep -w 445 | cut -d- -f2 | grep -v '>127.0.0.1' | sort | uniq | cut -d'>' -f2`);
@@ -20,7 +20,7 @@ echo "$jum" > /tmp/iptrojan.txt
 fi
 done
 jum2=$(cat /tmp/iptrojan.txt | nl)
-echo "user : $akun";
+echo "User : $akun";
 echo "$jum2";
-echo "-------------------------------"
+echo "============================";
 done

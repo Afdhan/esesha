@@ -129,14 +129,14 @@ class ConnectionHandler(threading.Thread):
                 if len(PASS) != 0 and passwd == PASS:
                     self.method_CONNECT(hostPort)
                 elif len(PASS) != 0 and passwd != PASS:
-                    self.client.send('HTTP/1.1 400 WrongPass!\r\n\r\n')
+                    self.client.send('HTTP/1.1 400 Wrong-Password!\r\n\r\n')
                 elif hostPort.startswith('127.0.0.1') or hostPort.startswith('localhost'):
                     self.method_CONNECT(hostPort)
                 else:
                     self.client.send('HTTP/1.1 403 Forbidden!\r\n\r\n')
             else:
                 print '- No X-Real-Host!'
-                self.client.send('HTTP/1.1 400 NoXRealHost!\r\n\r\n')
+                self.client.send('HTTP/1.1 400 No-X-Real-Host!\r\n\r\n')
 
         except Exception as e:
             self.log += ' - error: ' + e.strerror

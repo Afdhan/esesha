@@ -7,7 +7,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/shadowsocksr/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Anda Tidak Memiliki Klien!"
+		echo "User Tidak Ada!"
 		exit 1
 	fi
 
@@ -32,7 +32,7 @@ d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 exp3=$(($exp2 + $masaaktif))
-exp4=`date -d "$exp3 days" +"%d-%m-%Y"`
+exp4=`date -d "$exp3 days" +"%d-%B-%Y"`
 tgl=$(echo "$exp4" | cut -d- -f3)
 bln=$(echo "$exp4" | cut -d- -f2)
 sed -i "s/### $user $exp/### $user $exp4/g" /usr/local/shadowsocksr/akun.conf

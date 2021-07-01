@@ -20,9 +20,9 @@ clear
 echo -e ""
 echo -e "========================================" | lolcat
 echo -e ""
-echo -e "    Username        :  $User"
-echo -e "    Days Added      :  $Days Days"
-echo -e "    Expires on      :  $Expiration_Display"
+echo -e "    Nama        :  $User"
+echo -e "    Expirasi      :  $Days Days"
+echo -e "    Expired      :  $Expiration_Display"
 echo -e ""
 echo -e "========================================" | lolcat
 else

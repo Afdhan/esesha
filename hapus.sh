@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-read -p "Masukkan Username SSH Untuk Menghapus : " Pengguna
+read -p "Masukkan Username SSH Yang Mau Dihapus : " Pengguna
 
 if getent passwd $Pengguna > /dev/null 2>&1; then
         userdel $Pengguna

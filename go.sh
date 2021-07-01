@@ -296,21 +296,21 @@ startV2ray(){
 
 installV2Ray(){
     # Install V2Ray binary to /usr/bin/v2ray
-    mkdir -p '/etc/v2ray' '/var/log/v2ray' && \
+    mkdir -p '/etc/stopwibu' '/var/log/v2ray' && \
     unzip -oj "$1" "$2v2ray" "$2v2ctl" "$2geoip.dat" "$2geosite.dat" -d '/usr/bin/v2ray' && \
     chmod +x '/usr/bin/v2ray/v2ray' '/usr/bin/v2ray/v2ctl' || {
         colorEcho ${RED} "Failed to copy V2Ray binary and resources."
         return 1
     }
 
-    # Install V2Ray server config to /etc/v2ray
-    if [ ! -f '/etc/v2ray/config.json' ]; then
+    # Install V2Ray server config to /etc/stopwibu
+    if [ ! -f '/etc/stopwibu/config.json' ]; then
         local PORT="$(($RANDOM + 10000))"
         local UUID="$(cat '/proc/sys/kernel/random/uuid')"
 
         unzip -pq "$1" "$2vpoint_vmess_freedom.json" | \
         sed -e "s/10086/${PORT}/g; s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g;" - > \
-        '/etc/v2ray/config.json' || {
+        '/etc/stopwibu/config.json' || {
             colorEcho ${YELLOW} "Failed to create V2Ray configuration file. Please create it manually."
             return 1
         }
@@ -335,7 +335,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/v2ray/v2ray -config /etc/v2ray/config.json
+ExecStart=/usr/bin/v2ray/v2ray -config /etc/stopwibu/config.json
 Restart=on-failure
 
 [Install]
@@ -351,7 +351,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/v2ray/v2ray -config /etc/v2ray/%i.json
+ExecStart=/usr/bin/v2ray/v2ray -config /etc/stopwibu/%i.json
 Restart=on-failure
  
 [Install]

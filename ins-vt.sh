@@ -23,10 +23,10 @@ mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
 chmod +x /root/.acme.sh/acme.sh
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
+~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/stopwibu/v2ray.crt --keypath /etc/stopwibu/v2ray.key --ecc
 service squid start
 uuid=$(cat /proc/sys/kernel/random/uuid)
-cat> /etc/v2ray/config.json << END
+cat> /etc/stopwibu/config.json << END
 {
   "log": {
     "access": "/var/log/v2ray/access.log",
@@ -35,7 +35,7 @@ cat> /etc/v2ray/config.json << END
   },
   "inbounds": [
     {
-      "port": 8443,
+      "port": 1443,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -52,15 +52,15 @@ cat> /etc/v2ray/config.json << END
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "etc/v2ray/v2ray.crt",
-              "keyFile": "/etc/v2ray/v2ray.key"
+              "certificateFile": "etc/stopwibu/v2ray.crt",
+              "keyFile": "/etc/stopwibu/v2ray.key"
             }
           ]
         },
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/stopwibu",
           "headers": {
-            "Host": ""
+            "Host": "masukkanbug"
           }
          },
         "quicSettings": {},
@@ -123,7 +123,7 @@ cat> /etc/v2ray/config.json << END
   }
 }
 END
-cat> /etc/v2ray/none.json << END
+cat> /etc/stopwibu/none.json << END
 {
   "log": {
     "access": "/var/log/v2ray/access.log",
@@ -132,7 +132,7 @@ cat> /etc/v2ray/none.json << END
   },
   "inbounds": [
     {
-      "port": 80,
+      "port": 8989,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -146,9 +146,9 @@ cat> /etc/v2ray/none.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/stopwibu",
           "headers": {
-            "Host": ""
+            "Host": "masukkanbug"
           }
          },
         "quicSettings": {},
@@ -211,7 +211,7 @@ cat> /etc/v2ray/none.json << END
   }
 }
 END
-cat> /etc/v2ray/vless.json << END
+cat> /etc/stopwibu/vless.json << END
 {
   "log": {
     "access": "/var/log/v2ray/access2.log",
@@ -220,7 +220,7 @@ cat> /etc/v2ray/vless.json << END
   },
   "inbounds": [
     {
-      "port": 2083,
+      "port": 2085,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -237,15 +237,15 @@ cat> /etc/v2ray/vless.json << END
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "etc/v2ray/v2ray.crt",
-              "keyFile": "/etc/v2ray/v2ray.key"
+              "certificateFile": "etc/stopwibu/v2ray.crt",
+              "keyFile": "/etc/stopwibu/v2ray.key"
             }
           ]
         },
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/stopwibu",
           "headers": {
-            "Host": ""
+            "Host": "masukkanbug"
           }
          },
         "quicSettings": {},
@@ -307,7 +307,7 @@ cat> /etc/v2ray/vless.json << END
   }
 }
 END
-cat> /etc/v2ray/vnone.json << END
+cat> /etc/stopwibu/vnone.json << END
 {
   "log": {
     "access": "/var/log/v2ray/access2.log",
@@ -316,7 +316,7 @@ cat> /etc/v2ray/vnone.json << END
   },
   "inbounds": [
     {
-      "port": 8880,
+      "port": 8180,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -330,9 +330,9 @@ cat> /etc/v2ray/vnone.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/stopwibu",
           "headers": {
-            "Host": ""
+            "Host": "masukkanbug"
           }
          },
         "quicSettings": {},
@@ -407,8 +407,8 @@ cat <<EOF > /etc/trojan/config.json
     ],
     "log_level": 1,
     "ssl": {
-        "cert": "/etc/v2ray/v2ray.crt",
-        "key": "/etc/v2ray/v2ray.key",
+        "cert": "/etc/stopwibu/v2ray.crt",
+        "key": "/etc/stopwibu/v2ray.key",
         "key_password": "",
         "cipher": "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384",
         "cipher_tls13": "TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384",
@@ -480,16 +480,16 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 systemctl daemon-reload
-systemctl enable v2ray@none.service
-systemctl start v2ray@none.service
-systemctl enable v2ray@vless.service
-systemctl start v2ray@vlessservice
-systemctl enable v2ray@vnone.service
-systemctl start v2ray@vnone.service
+systemctl enable stopwibu@none.service
+systemctl start stopwibu@none.service
+systemctl enable stopwibu@vless.service
+systemctl start stopwibu@vless.service
+systemctl enable stopwibu@vnone.service
+systemctl start stopwibu@vnone.service
 systemctl restart trojan
 systemctl enable trojan
-systemctl restart v2ray
-systemctl enable v2ray
+systemctl restart stopwibu
+systemctl enable stopwibu
 cd /usr/bin
 wget -O add-ws "https://raw.githubusercontent.com/Afdhan/esesha/main/add-ws.sh"
 wget -O add-vless "https://raw.githubusercontent.com/Afdhan/esesha/main/add-vless.sh"
@@ -519,5 +519,5 @@ chmod +x renew-tr
 chmod +x certv2ray
 cd
 rm -f ins-vt.sh
-mv /root/domain /etc/v2ray
+mv /root/domain /etc/stopwibu
 

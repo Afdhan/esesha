@@ -18,6 +18,7 @@ echo -e "     [8]  Pengaturan AutoKill SSH"
 echo -e "     [9]  Cek User Multi Login SSH"
 echo -e "     [10] Restart Service Dropbear, Squid3"
 echo -e "     [x]  Keluar"
+echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
 read -p "     Pilih Nomor  [1-10 / x] :  " port
@@ -58,7 +59,7 @@ clear
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada!"
+echo "Nomor Yang Anda Masukkan Salah!"
 sleep 0.5
 tessh
 ;;
