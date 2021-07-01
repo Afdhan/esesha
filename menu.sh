@@ -89,7 +89,7 @@ echo -e "${green}═════════════════════
 
 echo -e ""
 
-read -p " [ ${spin} ] Masukkan Nomor Pilihanmu :  "  num
+read -p " [ # ] Masukkan Nomor Pilihanmu :  "  num
 
 echo -e ""
 
