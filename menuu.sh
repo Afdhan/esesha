@@ -53,10 +53,10 @@ fi
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-    echo -e "${red}Waktu        :${NC} $jam"
-    echo -e "${red}Hari            :${NC}  $hari"
-    echo -e "${red}Tanggal     :${NC} $tnggl"
-    echo -e "${green}══════════════════════════════════════════════════════════${NC}"
+        echo -e "${red}Waktu               :${NC} $jam"
+        echo -e "${red}Hari                :${NC} $hari"
+        echo -e "${red}Tanggal             :${NC} $tnggl"
+        echo -e "${green}══════════════════════════════════════════════════════════${NC}"
 	echo -e "${red}CPU Model           :${NC} $cname"
 	echo -e "${red}Number Of Cores     :${NC}  $cores"
 	echo -e "${red}CPU Frequency       :${NC} $freq MHz"
@@ -73,35 +73,35 @@ echo -e "                      MENU SYSTEM " | lolcat
 
 echo -e "${green}═══════════════════════════════════════════════════════════${NC}"
 
-echo -e "  1 ⸩  Masukkan Domain/Host       11 ⸩  Limit Bandwith Server"
+echo -e " 1 ⸩  Masukkan Domain/Host              11 ⸩  Limit Bandwith Server"
 
-echo -e " 2 ⸩  Masukkan Subdomain       12 ⸩  Cek Ram VPS"
+echo -e "  2 ⸩  Masukkan Subdomain               12 ⸩  Cek Ram VPS"
 
-echo -e " 3 ⸩  Perbarui Sertifikat V2RAY    13 ⸩  Ganti Password VPS"
+echo -e "  3 ⸩  Perbarui Sertifikat V2RAY        13 ⸩  Ganti Password VPS"
 
-echo -e " 4 ⸩  Ubah Port VPN          14 ⸩  Reboot VPS"
+echo -e "  4 ⸩  Ubah Port VPN                    14 ⸩  Reboot VPS"
 
-echo -e " 5 ⸩  Autobackup Data VPS         15 ⸩  Speedtest VPS"
+echo -e "  5 ⸩  Autobackup Data VPS              15 ⸩  Speedtest VPS"
 
-echo -e " 6 ⸩  Backup Data VPS        16 ⸩  Informasi Display System"
+echo -e "  6 ⸩  Backup Data VPS                  16 ⸩  Informasi Display System"
 
-echo -e " 7 ⸩  Restore Data VPS         17 ⸩  Info Script Auto Install"
+echo -e "  7 ⸩  Restore Data VPS                 17 ⸩  Info Script Auto Install"
 
-echo -e " 8 ⸩  Menu Webmin            18 ⸩  Restart Service"
+echo -e "  8 ⸩  Menu Webmin                      18 ⸩  Restart Service"
 
-echo -e " 9 ⸩  Atur Auto Reboot         19 ⸩  Atur Multi Login SSH"
+echo -e "  9 ⸩  Atur Auto Reboot                 19 ⸩  Atur Multi Login SSH"
 
-echo -e " 10 ⸩  Edit Banner SSH           20 ⸩  Restart Script"
+echo -e " 10 ⸩  Edit Banner SSH                  20 ⸩  Restart Script"
 
 echo -e "${green}══════════════════════════════════════════════════════════${NC}"
 
-echo -e " 0 ⸩ Kembali Ke Menu Utama     x ⸩  Keluar Dari Terminal"
+echo -e "  0 ⸩ Kembali Ke Menu Utama              x ⸩  Keluar Dari Terminal"
 
 echo -e "${green}══════════════════════════════════════════════════════════${NC}"
 
 echo -e ""
 
-read -p "[ ${spin} ] Masukkan Nomor Pilihanmu :  "  num
+read -p "  [ ${spin} ] Masukkan Nomor Pilihanmu :  "  num
 
 echo -e ""
 
