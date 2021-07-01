@@ -49,12 +49,12 @@ cat <<EOF
 ================================ | lolcat
            PPTP VPN
 ================================ | lolcat
-Server IP    : $PUBLIC_IP
-Username     : $VPN_USER
-Password     : $VPN_PASSWORD
+Server IP     : $PUBLIC_IP
+Username      : $VPN_USER
+Password      : $VPN_PASSWORD
 ================================ | lolcat
-Aktif Selama   : $masaaktif Hari
-Dibuat Pada : $tnggl
+Aktif Selama  : $masaaktif Hari
+Dibuat Pada   : $tnggl
 Berakhir Pada : $exp
 ---------------------------------
 - Mod By M AFDHAN & NezaVPN
