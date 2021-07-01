@@ -35,7 +35,7 @@ cat> /etc/stopwibu/config.json << END
   },
   "inbounds": [
     {
-      "port": 1443,
+      "port": 8443,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -60,7 +60,7 @@ cat> /etc/stopwibu/config.json << END
         "wsSettings": {
           "path": "/stopwibu",
           "headers": {
-            "Host": "masukkanbug"
+            "Host": "bug-anda.com"
           }
          },
         "quicSettings": {},
@@ -132,7 +132,7 @@ cat> /etc/stopwibu/none.json << END
   },
   "inbounds": [
     {
-      "port": 8989,
+      "port": 80,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -148,7 +148,7 @@ cat> /etc/stopwibu/none.json << END
         "wsSettings": {
           "path": "/stopwibu",
           "headers": {
-            "Host": "masukkanbug"
+            "Host": "bug-anda.com"
           }
          },
         "quicSettings": {},
@@ -220,7 +220,7 @@ cat> /etc/stopwibu/vless.json << END
   },
   "inbounds": [
     {
-      "port": 2085,
+      "port": 2083,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -316,7 +316,7 @@ cat> /etc/stopwibu/vnone.json << END
   },
   "inbounds": [
     {
-      "port": 8180,
+      "port": 8880,
       "protocol": "vless",
       "settings": {
         "clients": [
