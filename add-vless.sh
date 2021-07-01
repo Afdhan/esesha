@@ -49,7 +49,7 @@ systemctl restart stopwibu@vnone
 clear
 echo -e ""
 echo -e "=================================" | lolcat
-echo -e "                   V2RAY/VLESS"
+echo -e "          V2RAY/VLESS"
 echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
@@ -60,16 +60,16 @@ echo -e "Encryption     : none"
 echo -e "network        : ws"
 echo -e "path           : /stopwibu"
 echo -e "=================================" | lolcat
-echo -e "                   VLESS TLS"
+echo -e "           VLESS TLS"
 echo -e "---------------------------------" | lolcat
 echo -e "  ${vlesslink1}"
 echo -e "=================================" | lolcat
-echo -e "                VLESS NON-TLS"
+echo -e "         VLESS NON-TLS"
 echo -e "---------------------------------" | lolcat
 echo -e "  ${vlesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
-echo -e "Dibuat Pada : $tnggl"
-echo -e "Berakhir Pada : $exp"
+echo -e "Dibuat Pada    : $tnggl"
+echo -e "Berakhir Pada  : $exp"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
