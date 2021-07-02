@@ -108,6 +108,20 @@ chmod +x vls
 chmod +x updatee
 chmod +x hostnya
 chmod +x auto-reboot
+chmod +x add-ws
+chmod +x add-vless
+chmod +x add-tr
+chmod +x del-ws
+chmod +x del-vless
+chmod +x del-tr
+chmod +x cek-ws
+chmod +x cek-vless
+chmod +x cek-tr
+chmod +x renew-ws
+chmod +x renew-vless
+chmod +x renew-tr
+chmod +x certv2ray
+chmod +x trialws
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 cd
