@@ -244,7 +244,6 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O hostnya "https://raw.githubusercontent.com/Afdhan/esesha/main/host.sh"
 wget -O add-host "https://raw.githubusercontent.com/Afdhan/esesha/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/Afdhan/esesha/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
@@ -286,7 +285,6 @@ wget -O wss "https://raw.githubusercontent.com/Afdhan/esesha/main/wss.sh"
 wget -O vls "https://raw.githubusercontent.com/Afdhan/esesha/main/vls.sh"
 wget -O updatee "https://raw.githubusercontent.com/Afdhan/esesha/main/updatee.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/Afdhan/esesha/main/auto-reboot.sh"
-chmod +x hostnya
 chmod +x add-host
 chmod +x menu
 chmod +x menuu
