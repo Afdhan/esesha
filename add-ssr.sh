@@ -62,19 +62,19 @@ echo -e ""
 echo -e "=================================" | lolcat
 echo -e "        SHADOWSOCKSR/SSR"
 echo -e "=================================" | lolcat
-echo -e " Host          : ${domain}"
-echo -e " IP            : ${MYIP}"
-echo -e " Port          : ${ssr_port}"
-echo -e " Password      : ${ssr_password}"
-echo -e " Encryption    : ${ssr_method}"
-echo -e " Protocol      : ${Red_font_prefix}${ssr_protocol}"
-echo -e " Obfs          : ${Red_font_prefix}${ssr_obfs}"
-echo -e " Device limit  : ${ssr_protocol_param}"
-echo -e " =================================" | lolcat
+echo -e "Host          : ${domain}"
+echo -e "IP            : ${MYIP}"
+echo -e "Port          : ${ssr_port}"
+echo -e "Password      : ${ssr_password}"
+echo -e "Encryption    : ${ssr_method}"
+echo -e "Protocol      : ${Red_font_prefix}${ssr_protocol}"
+echo -e "Obfs          : ${Red_font_prefix}${ssr_obfs}"
+echo -e "Device limit  : ${ssr_protocol_param}"
+echo -e "=================================" | lolcat
 echo -e "             LINK SSR      "
 echo -e "---------------------------------" | lolcat
 echo -e "  ${ssr_link}"
-echo -e " =================================" | lolcat
+echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
 echo -e "Berakhir Pada  : $exp"
