@@ -20,17 +20,6 @@ color2='\e[34;1m'
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-spinner=( 0oooo o0ooo oo0oo ooo0o oooo0 )
-spin () {
-  while [ 1 ]
-  do 
-    for i in "${spinner[@]}"
-     do
-       echo -ne "\r$i"
-       sleep 0.2
-    done
-  done
- }
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
@@ -169,9 +158,123 @@ trj
 
 ;;
 
-0)
+9)
 
-menuu
+add-host
+
+;;
+
+10)
+
+hostnya
+
+;;
+
+11)
+
+certv2ray
+
+;;
+
+12)
+
+change-port
+
+;;
+
+13)
+
+autobackup
+
+;;
+
+14)
+
+backup
+
+;;
+
+15)
+
+restore
+
+;;
+
+16)
+
+wbmn
+
+;;
+
+17)
+
+auto-reboot
+
+;;
+
+18)
+
+nano /etc/banner.net
+
+;;
+
+19)
+
+limit-speed
+
+;;
+
+20)
+
+ram
+
+;;
+
+21)
+
+passwd
+
+;;
+
+22)
+
+reboot
+
+;;
+
+23)
+
+speedtest
+
+;;
+
+24)
+
+info
+
+;;
+
+25)
+
+about
+
+;;
+
+26)
+
+restart
+
+;;
+
+27)
+
+autokill
+
+;;
+
+28)
+
+updatee
 
 ;;
 
