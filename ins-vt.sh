@@ -504,6 +504,7 @@ wget -O renew-ws "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-ws.
 wget -O renew-vless "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-vless.sh"
 wget -O renew-tr "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-tr.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Afdhan/esesha/main/cert.sh"
+wget -O trialws "https://raw.githubusercontent.com/Afdhan/esesha/main/trialws.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
@@ -514,9 +515,10 @@ chmod +x cek-ws
 chmod +x cek-vless
 chmod +x cek-tr
 chmod +x renew-ws
-cmod +x renew-vless
+chmod +x renew-vless
 chmod +x renew-tr
 chmod +x certv2ray
+chmod +x trialws
 cd
 rm -f ins-vt.sh
 mv /root/domain /etc/stopwibu
