@@ -16,7 +16,7 @@ fi
 clear
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-domain=$(cat /etc/stopwibu/domain)
+domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
@@ -28,10 +28,10 @@ tnggl=$(date +"%T")
 read -p "Expired (hours): " ktf
 exp=`date -d "$ktf hour" +"%T"`
 sed -i '/#tls$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/stopwibu/config.json
+},{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
 sed -i '/#none$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/stopwibu/none.json
-cat>/etc/stopwibu/$user-tls.json<<EOF
+},{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/none.json
+cat>/etc/v2ray/$user-tls.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
@@ -40,13 +40,13 @@ cat>/etc/stopwibu/$user-tls.json<<EOF
       "id": "${uuid}",
       "aid": "2",
       "net": "ws",
-      "path": "/stopwibu",
+      "path": "/v2ray",
       "type": "none",
       "host": "",
       "tls": "tls"
 }
 EOF
-cat>/etc/stopwibu/$user-none.json<<EOF
+cat>/etc/v2ray/$user-none.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
@@ -55,7 +55,7 @@ cat>/etc/stopwibu/$user-none.json<<EOF
       "id": "${uuid}",
       "aid": "2",
       "net": "ws",
-      "path": "/stopwibu",
+      "path": "/v2ray",
       "type": "none",
       "host": "${domain}",
       "tls": "none"
@@ -63,10 +63,10 @@ cat>/etc/stopwibu/$user-none.json<<EOF
 EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
-vmesslink1="vmess://$(base64 -w 0 /etc/stopwibu/$user-tls.json)"
-vmesslink2="vmess://$(base64 -w 0 /etc/stopwibu/$user-none.json)"
-systemctl restart stopwibu
-systemctl restart stopwibu@none
+vmesslink1="vmess://$(base64 -w 0 /etc/v2ray/$user-tls.json)"
+vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-none.json)"
+systemctl restart v2ray
+systemctl restart v2ray@none
 service cron restart
 clear
 echo -e ""
@@ -81,7 +81,7 @@ echo -e "id             : ${uuid}"
 echo -e "alterId        : 2"
 echo -e "Security       : auto"
 echo -e "network        : ws"
-echo -e "path           : /stopwibu"
+echo -e "path           : /v2ray"
 echo -e "=================================" | lolcat
 echo -e "           VMESS TLS"
 echo -e "---------------------------------" | lolcat
