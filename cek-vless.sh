@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 echo -n > /tmp/other.txt
-data=( `cat /etc/stopwibu/vless.json | grep '^###' | cut -d ' ' -f 2`);
+data=( `cat /etc/v2ray/vless.json | grep '^###' | cut -d ' ' -f 2`);
 echo "============================";
 echo "        VLESS USER LOGIN" | lolcat
 echo "============================";
