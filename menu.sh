@@ -29,7 +29,7 @@ hari=$(date +"%A")
 tnggl=$(date +"%d-%B-%Y")
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-domain=$(cat /etc/stopwibu/domain)
+domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
