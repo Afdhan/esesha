@@ -49,7 +49,7 @@ Server IP/Host : $domain
 Username       : $user
 Password       : $pass
 Port           : $sstp
-Cert           : http://$domain:85/server.crt
+Cert           : http://$domain:81/server.crt
 ================================ | lolcat
 Aktif Selama   : $masaaktif Hari
 Dibuat Pada    : $tnggl
