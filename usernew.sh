@@ -58,10 +58,10 @@ echo -e "BadVPN         : $bad"
 echo -e "=================================" | lolcat
 echo -e "         Config OpenVPN"
 echo -e "=================================" | lolcat
-echo -e "TCP $ovpn      : http://$domain:85/OpenVPN-TCP-$ovpn.ovpn"
-echo -e "UDP $ovpn2     : http://$domain:85/OpenVPN-UDP-$ovpn2.ovpn"
-echo -e "SSL 442        : http://$domain:85/OpenVPN-TCP-SSL.ovpn"
-echo -e "ZIP FILE       : http://$domain:85/Configs-OpenVPN.zip"
+echo -e "TCP $ovpn      : http://$domain:81/OpenVPN-TCP-$ovpn.ovpn"
+echo -e "UDP $ovpn2     : http://$domain:81/OpenVPN-UDP-$ovpn2.ovpn"
+echo -e "SSL 442        : http://$domain:81/OpenVPN-TCP-SSL.ovpn"
+echo -e "ZIP FILE       : http://$domain:81/Configs-OpenVPN.zip"
 echo -e "=================================" | lolcat
 echo -e "        Setting WebSocket"
 echo -e "=================================" | lolcat
