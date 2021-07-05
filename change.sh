@@ -15,6 +15,7 @@ echo -e "     [6]  Ubah Port Trojan"
 echo -e "     [7]  Ubah Port Squid"
 echo -e "     [8]  Ubah Port SSTP"
 echo -e "     [x]  Keluar"
+echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
 read -p "     Pilih Nomor [1-8 / x] :  " port
