@@ -92,8 +92,8 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo -e "=================================" | lolcat
         echo -e "             WIREGUARD"
         echo -e "=================================" | lolcat
-	echo -e "Wireguard 	: http://$MYIP:85/$CLIENT_NAME.conf"
-	echo -e "===============================" | lolcat
+	echo -e "Wireguard 	: http://$MYIP:81/$CLIENT_NAME.conf"
+	echo -e "=================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
         echo -e "Dibuat Pada    : $tnggl"
         echo -e "Berakhir Pada  : $exp"
