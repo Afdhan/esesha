@@ -18,7 +18,7 @@ fi
 clear
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-domain=$(cat /etc/stopwibu/domain)
+domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
@@ -26,7 +26,7 @@ tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "User: " -e user
-		CLIENT_EXISTS=$(grep -w $user /etc/stopwibu/vless.json | wc -l)
+		CLIENT_EXISTS=$(grep -w $user /etc/v2ray/vless.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -39,13 +39,13 @@ tnggl=$(date +"%d-%B-%Y")
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
 sed -i '/#tls$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/stopwibu/vless.json
+},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vless.json
 sed -i '/#none$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/stopwibu/vnone.json
-vlesslink1="vless://${uuid}@${domain}:$tls?path=/stopwibu&security=tls&encryption=none&type=ws#${user}"
-vlesslink2="vless://${uuid}@${domain}:$none?path=/stopwibu&encryption=none&type=ws#${user}"
-systemctl restart stopwibu@vless
-systemctl restart stopwibu@vnone
+},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vnone.json
+vlesslink1="vless://${uuid}@${domain}:$tls?path=/v2ray&security=tls&encryption=none&type=ws#${user}"
+vlesslink2="vless://${uuid}@${domain}:$none?path=/v2ray&encryption=none&type=ws#${user}"
+systemctl restart v2ray@vless
+systemctl restart v2ray@vnone
 clear
 echo -e ""
 echo -e "=================================" | lolcat
@@ -58,15 +58,15 @@ echo -e "port none TLS  : $none"
 echo -e "id             : ${uuid}"
 echo -e "Encryption     : none"
 echo -e "network        : ws"
-echo -e "path           : /stopwibu"
+echo -e "path           : /v2ray"
 echo -e "=================================" | lolcat
 echo -e "           VLESS TLS"
 echo -e "---------------------------------" | lolcat
-echo -e "  ${vlesslink1}"
+echo -e "${vlesslink1}"
 echo -e "=================================" | lolcat
 echo -e "         VLESS NON-TLS"
 echo -e "---------------------------------" | lolcat
-echo -e "  ${vlesslink2}"
+echo -e "${vlesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
