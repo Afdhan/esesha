@@ -4,9 +4,9 @@ green='\e[0;32m'
 NC='\e[0m'
 clear
 echo -n > /tmp/other.txt
-data=( `cat /etc/stopwibu/config.json | grep '^###' | cut -d ' ' -f 2`);
+data=( `cat /etc/v2ray/config.json | grep '^###' | cut -d ' ' -f 2`);
 echo "============================";
-echo "         VMESS USER LOGIN" | lolcat
+echo "       VMESS USER LOGIN" | lolcat
 echo "============================";
 for akun in "${data[@]}"
 do
