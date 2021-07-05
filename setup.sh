@@ -81,7 +81,7 @@ echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
 echo "   - WebSocket               : 2086"  | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080 (limit to IP SSH)"  | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
-echo "   - Nginx                   : 85"  | tee -a log-install.txt
+echo "   - Nginx                   : 81"  | tee -a log-install.txt
 echo "   - Wireguard               : 7070"  | tee -a log-install.txt
 echo "   - L2TP/IPSEC VPN          : 1701"  | tee -a log-install.txt
 echo "   - PPTP VPN                : 1732"  | tee -a log-install.txt
