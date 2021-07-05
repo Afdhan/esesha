@@ -19,7 +19,7 @@ clear
 uuid=$(cat /etc/trojan/uuid.txt)
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-domain=$(cat /etc/stopwibu/domain)
+domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
