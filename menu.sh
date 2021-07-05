@@ -214,7 +214,7 @@ auto-reboot
 
 18)
 
-nano /etc/banner.net
+nano /etc/issue.net
 
 ;;
 
