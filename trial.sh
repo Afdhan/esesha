@@ -66,13 +66,13 @@ echo -e "=================================" | lolcat
 echo -e "        Setting WebSocket"
 echo -e "=================================" | lolcat
 echo -e "Setting Payload "
-echo -e "GET / [protocol][crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf*2]"
+echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e ""
 echo -e "Setting SSH "
 echo -e "bimbel.ruangguru.com:$ws@$Login:$Pass"
 echo -e "=================================" | lolcat
-echo -e "Aktif Selama   : 1 Hari"
-echo -e "Dibuat Pada : $tnggl"
+echo -e "Aktif Selama  : 1 Hari"
+echo -e "Dibuat Pada   : $tnggl"
 echo -e "Berakhir Pada : $exp"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
