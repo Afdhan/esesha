@@ -76,25 +76,25 @@ echo -e "                      MENU SYSTEM " | lolcat
 
 echo -e "${green}═══════════════════════════════════════════════════════════${NC}"
 
-echo -e "  9 ⸩  Masukkan Domain/Host             19 ⸩  Limit Bandwith Server"
+echo -e "  9 ⸩  Masukkan Host          19 ⸩  Limit Bandwith"
 
-echo -e " 10 ⸩  Masukkan Subdomain               20 ⸩  Cek Ram VPS"
+echo -e " 10 ⸩  Masukkan Subdomain     20 ⸩  Ram VPS"
 
-echo -e " 11 ⸩  Perbarui Sertifikat V2RAY        21 ⸩  Ganti Password VPS"
+echo -e " 11 ⸩  Sertifikat V2RAY       21 ⸩  Ganti Password"
 
-echo -e " 12 ⸩  Ubah Port VPN                    22 ⸩  Reboot VPS"
+echo -e " 12 ⸩  Ubah Port VPN          22 ⸩  Reboot"
 
-echo -e " 13 ⸩  Autobackup Data VPS              23 ⸩  Speedtest VPS"
+echo -e " 13 ⸩  Autobackup VPS         23 ⸩  Speedtest"
 
-echo -e " 14 ⸩  Backup Data VPS                  24 ⸩  Informasi Display System"
+echo -e " 14 ⸩  Backup VPS             24 ⸩  Informasi System"
 
-echo -e " 15 ⸩  Restore Data VPS                 25 ⸩  Info Script Auto Install"
+echo -e " 15 ⸩  Restore VPS            25 ⸩  Info Script"
 
-echo -e " 16 ⸩  Menu Webmin                      26 ⸩  Restart Service"
+echo -e " 16 ⸩  Menu Webmin            26 ⸩  Restart Service"
 
-echo -e " 17 ⸩  Atur Auto Reboot                 27 ⸩  Atur Multi Login SSH"
+echo -e " 17 ⸩  Auto Reboot            27 ⸩  Multi Login SSH"
 
-echo -e " 18 ⸩  Edit Banner SSH                  28 ⸩  Restart Script"
+echo -e " 18 ⸩  Edit Banner SSH        28 ⸩  Restart Script"
 
 echo -e "${green}══════════════════════════════════════════════════════════${NC}"
 
