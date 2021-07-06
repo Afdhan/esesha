@@ -8,7 +8,7 @@ echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
 echo -e "     [1]  Buat Akun Trojan"
-echo -e "     [2]  Hapus Akuj Trojan"
+echo -e "     [2]  Hapus Akun Trojan"
 echo -e "     [3]  Perbarui Akun Trojan"
 echo -e "     [4]  Cek Login Trojan"
 echo -e "     [x]  Keluar"
