@@ -1,3 +1,6 @@
+#!/bin/bash
+# Proxy For Edukasi & Imclass
+# ==============================
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/edu-proxy "https://raw.githubusercontent.com/Afdhan/esesha/main/edu.py"
