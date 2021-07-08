@@ -483,7 +483,7 @@ systemctl daemon-reload
 systemctl enable v2ray@none.service
 systemctl start v2ray@none.service
 systemctl enable v2ray@vless.service
-systemctl start v2ray@vless.service
+systemctl start v2ray@vlessservice
 systemctl enable v2ray@vnone.service
 systemctl start v2ray@vnone.service
 systemctl restart trojan
@@ -514,7 +514,7 @@ chmod +x cek-ws
 chmod +x cek-vless
 chmod +x cek-tr
 chmod +x renew-ws
-chmod +x renew-vless
+cmod +x renew-vless
 chmod +x renew-tr
 chmod +x certv2ray
 cd

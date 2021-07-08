@@ -1,6 +1,10 @@
 #!/bin/bash
+# Debian 9 & 10 64bit
+# Ubuntu 18.04 & 20.04 bit
+# Centos 7 & 8 64bit 
+# ==================================================
 
-VPN_IPSEC_PSK='vpnsantuy'
+VPN_IPSEC_PSK='myvpn'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 source /etc/os-release
@@ -12,13 +16,16 @@ bigecho "VPN setup in progress... Please be patient."
 # Create and change to working dir
 mkdir -p /opt/src
 cd /opt/src
+
+bigecho "Trying to auto discover IP of this server..."
 PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
 
+bigecho "Installing packages required for the VPN..."
 if [[ ${OS} == "centos" ]]; then
 epel_url="https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E '%{rhel}').noarch.rpm"
 yum -y install epel-release || yum -y install "$epel_url" 
 
-bigecho "Menginstall Paket VPN..."
+bigecho "Installing packages required for the VPN..."
 
 REPO1='--enablerepo=epel'
 REPO2='--enablerepo=*server-*optional*'
@@ -45,7 +52,7 @@ apt-get -y install libnss3-dev libnspr4-dev pkg-config \
   libcurl4-nss-dev flex bison gcc make libnss3-tools \
   libevent-dev ppp xl2tpd pptpd
 fi
-bigecho "Menginstall Libreswan..."
+bigecho "Compiling and installing Libreswan..."
 
 SWAN_VER=3.32
 swan_file="libreswan-$SWAN_VER.tar.gz"
@@ -88,7 +95,7 @@ if ! /usr/local/sbin/ipsec --version 2>/dev/null | grep -qF "$SWAN_VER"; then
   exiterr "Libreswan $SWAN_VER failed to build."
 fi
 
-bigecho "Membuat Konfigurasi VPN..."
+bigecho "Creating VPN configuration..."
 
 L2TP_NET=192.168.42.0/24
 L2TP_LOCAL=192.168.42.1

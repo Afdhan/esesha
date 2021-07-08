@@ -46,7 +46,7 @@ clear
 menu
 ;;
 *)
-echo "Nomor Yang Anda Masukkan Salah!"
+echo "Masukkan Nomor Yang Ada!"
 sleep 0.5
 ltp
 ;;
