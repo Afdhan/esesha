@@ -2,6 +2,8 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
@@ -28,14 +30,13 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "Nama Sudah Ada, Harap Pilih Nama Lain!"
+			echo "A client with the specified name was already created, please choose another name."
 			exit 1
 		fi
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
-tnggl=$(date +"%d-%B-%Y")
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
 sed -i '/#none$/a\### '"$user $exp"'\
@@ -79,10 +80,10 @@ systemctl restart v2ray@none
 service cron restart
 clear
 echo -e ""
-echo -e "=================================" | lolcat
-echo -e "          V2RAY/VMESS"
-echo -e "=================================" | lolcat
+echo -e "=========[ V2RAY/VMESS ]=========" | lolcat
 echo -e "Remarks        : ${user}"
+echo -e "CITY           : $CITY"
+echo -e "ISP            : $ISP"
 echo -e "Domain         : ${domain}"
 echo -e "port TLS       : ${tls}"
 echo -e "port none TLS  : ${none}"
@@ -92,16 +93,10 @@ echo -e "Security       : auto"
 echo -e "network        : ws"
 echo -e "path           : /v2ray"
 echo -e "=================================" | lolcat
-echo -e "           VMESS TLS"
-echo -e "---------------------------------" | lolcat
-echo -e "${vmesslink1}"
+echo -e "link TLS       : ${vmesslink1}"
 echo -e "=================================" | lolcat
-echo -e "         VMESS NON-TLS"
-echo -e "---------------------------------" | lolcat
-echo -e "${vmesslink2}"
+echo -e "link none TLS  : ${vmesslink2}"
 echo -e "=================================" | lolcat
-echo -e "Aktif Selama   : $masaaktif Hari"
-echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $exp"
-echo -e "---------------------------------" | lolcat
-echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e "Aktif Selama   : ${masaaktif} Hari"
+echo -e "Berakhir Pada  : ${exp}"
+echo -e "Mod By M AFDHAN & NezaVPN"
