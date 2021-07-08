@@ -64,7 +64,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       "id": "${uuid}",
       "aid": "2",
       "net": "ws",
-      "path": "/stopwibu",
+      "path": "/v2ray",
       "type": "none",
       "host": "${domain}",
       "tls": "none"
