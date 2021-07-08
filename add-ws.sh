@@ -8,7 +8,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
-echo -e "${green}Akses Diizinkan...${NC}"
+lecho -e "${green}Akses Diizinkan...${NC}"
 else
 echo -e "${red}Akses Diblokir!${NC}";
 echo "Hanya Untuk Pengguna Berbayar!"
@@ -22,6 +22,7 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
+tnggl=$(date +"%d-%B-%Y")
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -36,7 +37,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
 sed -i '/#none$/a\### '"$user $exp"'\
@@ -80,10 +81,10 @@ systemctl restart v2ray@none
 service cron restart
 clear
 echo -e ""
-echo -e "=========[ V2RAY/VMESS ]=========" | lolcat
+echo -e "=================================" | lolcat
+echo -e "          V2RAY/VMESS"
+echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
-echo -e "CITY           : $CITY"
-echo -e "ISP            : $ISP"
 echo -e "Domain         : ${domain}"
 echo -e "port TLS       : ${tls}"
 echo -e "port none TLS  : ${none}"
@@ -93,10 +94,16 @@ echo -e "Security       : auto"
 echo -e "network        : ws"
 echo -e "path           : /v2ray"
 echo -e "=================================" | lolcat
-echo -e "link TLS       : ${vmesslink1}"
+echo -e "           VMESS TLS"
+echo -e "---------------------------------" | lolcat
+echo -e "${vmesslink1}"
 echo -e "=================================" | lolcat
-echo -e "link none TLS  : ${vmesslink2}"
+echo -e "         VMESS NON-TLS"
+echo -e "---------------------------------" | lolcat
+echo -e "${vmesslink2}"
 echo -e "=================================" | lolcat
-echo -e "Aktif Selama   : ${masaaktif} Hari"
-echo -e "Berakhir Pada  : ${exp}"
-echo -e "Mod By M AFDHAN & NezaVPN"
+echo -e "Aktif Selama   : $masaaktif Hari"
+echo -e "Dibuat Pada    : $tnggl"
+echo -e "Berakhir Pada  : $exp"
+echo -e "---------------------------------" | lolcat
+echo -e "- Mod By M AFDHAN & NezaVPN"
