@@ -116,16 +116,16 @@ echo '</ca>' >> /etc/openvpn/client-tcp-ssl.ovpn
 cp /etc/openvpn/client-tcp-ssl.ovpn /home/vps/public_html/OpenVPN-TCP-SSL.ovpn
 
 mkdir /root/OVPN
-cp /etc/openvpn/client-tcp-ssl.ovpn OVPN
-cp /etc/openvpn/client-udp-2200.ovpn OVPN
-cp /etc/openvpn/client-tcp-1194.ovpn OVPN
+cp /etc/openvpn/client-tcp-ssl.ovpn/ OVPN/Client
+cp /etc/openvpn/client-udp-2200.ovpn/ OVPN/Client
+cp /etc/openvpn/client-tcp-1194.ovpn/ OVPN/Client
 cd /root
-zip -r openvpn.zip OVPN > /dev/null 2>&1
+zip -r Configs-OpenVPN.zip OVPN > /dev/null 2>&1
 cp /root/openvpn.zip /home/vps/public_html/Configs-OpenVPN.zip
 rm -rf /root/OVPN
-rm -f /root/openvpn.zip
-#firewall untuk memperbolehkan akses UDP dan akses jalur TCP
+rm -f /root/Configs-OpenVPN.zip
 
+#firewall untuk memperbolehkan akses UDP dan akses jalur TCP
 iptables -t nat -I POSTROUTING -s 10.6.0.0/24 -o $ANU -j MASQUERADE
 iptables -t nat -I POSTROUTING -s 10.7.0.0/24 -o $ANU -j MASQUERADE
 iptables-save > /etc/iptables.up.rules
