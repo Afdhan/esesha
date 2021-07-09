@@ -40,7 +40,7 @@ exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
 tnggl=$(date +"%d-%B-%Y")
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
-trojanlink="trojan://${user}@${domain}:${tr}?sni=bug-anda.com#trojan"
+trojanlink="trojan://${user}@${domain}:${tr}"
 clear
 echo -e ""
 echo -e "=================================" | lolcat
