@@ -1,6 +1,6 @@
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/edu-proxy "https://raw.githubusercontent.com/Afdhan/sc/main/edu.py"
+wget -q -O /usr/local/bin/edu-proxy "https://raw.githubusercontent.com/Afdhan/esesha/main/edu.py"
 chmod +x /usr/local/bin/edu-proxy
 
 # Installing Service
