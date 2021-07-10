@@ -51,17 +51,18 @@ chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-l2tp"
 cat <<EOF
 
-================================ | lolcat
+================================
           L2TP/IPSEC
-================================ | lolcat
+================================
 Server IP     : $PUBLIC_IP
-IPsec PSK     : vpnsantuy
+IPsec PSK     : myvpn
 Username      : $VPN_USER
 Password      : $VPN_PASSWORD
-================================ | lolcat
+================================
 Aktif Selama  : $masaaktif Hari
 Dibuat Pada   : $tnggl
 Berakhir Pada : $exp
 ---------------------------------
 - Mod By M AFDHAN & NezaVPN
+
 EOF
