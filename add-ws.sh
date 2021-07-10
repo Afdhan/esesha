@@ -22,7 +22,7 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
-tnggl=$(date +"%d-%B-%Y")
+tnggl=$(date +"%d-%m-%Y")
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -31,13 +31,13 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
-			echo "A client with the specified name was already created, please choose another name."
+			echo "Nama Sudah Ada, Harap Masukkan Nama Lain!"
 			exit 1
 		fi
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
 sed -i '/#none$/a\### '"$user $exp"'\
@@ -82,23 +82,23 @@ service cron restart
 clear
 echo -e ""
 echo -e "=================================" | lolcat
-echo -e "          V2RAY/VMESS"
+echo -e "           V2RAY/VMESS"
 echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
-echo -e "port TLS       : ${tls}"
-echo -e "port none TLS  : ${none}"
-echo -e "id             : ${uuid}"
-echo -e "alterId        : 2"
+echo -e "Port TLS       : ${tls}"
+echo -e "Port HTTP      : ${none}"
+echo -e "ID             : ${uuid}"
+echo -e "AlterId        : 2"
 echo -e "Security       : auto"
-echo -e "network        : ws"
-echo -e "path           : /v2ray"
+echo -e "Network        : ws"
+echo -e "Path           : /v2ray"
 echo -e "=================================" | lolcat
 echo -e "           VMESS TLS"
 echo -e "---------------------------------" | lolcat
 echo -e "${vmesslink1}"
 echo -e "=================================" | lolcat
-echo -e "         VMESS NON-TLS"
+echo -e "           VMESS HTTP"
 echo -e "---------------------------------" | lolcat
 echo -e "${vmesslink2}"
 echo -e "=================================" | lolcat
@@ -107,3 +107,4 @@ echo -e "Dibuat Pada    : $tnggl"
 echo -e "Berakhir Pada  : $exp"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e ""
