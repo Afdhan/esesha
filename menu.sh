@@ -26,41 +26,43 @@ WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 jam=$(date +"%T")
 hari=$(date +"%A")
-tnggl=$(date +"%d-%B-%Y")
+tnggl=$(date +"%d")
+bln=$(date +"%B")
+thn=$(date +"%Y")
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
-	echo -e "${green}══════════════════════════════════════════════════════════${NC}"
+	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 	echo -e "                 M AFDHAN - NEZAVPN " | lolcat
-	echo -e "${green}══════════════════════════════════════════════════════════${NC}"
+	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-        echo -e "${red}Waktu               :${NC} $jam"
-        echo -e "${red}Hari                :${NC} $hari"
-        echo -e "${red}Tanggal             :${NC} $tnggl"
-        echo -e "${green}══════════════════════════════════════════════════════════${NC}"
-	echo -e "${red}CPU Model           :${NC} $cname"
-	echo -e "${red}Number Of Cores     :${NC}  $cores"
-	echo -e "${red}CPU Frequency       :${NC} $freq MHz"
-	echo -e "${red}Amount Of RAM       :${NC}  $tram MB"
-	echo -e "${red}Amount Of Swap      :${NC}  $swap MB"
-	echo -e "${red}System Uptime       :${NC} $up"
-	echo -e "${red}ISP Name            :${NC}  $ISP"
-	echo -e "${red}City                :${NC}  $CITY"
-	echo -e "${red}IP VPS              :${NC}  $IPVPS"
-	echo -e "${red}Domain              :${NC}  $domain"
-	echo -e "${green}══════════════════════════════════════════════════════════${NC}"
+        echo -e "${green}Waktu                  :${NC} $jam WIB"
+        echo -e "${green}Hari                   :${NC} $hari"
+        echo -e "${green}Tanggal                :${NC} $tnggl $bln $thn"
+        echo -e "${red}══════════════════════════════════════════════════════════${NC}"
+	echo -e "${green}CPU Model              :${NC} $cname"
+	echo -e "${green}Number Of Cores        :${NC}  $cores"
+	echo -e "${green}CPU Frequency          :${NC} $freq MHz"
+	echo -e "${green}Amount Of RAM          :${NC}  $tram MB"
+	echo -e "${green}Amount Of Swap         :${NC}  $swap MB"
+	echo -e "${green}System Uptime          :${NC} $up"
+	echo -e "${green}ISP Name               :${NC}  $ISP"
+	echo -e "${green}City                   :${NC}  $CITY"
+	echo -e "${green}IP VPS                 :${NC}  $IPVPS"
+	echo -e "${green}Domain                 :${NC}  $domain"
+	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
 echo -e "                    MENU TUNNELING " | lolcat
 
-echo -e "${green}══════════════════════════════════════════════════════════${NC}"
+echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
 echo -e " 1 ⸩  Panel SSH & OVPN         5 ⸩  Panel SSR & Shadowsocks"
 
@@ -70,11 +72,11 @@ echo -e " 3 ⸩  Panel L2TP & PPTP        7 ⸩  Panel Vless"
 
 echo -e " 4 ⸩  Panel SSTP               8 ⸩  Panel Trojan"
 
-echo -e "${green}══════════════════════════════════════════════════════════${NC}"
+echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
 echo -e "                      MENU SYSTEM " | lolcat
 
-echo -e "${green}═══════════════════════════════════════════════════════════${NC}"
+echo -e "${red}═══════════════════════════════════════════════════════════${NC}"
 
 echo -e "  9 ⸩  Masukkan Host          19 ⸩  Limit Bandwith"
 
@@ -96,11 +98,11 @@ echo -e " 17 ⸩  Auto Reboot            27 ⸩  Multi Login SSH"
 
 echo -e " 18 ⸩  Edit Banner SSH        28 ⸩  Restart Script"
 
-echo -e "${green}══════════════════════════════════════════════════════════${NC}"
+echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
 echo -e "  x ⸩  Keluar Dari Terminal"
 
-echo -e "${green}══════════════════════════════════════════════════════════${NC}"
+echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
 echo -e ""
 
