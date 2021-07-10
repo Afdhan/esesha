@@ -95,9 +95,9 @@ port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
 	echo -e ""
-	echo -e "=================================" | lolcat
+	echo -e "===================================" | lolcat
         echo -e "         SHADOWSOCKS OBFS"
-        echo -e "=================================" | lolcat
+        echo -e "===================================" | lolcat
 	echo -e "Domain/Host   : $domain"
 	echo -e "OBFS TLS      : $tls"
 	echo -e "OBFS HTTP     : $http"
