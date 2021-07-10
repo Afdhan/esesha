@@ -4,9 +4,9 @@ green='\e[0;32m'
 NC='\e[0m'
 echo -n > /tmp/other.txt
 data=( `cat /etc/v2ray/vless.json | grep '^###' | cut -d ' ' -f 2`);
-echo "============================";
+echo -e "${red}============================${NC}";
 echo "        VLESS USER LOGIN" | lolcat
-echo "============================";
+echo -e "${red}============================${NC}";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -32,13 +32,13 @@ else
 jum2=$(cat /tmp/ipvless.txt | nl)
 echo "User : $akun";
 echo "$jum2";
-echo "============================";
+echo -e "${red}============================${NC}";
 fi
 rm -rf /tmp/ipvmess.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "Other";
 echo "$oth";
-echo "============================";
+echo -e "${red}============================${NC}";
 rm -rf /tmp/other.txt
 
