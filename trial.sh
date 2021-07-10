@@ -27,9 +27,13 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-Login=trial@`</dev/urandom tr -dc X-Z0-9 | head -c4`
+Login=Trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
-Pass=1
+Pass=`</dev/urandom tr -dc 0-9 | head -c2`
+useradd -e `date -d "1 days" +"%Y-%m-%d"` -s /bin/false -M $Login
+exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
+echo -e ""
 echo -e "=================================" | lolcat
 echo -e "       Trial SSH & OpenVPN"
 echo -e "=================================" | lolcat
@@ -41,7 +45,7 @@ echo -e "Host/IP        : $MYIP"
 echo -e "OpenSSH        : 22"
 echo -e "Dropbear       : 109, 143"
 echo -e "Stunnel        : $ssl"
-echo -e "WebSocket      : 2082"
+echo -e "WebSocket      : 2086"
 echo -e "Squid          : $sqd"
 echo -e "BadVPN         : 7100, 7200, 7300"
 echo -e "=================================" | lolcat
@@ -57,10 +61,11 @@ echo -e "=================================" | lolcat
 echo -e "Setting Payload "
 echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e ""
-echo -e "Setting SSH "
-echo -e "bimbel.ruangguru.com:2082@$Login:$Pass"
+echo -e "Setting SSH (HC) "
+echo -e "bimbel.ruangguru.com:2086@$Login:$Pass"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : 1 Hari"
 echo -e "Berakhir Pada  : $exp"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e ""
