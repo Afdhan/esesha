@@ -156,9 +156,8 @@ echo "1.0.1" > /home/ver
 clear
 echo " Script Berhasil Di Restart"
 echo " Sekarang Kamu Bisa Ubah Port Di Beberapa Layanan VPN"
-echo " Reboot 5 Detik"
 echo ""
 figlet M AFDHAN  NezaVPN | lolcat
 sleep 5
 rm -f update.sh
-reboot
+menu
