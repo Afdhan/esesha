@@ -5,9 +5,9 @@ NC='\e[0m'
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/v2ray/config.json | grep '^###' | cut -d ' ' -f 2`);
-echo "============================";
+echo "${red}============================${NC}";
 echo "      VMESS USER LOGIN" | lolcat
-echo "============================";
+echo "${red}============================${NC}";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -33,12 +33,12 @@ else
 jum2=$(cat /tmp/ipvmess.txt | nl)
 echo "user : $akun";
 echo "$jum2";
-echo "============================"
+echo "${red}============================${NC}"
 fi
 rm -rf /tmp/ipvmess.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
-echo "============================"
+echo "${red}============================${NC}"
 rm -rf /tmp/other.txt
