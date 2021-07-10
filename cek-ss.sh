@@ -3,15 +3,15 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-echo "${red}============================${NC}";
+echo -e "${red}============================${NC}";
 echo "     SS OBFS USER LOGIN" | lolcat
-echo "${red}============================${NC}";
+echo -e "${red}============================${NC}";
 echo ""
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
-echo "${red}============================${NC}";
+echo -e "${red}============================${NC}";
 echo "         USER | TLS"
-echo "${red}============================${NC}";
+echo -e "${red}============================${NC}";
 for akun in "${data[@]}"
 do
 port=$(cat /etc/shadowsocks-libev/akun.conf | grep '^port_tls' | cut -d ' ' -f 2 | tr '\n' ' ' | awk '{print $'"$x"'}')
@@ -21,16 +21,16 @@ echo > /dev/null
 else
 echo " $akun - $port"
 echo "$jum";
-echo "${red}============================${NC}";
+echo -e "${red}============================${NC}";
 fi
 x=$(( "$x" + 1 ))
 done
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
 echo ""
-echo "${red}============================${NC}";
+echo -e "${red}============================${NC}";
 echo "         USER |  HTTP"
-echo "${red}============================${NC}";
+echo -e "${red}============================${NC}";
 for akun in "${data[@]}"
 do
 port=$(cat /etc/shadowsocks-libev/akun.conf | grep '^port_http' | cut -d ' ' -f 2 | tr '\n' ' ' | awk '{print $'"$x"'}')
@@ -40,7 +40,7 @@ echo > /dev/null
 else
 echo " $akun - $port"
 echo "$jum";
-echo "${red}============================${NC}";
+echo -e "${red}============================${NC}";
 fi
 x=$(( "$x" + 1 ))
 done
