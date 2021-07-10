@@ -5,12 +5,12 @@ NC='\e[0m'
 clear
 last | grep ppp | grep still | awk '{print " ",$1," - " $3 }' > /tmp/login-db-pptp.txt;
 echo " "
-echo "${green}============================${NC}";
+echo -e "${red}============================${NC}";
 echo "     PPTP VPN USER LOGIN" | lolcat
-echo "${green}============================${NC}";
+echo -e "${red}============================${NC}";
 echo "Username   ---   IP" | lolcat
-echo "${red}------------------------------------- ${NC}";
+echo -e "${green}------------------------------------- ${NC}";
 cat /tmp/login-db-pptp.txt
 echo " "
-echo "${green}============================${green}";
+echo -e "${red}============================${green}";
 echo " ";
