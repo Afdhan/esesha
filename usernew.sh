@@ -66,7 +66,7 @@ echo -e "        Setting WebSocket"
 echo -e "=================================" | lolcat
 echo -e "Setting Payload "
 echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]"
-echo -e ""
+echo -e "---------------------------------" | lolcat
 echo -e "Setting SSH (HC) "
 echo -e "bimbel.ruangguru.com:2086@$Login:$Pass"
 echo -e "=================================" | lolcat
