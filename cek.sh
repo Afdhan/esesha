@@ -14,11 +14,11 @@ if [ -e "/var/log/secure" ]; then
 fi
                 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
-echo "============================";
-echo "         DROPBEAR" | lolcat
-echo "============================";
-echo "   ID  |  Username  |  IP ";
-echo "============================";
+echo -e "${red}============================${NC}";
+echo -e "         DROPBEAR" | lolcat
+echo -e "${red}============================${NC}";
+echo -e "   ID  |  Username  |  IP ";
+echo -e "${red}============================${NC}";
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
 for PID in "${data[@]}"
 do
@@ -30,12 +30,12 @@ do
                 echo "$PID - $USER - $IP";
                 fi
 done
-echo " "
-echo "============================";
-echo "          OPENSSH " | lolcat
-echo "============================";
-echo "    ID  |  Username  |  IP ";
-echo "============================";
+echo -e " "
+echo -e "${red}============================${NC}";
+echo -e "          OPENSSH " | lolcat
+echo -e "${red}============================${NC}";
+echo -e "    ID  |  Username  |  IP ";
+echo -e "${red}============================${NC}";
 cat $LOG | grep -i sshd | grep -i "Accepted password for" > /tmp/login-db.txt
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
 
@@ -50,27 +50,27 @@ do
         fi
 done
 if [ -f "/etc/openvpn/server/openvpn-tcp.log" ]; then
-        echo " "
-        echo "============================";
-        echo "        OPENVPN TCP " | lolcat
-        echo "============================";
-        echo "Username  |  IP  | Since";
-        echo "============================";
+        echo -e " "
+        echo -e "${red}============================${NC}";
+        echo -e "        OPENVPN TCP " | lolcat
+        echo -e "${red}============================${NC}";
+        echo -e "Username  |  IP  | Since";
+        echo -e "${red}============================${NC}";
         cat /etc/openvpn/server/openvpn-tcp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-tcp.txt
         cat /tmp/vpn-login-tcp.txt
 fi
-echo "============================";
+echo -e "${red}============================${NC}";
 
 if [ -f "/etc/openvpn/server/openvpn-udp.log" ]; then
-        echo " "
-        echo "============================";
-        echo "          OPENVPN UDP " | lolcat
-        echo "============================";
-        echo "Username  |  IP  | Since";
-        echo "============================";
+        echo -e " "
+        echo -e "${red}============================${NC}";
+        echo -e "          OPENVPN UDP " | lolcat
+        echo -e "${red}============================${NC}";
+        echo -e "Username  |  IP  | Since";
+        echo -e "${red}============================${NC}";
         cat /etc/openvpn/server/openvpn-udp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-udp.txt
         cat /tmp/vpn-login-udp.txt
 fi
-echo "============================";
-echo "";
-echo "- Mod By M AFDHAN & NezaVPN";
+echo -e "${red}============================${NC}";
+echo -e "";
+echo -e "- Mod By M AFDHAN & NezaVPN" | lolcat
