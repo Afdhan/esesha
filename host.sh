@@ -40,5 +40,8 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
 echo "Host/Domain Berhasil Disimpan"
+echo ""
 echo "Domain Anda : $SUB_DOMAIN"
+echo ""
+echo "- Mod By M AFDHAN & NezaVPN" | lolcat
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
