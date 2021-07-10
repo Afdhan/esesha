@@ -83,6 +83,10 @@ wget -O renew-vless "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-
 wget -O renew-tr "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-tr.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Afdhan/esesha/main/cert.sh"
 wget -O trialws "https://raw.githubusercontent.com/Afdhan/esesha/main/trialws.sh"
+wget -O add-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-wg.sh"
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
@@ -141,6 +145,10 @@ chmod +x renew-vless
 chmod +x renew-tr
 chmod +x certv2ray
 chmod +x trialws
+chmod +x add-wg
+chmod +x del-wg
+chmod +x cek-wg
+chmod +x renew-wg
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 cd
