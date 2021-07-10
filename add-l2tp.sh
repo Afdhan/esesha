@@ -32,8 +32,8 @@ until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 read -p "Password: " VPN_PASSWORD
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
-tnggl=$(date +"%d-%B-%Y")
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
+tnggl=$(date +"%d-%m-%Y")
 clear
 
 # Add or update VPN user
