@@ -157,7 +157,7 @@ clear
 echo " Script Berhasil Di Restart"
 echo " Sekarang Kamu Bisa Ubah Port Di Beberapa Layanan VPN"
 echo ""
-sleep 10
+sleep 3
 clear
 figlet M AFDHAN  NezaVPN | lolcat
 rm -f update.sh
