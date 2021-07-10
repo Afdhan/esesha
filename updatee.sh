@@ -10,14 +10,26 @@ fi
 echo "Memperbarui..."
 sleep 0.5
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/edukasi.sh && chmod +x edukasi.sh && ./edukasi.sh && rm -f edukasi.sh
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/Afdhan/esesha/main/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/Afdhan/esesha/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
+wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/Afdhan/esesha/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/Afdhan/esesha/main/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
 wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/Afdhan/esesha/main/add-l2tp.sh && chmod +x /usr/bin/add-l2tp
 wget -O /usr/bin/del-l2tp https://raw.githubusercontent.com/Afdhan/esesha/main/del-l2tp.sh && chmod +x /usr/bin/del-l2tp
 wget -O /usr/bin/add-pptp https://raw.githubusercontent.com/Afdhan/esesha/main/add-pptp.sh && chmod +x /usr/bin/add-pptp
 wget -O /usr/bin/del-pptp https://raw.githubusercontent.com/Afdhan/esesha/main/del-pptp.sh && chmod +x /usr/bin/del-pptp
 wget -O /usr/bin/renew-pptp https://raw.githubusercontent.com/Afdhan/esesha/main/renew-pptp.sh && chmod +x /usr/bin/renew-pptp
 wget -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/Afdhan/esesha/main/renew-l2tp.sh && chmod +x /usr/bin/renew-l2tp
+wget -O /usr/bin/add-sstp https://raw.githubusercontent.com/Afdhan/esesha/main/add-sstp.sh && chmod +x /usr/bin/add-sstp
+wget -O /usr/bin/del-sstp https://raw.githubusercontent.com/Afdhan/esesha/main/del-sstp.sh && chmod +x /usr/bin/del-sstp
+wget -O /usr/bin/cek-sstp https://raw.githubusercontent.com/Afdhan/esesha/main/cek-sstp.sh && chmod +x /usr/bin/cek-sstp
+wget -O /usr/bin/renew-sstp https://raw.githubusercontent.com/Afdhan/esesha/main/renew-sstp.sh && chmod +x /usr/bin/renew-sstp
 
 cd /usr/bin
+wget -O add-ss "https://raw.githubusercontent.com/Afdhan/esesha/main/add-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/Afdhan/esesha/main/del-ss.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/Afdhan/esesha/main/cek-ss.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-ss.sh"
 wget -O add-host "https://raw.githubusercontent.com/Afdhan/esesha/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/Afdhan/esesha/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
@@ -73,6 +85,10 @@ wget -O renew-vless "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-
 wget -O renew-tr "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-tr.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Afdhan/esesha/main/cert.sh"
 wget -O trialws "https://raw.githubusercontent.com/Afdhan/esesha/main/trialws.sh"
+chmod +x add-ss
+chmod +x del-ss
+chmod +x cek-ss
+chmod +x renew-ss
 chmod +x add-host
 chmod +x menu
 chmod +x menuu
