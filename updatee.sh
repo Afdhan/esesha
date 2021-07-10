@@ -10,6 +10,13 @@ fi
 echo "Memperbarui..."
 sleep 0.5
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/edukasi.sh && chmod +x edukasi.sh && ./edukasi.sh && rm -f edukasi.sh
+wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/Afdhan/esesha/main/add-l2tp.sh && chmod +x /usr/bin/add-l2tp
+wget -O /usr/bin/del-l2tp https://raw.githubusercontent.com/Afdhan/esesha/main/del-l2tp.sh && chmod +x /usr/bin/del-l2tp
+wget -O /usr/bin/add-pptp https://raw.githubusercontent.com/Afdhan/esesha/main/add-pptp.sh && chmod +x /usr/bin/add-pptp
+wget -O /usr/bin/del-pptp https://raw.githubusercontent.com/Afdhan/esesha/main/del-pptp.sh && chmod +x /usr/bin/del-pptp
+wget -O /usr/bin/renew-pptp https://raw.githubusercontent.com/Afdhan/esesha/main/renew-pptp.sh && chmod +x /usr/bin/renew-pptp
+wget -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/Afdhan/esesha/main/renew-l2tp.sh && chmod +x /usr/bin/renew-l2tp
+
 cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/Afdhan/esesha/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/Afdhan/esesha/main/about.sh"
@@ -131,7 +138,7 @@ echo " Script Berhasil Di Restart"
 echo " Sekarang Kamu Bisa Ubah Port Di Beberapa Layanan VPN"
 echo " Reboot 5 Detik"
 echo ""
-echo "AFDHAN - NezaVPN" | lolcat
+figlet M AFDHAN  NezaVPN | lolcat
 sleep 5
 rm -f update.sh
 reboot
