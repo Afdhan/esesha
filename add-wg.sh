@@ -22,10 +22,7 @@ SERVER_PUB_IP=$(wget -qO- ipinfo.io/ip);
 else
 SERVER_PUB_IP=$IP
 fi
-	echo ""
-	echo "Tell me a name for the client."
-	echo "Use one word only, no special characters."
-
+	
 	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Client name: " -e CLIENT_NAME
 		CLIENT_EXISTS=$(grep -w $CLIENT_NAME /etc/wireguard/wg0.conf | wc -l)
@@ -36,8 +33,6 @@ fi
 			exit 1
 		fi
 	done
-
-	echo "IPv4 Terdeteksi"
 	ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
 	WG_CONFIG="/etc/wireguard/wg0.conf"
 	LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
@@ -53,8 +48,8 @@ fi
 	CLIENT_DNS_2="176.103.130.131"
 	MYIP=$(wget -qO- ifconfig.co);
 	read -p "Expired (days): " masaaktif
-	exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
-    tnggl=$(date +"%d-%B-%Y")
+	exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
+    tnggl=$(date +"%d-%m-%Y")
 	# Generate key pair for the client
 	CLIENT_PRIV_KEY=$(wg genkey)
 	CLIENT_PUB_KEY=$(echo "$CLIENT_PRIV_KEY" | wg pubkey)
@@ -90,7 +85,7 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	clear
 	echo -e ""
 	echo -e "=================================" | lolcat
-        echo -e "             WIREGUARD"
+        echo -e "            WIREGUARD"
         echo -e "=================================" | lolcat
 	echo -e "Wireguard 	: http://$MYIP:81/$CLIENT_NAME.conf"
 	echo -e "=================================" | lolcat
@@ -99,4 +94,5 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
         echo -e "Berakhir Pada  : $exp"
         echo -e "---------------------------------" | lolcat
         echo -e "- Mod By M AFDHAN & NezaVPN"
+        echo -e ""
 	rm -f /root/wg0-client-$CLIENT_NAME.conf
