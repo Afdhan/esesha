@@ -42,15 +42,16 @@ echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
 clear
 cat <<EOF
 
-================================ | lolcat
+================================
            SSTP VPN
-================================ | lolcat
-Server IP/Host : $domain
+================================
+Server Host    : $domain
+Server IP      : $MYIP
 Username       : $user
 Password       : $pass
 Port           : $sstp
 Cert           : http://$MYIP:81/server.crt
-================================ | lolcat
+================================
 Aktif Selama   : $masaaktif Hari
 Dibuat Pada    : $tnggl
 Berakhir Pada  : $exp
