@@ -41,14 +41,12 @@ wget -O member "https://raw.githubusercontent.com/Afdhan/esesha/main/member.sh"
 wget -O delete "https://raw.githubusercontent.com/Afdhan/esesha/main/delete.sh"
 wget -O cek "https://raw.githubusercontent.com/Afdhan/esesha/main/cek.sh"
 wget -O restart "https://raw.githubusercontent.com/Afdhan/esesha/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Afdhan/esesha/main/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/Afdhan/esesha/main/info.sh"
 wget -O ram "https://raw.githubusercontent.com/Afdhan/esesha/main/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/Afdhan/esesha/main/renew.sh"
 wget -O autokill "https://raw.githubusercontent.com/Afdhan/esesha/main/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/Afdhan/esesha/main/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/Afdhan/esesha/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/Afdhan/esesha/main/clear-log.sh"
 wget -O change-port "https://raw.githubusercontent.com/Afdhan/esesha/main/change.sh"
 wget -O port-ovpn "https://raw.githubusercontent.com/Afdhan/esesha/main/port-ovpn.sh"
 wget -O port-ssl "https://raw.githubusercontent.com/Afdhan/esesha/main/port-ssl.sh"
@@ -99,7 +97,6 @@ chmod +x member
 chmod +x delete
 chmod +x cek
 chmod +x restart
-chmod +x speedtest
 chmod +x info
 chmod +x about
 chmod +x autokill
@@ -107,7 +104,6 @@ chmod +x tendang
 chmod +x ceklim
 chmod +x ram
 chmod +x renew
-chmod +x clear-log
 chmod +x change-port
 chmod +x port-ovpn
 chmod +x port-ssl
