@@ -17,7 +17,7 @@ data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo "============================";
 echo "         DROPBEAR" | lolcat
 echo "============================";
-echo "   ID  |  Username  |  IP Address";
+echo "   ID  |  Username  |  IP ";
 echo "============================";
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
 for PID in "${data[@]}"
@@ -32,9 +32,9 @@ do
 done
 echo " "
 echo "============================";
-echo "              OPENSSH " | lolcat
+echo "          OPENSSH " | lolcat
 echo "============================";
-echo "    ID  |  Username  |  IP Address";
+echo "    ID  |  Username  |  IP ";
 echo "============================";
 cat $LOG | grep -i sshd | grep -i "Accepted password for" > /tmp/login-db.txt
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
@@ -52,9 +52,9 @@ done
 if [ -f "/etc/openvpn/server/openvpn-tcp.log" ]; then
         echo " "
         echo "============================";
-        echo "          OPENVPN TCP " | lolcat
+        echo "        OPENVPN TCP " | lolcat
         echo "============================";
-        echo "Username  |  IP Address  | Since";
+        echo "Username  |  IP  | Since";
         echo "============================";
         cat /etc/openvpn/server/openvpn-tcp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-tcp.txt
         cat /tmp/vpn-login-tcp.txt
@@ -64,13 +64,13 @@ echo "============================";
 if [ -f "/etc/openvpn/server/openvpn-udp.log" ]; then
         echo " "
         echo "============================";
-        echo "           OPENVPN UDP " | lolcat
+        echo "          OPENVPN UDP " | lolcat
         echo "============================";
-        echo "Username  |  IP Address  | Since";
+        echo "Username  |  IP  | Since";
         echo "============================";
         cat /etc/openvpn/server/openvpn-udp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-udp.txt
         cat /tmp/vpn-login-udp.txt
 fi
 echo "============================";
 echo "";
-
+echo "- Mod By M AFDHAN & NezaVPN";
