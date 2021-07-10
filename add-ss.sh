@@ -46,8 +46,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		fi
 	done
 read -p "Expired (hari): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%B-%Y"`
-tnggl=$(date +"%d-%B-%Y")
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
+tnggl=$(date +"%d-%m-%Y")
 cat > /etc/shadowsocks-libev/$user-tls.json<<END
 {   
     "server":"0.0.0.0",
@@ -96,7 +96,7 @@ service cron restart
 clear
 	echo -e ""
 	echo -e "=================================" | lolcat
-        echo -e "           SHADOWSOCKS"
+        echo -e "         SHADOWSOCKS OBFS"
         echo -e "=================================" | lolcat
 	echo -e "Domain/Host   : $domain"
 	echo -e "OBFS TLS      : $tls"
@@ -117,3 +117,5 @@ clear
         echo -e "Berakhir Pada  : $exp"
         echo -e "-----------------------------------" | lolcat
         echo -e "- Mod By M AFDHAN & NezaVPN"
+        echo -e ""
+	
