@@ -160,4 +160,3 @@ echo ""
 figlet M AFDHAN  NezaVPN | lolcat
 sleep 5
 rm -f update.sh
-menu
