@@ -17,15 +17,15 @@ echo -e "======================================" | lolcat
 echo -e ""
 echo -e "     Status Autokill $sts        "
 echo -e ""
-echo -e "     [1]  AutoKill After 5 Minutes"
-echo -e "     [2]  AutoKill After 10 Minutes"
-echo -e "     [3]  AutoKill After 15 Minutes"
-echo -e "     [4]  Turn Off AutoKill/MultiLogin"
-echo -e "     [x]  Exit"
+echo -e "     [1]  Auto Kill 5 Minutes"
+echo -e "     [2]  Auto Kill 10 Minutes"
+echo -e "     [3]  Auto Kill 15 Minutes"
+echo -e "     [4]  Nonaktifkan AutoKill MultiLogin"
+echo -e "     [x]  Keluar"
 echo -e "======================================" | lolcat                                                                                                         
 echo -e ""
-read -p "     Select From Options [1-4 or x] :  " AutoKill
-read -p "     Multilogin Maximum Number Of Allowed: " max
+read -p "     Pilih Nomor [1-4 / x] :  " AutoKill
+read -p "     Multi Login Maximum : " max
 echo -e ""
 case $AutoKill in
                 1)
@@ -38,8 +38,8 @@ case $AutoKill in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "      Allowed MultiLogin : $max"
-                echo -e "      AutoKill Every     : 5 Minutes"      
+                echo -e "      Max Login          : $max"
+                echo -e "      Auto Kill          : 5 Minutes"      
                 echo -e ""
                 echo -e "======================================" | lolcat                                                                                                                              
                 exit                                                                  
@@ -54,8 +54,8 @@ case $AutoKill in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "      Allowed MultiLogin : $max"
-                echo -e "      AutoKill Every     : 10 Minutes"
+                echo -e "      Max Login          : $max"
+                echo -e "      Auto Kill          : 10 Minutes"
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -70,8 +70,8 @@ case $AutoKill in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "      Allowed MultiLogin : $max"
-                echo -e "      AutoKill Every     : 15 Minutes"
+                echo -e "      Max Login        : $max"
+                echo -e "      Auto Kill        : 15 Minutes"
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
@@ -82,7 +82,7 @@ case $AutoKill in
                 echo -e ""
                 echo -e "======================================" | lolcat
                 echo -e ""
-                echo -e "      AutoKill MultiLogin Turned Off  "
+                echo -e "  AutoKill MultiLogin Di Nonaktifkan "
                 echo -e ""
                 echo -e "======================================" | lolcat
                 exit
