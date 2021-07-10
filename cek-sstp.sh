@@ -5,5 +5,5 @@ NC='\e[0m'
 clear
 accel-cmd show sessions
 echo ""
-echo "============================" | lolcat
+echo -e "============================" | lolcat
 echo "- Mod By M AFDHAN & NezaVPN"
