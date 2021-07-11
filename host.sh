@@ -10,7 +10,7 @@ clear
 DOMAIN=nezavpn.com
 SUB_DOMAIN=${sub}.${DOMAIN}
 CF_ID=muhammad.neizam@gmail.com
-CF_KEY=10da726480584a601ecc58b12621f0b0102ec
+CF_KEY=0783093590c2f3eebc8d016382f92c2d10897
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Pointing DNS Untuk Domain ${SUB_DOMAIN}..."
