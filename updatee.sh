@@ -7,8 +7,26 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
-echo "Memperbarui..."
-sleep 0.5
+echo "Untuk Melakukan Tindakan Ini, Anda Harus Laporan Terlebih Dahulu Kepada Pihak Admin."
+echo "Agar Diberikan Akses Pembaruan Pada Script VPS Anda!"
+read -p "Sudah Laporan? [Y/N]:" arg
+if [[ $arg == 'Y' ]]; then
+  echo "Tindakan Diteruskan!"
+  figlet -f slant Memperbarui... | lolcat
+elif [[ $arg == 'N' ]]; then
+  echo "Tindakan Dihentikan!"
+  sleep 1
+  exit 0
+  clear
+  neofetch
+else
+  echo "Argumen Tidak Diketahui!"
+  sleep 1
+  exit 0
+  clear
+  neofetch
+fi
+sleep 1
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/edukasi.sh && chmod +x edukasi.sh && ./edukasi.sh && rm -f edukasi.sh
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/Afdhan/esesha/main/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/Afdhan/esesha/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
