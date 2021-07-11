@@ -54,7 +54,8 @@ cat <<EOF
 ================================
           L2TP/IPSEC
 ================================
-Server IP     : $PUBLIC_IP
+Server Host   : $PUBLIC_IP
+Server IP     : $MYIP
 IPsec PSK     : myvpn
 Username      : $VPN_USER
 Password      : $VPN_PASSWORD
