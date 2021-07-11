@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clear
-figlet -f slant AFDHAN - NEZA  VPN - PROJECT | lolcat
+figlet -f slant AFDHAN - NEZA   VPN PROJECT \~ | lolcat
 
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
