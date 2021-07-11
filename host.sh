@@ -1,13 +1,16 @@
 #!/bin/bash
 echo "==============================" | lolcat
 echo ""
-echo "Domain Bawaan Script: nezavpn.com" 
+read -rp "Masukkan Domain: " -e DOMAIN
+clear
+echo "==============================" | lolcat
+echo ""
+echo "Domain Enable: $DOMAIN" 
 echo ""
 read -rp "Masukkan Subdomain: " -e sub
 echo "Menganalisis Subomain..."
 sleep 0.5
 clear
-DOMAIN=nezavpn.com
 SUB_DOMAIN=${sub}.${DOMAIN}
 CF_ID=muhammad.neizam@gmail.com
 CF_KEY=0783093590c2f3eebc8d016382f92c2d10897
