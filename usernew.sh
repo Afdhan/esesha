@@ -7,7 +7,9 @@ IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Akses Diizinkan...${NC}"
+sleep 1
 else
+clear
 echo -e "${red}Akses Diblokir!${NC}";
 echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
@@ -32,10 +34,11 @@ ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | c
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 echo Membuat Akun $Login
 sleep 0.5
-echo Setting Password $Pass
+echo Menyetel Password $Pass
 sleep 0.5
+echo "Akun Berhasil Dibuat!"
 clear
-tnggl=$(date +"%d-%B-%Y")
+tnggl=$(date +"%d-%m-%Y")
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
