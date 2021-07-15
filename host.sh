@@ -12,8 +12,8 @@ echo "Menganalisis Subomain..."
 sleep 0.5
 clear
 SUB_DOMAIN=${sub}.${DOMAIN}
-CF_ID=muhammad.neizam@gmail.com
-CF_KEY=0783093590c2f3eebc8d016382f92c2d10897
+CF_ID=neza.afdhan@gmail.com
+CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Pointing DNS Untuk Domain ${SUB_DOMAIN}..."
@@ -48,3 +48,4 @@ echo "Domain Anda : $SUB_DOMAIN"
 echo ""
 echo "- Mod By M AFDHAN & NezaVPN" | lolcat
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
+figlet -f slant AFDHAN - NEZA | lolcat
