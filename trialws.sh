@@ -7,7 +7,9 @@ IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Akses Diizinkan...${NC}"
+sleep 1
 else
+clear
 echo -e "${red}Akses Diblokir!${NC}";
 echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
@@ -24,9 +26,9 @@ tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 user=Trial-`</dev/urandom tr -dc X-Z0-9 | head -c2`
 uuid=$(cat /proc/sys/kernel/random/uuid)
-tnggl=$(date +"%T")
+tnggl=$(date +"%R")
 read -p "Expired (hours): " ktf
-exp=`date -d "$ktf hour" +"%T"`
+exp=`date -d "$ktf hour" +"%R"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
 sed -i '/#none$/a\### '"$user $exp"'\
@@ -92,8 +94,7 @@ echo -e "---------------------------------" | lolcat
 echo -e "${vmesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $ktf Jam"
-echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $exp"
+echo -e "Berakhir Pada  : $exp WIB"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
 echo -e ""
