@@ -7,7 +7,9 @@ IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Akses Diizinkan...${NC}"
+sleep 1
 else
+clear
 echo -e "${red}Akses Diblokir!${NC}";
 echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
