@@ -24,6 +24,7 @@ add-ws
 ;;
 2)
 trialws
+;;
 3)
 del-ws
 ;;
