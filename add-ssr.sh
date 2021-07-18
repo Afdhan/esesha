@@ -6,6 +6,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
+clear
 echo -e "${green}Akses Diizinkan...${NC}"
 sleep 1
 else
@@ -22,8 +23,8 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
-echo "Please enter the username you want to set (do not repeat, does not support Chinese, will be reported incorrect!)"
-read -e -p "User Default :" ssr_user
+
+read -e -p "Username :" ssr_user
 CLIENT_EXISTS=$(grep -w $ssr_user /usr/local/shadowsocksr/akun.conf | wc -l)
 if [[ ${CLIENT_EXISTS} == '1' ]]; then
 echo ""
