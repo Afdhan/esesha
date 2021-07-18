@@ -46,9 +46,9 @@ echo -e "       Trial SSH & OpenVPN"
 echo -e "=================================" | lolcat
 echo -e "Username       : $Login "
 echo -e "Password       : $Pass"
-echo -e "Domain         : $domain"
+echo -e "Host CDN       : $domain"
 echo -e "=================================" | lolcat
-echo -e "Host/IP        : $MYIP"
+echo -e "Server IP      : $MYIP"
 echo -e "OpenSSH        : 22"
 echo -e "Dropbear       : 109, 143"
 echo -e "Stunnel        :$ssl"
