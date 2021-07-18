@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 clear
 echo -e ""
-echo -e "======================================" | lolcat
+echo -e "${red}======================================${NC}"
 echo -e ""
 echo -e ""
 echo -e "    [1] Mulai Ulang Services"
@@ -14,12 +14,14 @@ echo -e "    [4] Mulai Ulang Stunnel4"
 echo -e "    [5] Mulai Ulang OpenVPN"
 echo -e "    [6] Mulai Ulang Squid"
 echo -e "    [7] Mulai Ulang Nginx"
-echo -e "    [8] Mulai Ulang Badvpn"
+echo -e "    [8] Mulai Ulang BadVPN"
+echo -e "    [9] Mulai Ulang WebSocket"
 echo -e "    [x] Keluar"
 echo -e ""
-read -p "    Pilih Nomor  [1-8 / x] :  " Restart
+echo -e "${red}======================================${NC}"
 echo -e ""
-echo -e "======================================" | lolcat
+read -p "    Masukkan Nomor :  " Restart
+echo -e ""
 sleep 1
 clear
 case $Restart in
@@ -36,78 +38,62 @@ case $Restart in
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 1000
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000
+                systemctl daemon-reload
+                systemctl enable edu-proxy
+                systemctl restart edu-proxy
+                systemctl enable edu-vpn
+                systemctl restart edu-vpn
                 echo -e ""
-                echo -e "======================================" | lolcat
+                echo -e " Services Diperbarui" | lolcat
                 echo -e ""
-                echo -e "          Services Diperbarui         "
-                echo -e ""
-                echo -e "======================================" | lolcat
                 exit
                 ;;
                 2)
                 clear
                 /etc/init.d/ssh restart
                 echo -e ""
-                echo -e "======================================" | lolcat
+                echo -e " SSH Services Diperbarui" | lolcat
                 echo -e ""
-                echo -e "         SSH Service Diperbarui        "
-                echo -e ""
-                echo -e "======================================" | lolcat
                 exit
                 ;;
                 3)
                 clear
                 /etc/init.d/dropbear restart
                 echo -e ""
-                echo -e "======================================" | lolcat
+                echo -e " Dropbear Services Diperbarui" | lolcat
                 echo -e ""
-                echo -e "       Dropbear Service Diperbarui     "
-                echo -e ""
-                echo -e "======================================" | lolcat
                 exit
                 ;;
                 4)
                 clear
                 /etc/init.d/stunnel4 restart
                 echo -e ""
-                echo -e "======================================" | lolcat
+                echo -e " Stunnel4 Services Diperbarui" | lolcat
                 echo -e ""
-                echo -e "        Stunnel4 Service Diperbarui    "
-                echo -e ""
-                echo -e "======================================" | lolcat
                 exit
                 ;;
                 5)
                 clear
                 /etc/init.d/openvpn restart
                 echo -e ""
-                echo -e "======================================" | lolcat
+                echo -e " OpenVPN Services Diperbarui" | lolcat
                 echo -e ""
-                echo -e "       OpenVPN Service Diperbarui      "
-                echo -e ""
-                echo -e "======================================" | lolcat
                 exit
                 ;;
                 6)
                 clear
                 /etc/init.d/squid restart
                 echo -e ""
-                echo -e "======================================" | lolcat
+                echo -e " Squid3 Services Diperbarui" | lolcat
                 echo -e ""
-                echo -e "        Squid3 Service Diperbarui      "
-                echo -e ""
-                echo -e "======================================" | lolcat
                 exit
                 ;;
                 7)
                 clear
                 /etc/init.d/nginx restart
                 echo -e ""
-                echo -e "======================================" | lolcat
+                echo -e " Nginx Services Diperbarui" | lolcat
                 echo -e ""
-                echo -e "         Nginx Service Diperbarui      "
-                echo -e ""
-                echo -e "======================================" | lolcat
                 exit
                 ;;
                 8)
@@ -122,12 +108,19 @@ case $Restart in
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
                 echo -e ""
-                echo -e "======================================" | lolcat
+                echo -e " BadVPN Services Diperbarui" | lolcat
                 echo -e ""
-                echo -e "    Badvpn  Badvpn Service Diperbarui  "
-                echo -e ""
-                echo -e "======================================" | lolcat
                 exit
+                ;;
+                9)
+                systemctl daemon-reload
+                systemctl enable edu-proxy
+                systemctl restart edu-proxy
+                systemctl enable edu-vpn
+                systemctl restart edu-vpn
+                echo -e ""
+                echo -e " WebSocket Services Diperbarui" | lolcat
+                echo -e ""
                 ;;
                 x)
                 clear
