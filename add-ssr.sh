@@ -31,8 +31,15 @@ echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
 exit 1
 fi
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
-tnggl=$(date +"%d-%m-%Y")
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 lastport=$(cat /usr/local/shadowsocksr/mudb.json | grep '"port": ' | tail -n1 | awk '{print $2}' | cut -d "," -f 1 | cut -d ":" -f 1 )
 if [[ $lastport == '' ]]; then
 ssr_port=1443
@@ -79,7 +86,7 @@ echo -e "  ${ssr_link}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $exp"
+echo -e "Berakhir Pada  : $expe"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
 echo -e ""
