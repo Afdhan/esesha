@@ -38,8 +38,15 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 	done
 read -p "Expired (days): " masaaktif
 sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan/config.json
-exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
-tnggl=$(date +"%d-%m-%Y")
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
 trojanlink="trojan://${user}@${domain}:${tr}"
@@ -51,13 +58,13 @@ echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "IP             : ${MYIP}"
 echo -e "Host           : ${domain}"
-echo -e "port           : ${tr}"
+echo -e "Port           : ${tr}"
 echo -e "Key            : ${user}"
-echo -e "link           : ${trojanlink}"
+echo -e "Link           : ${trojanlink}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $exp"
+echo -e "Berakhir Pada  : $expe"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
 echo -e ""
