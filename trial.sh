@@ -46,9 +46,9 @@ echo -e "=================================" | lolcat
 echo -e "Host/IP        : $MYIP"
 echo -e "OpenSSH        : 22"
 echo -e "Dropbear       : 109, 143"
-echo -e "Stunnel        : $ssl"
+echo -e "Stunnel        :$ssl"
 echo -e "WebSocket      : 2086, 2095"
-echo -e "Squid          : $sqd"
+echo -e "Squid          :$sqd"
 echo -e "BadVPN         : 7100, 7200, 7300"
 echo -e "=================================" | lolcat
 echo -e "         Config OpenVPN"
