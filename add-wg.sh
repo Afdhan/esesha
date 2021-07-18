@@ -20,9 +20,9 @@ clear
 source /etc/wireguard/params
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-domain=$(cat /etc/v2ray/domain);
+SERVER_PUB_IP=$(cat /etc/v2ray/domain);
 else
-domain=$IP
+SERVER_PUB_IP=$IP
 fi
 	
 	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -48,7 +48,7 @@ fi
 	CLIENT_DNS_1="176.103.130.130"
 
 	CLIENT_DNS_2="176.103.130.131"
-	MYIP=$(wget -qO- ifconfig.co);
+	
 	read -p "Expired (days): " masaaktif
 	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
         tgl=$(date -d "$masaaktif days" +"%d")
@@ -91,9 +91,9 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
         echo -e "            WIREGUARD"
         echo -e "=================================" | lolcat
         echo -e "Server IP      : $MYIP"
-        echo -e "Server Host    : $domain"
+        echo -e "Server Host    : $SERVER_PUB_IP"
         echo -e "=================================" | lolcat
-	echo -e "WireGuard URL 	: http://$MYIP:81/$CLIENT_NAME.conf"
+	echo -e "WireGuard URL 	: http://$SERVER_PUB_IP:81/$CLIENT_NAME.conf"
 	echo -e "=================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
         echo -e "Dibuat Pada    : $tnggl"
