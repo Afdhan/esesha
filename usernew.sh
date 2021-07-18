@@ -6,6 +6,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
+clear
 echo -e "${green}Akses Diizinkan...${NC}"
 sleep 1
 else
@@ -32,13 +33,13 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-echo Membuat Akun $Login
-sleep 0.5
-echo Menyetel Password $Pass
-sleep 0.5
+sleep 1
 echo "Akun Berhasil Dibuat!"
 clear
-tnggl=$(date +"%d-%m-%Y")
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
@@ -74,7 +75,8 @@ echo -e "Setting SSH (HC) "
 echo -e "bimbel.ruangguru.com:2086@$Login:$Pass"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
-echo -e "Berakhir Pada  : $exp"
+echo -e "Dibuat Pada    : $tnggl"
+echo -e "Berakhir Pada  : $expe"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
 echo -e ""
