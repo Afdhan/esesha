@@ -89,7 +89,7 @@ echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "Port TLS       : ${tls}"
-echo -e "Port HTTP      : ${none}"
+echo -e "Port NON-TLS   : ${none}"
 echo -e "ID             : ${uuid}"
 echo -e "AlterId        : 2"
 echo -e "Security       : auto"
@@ -100,7 +100,7 @@ echo -e "           VMESS TLS"
 echo -e "---------------------------------" | lolcat
 echo -e "${vmesslink1}"
 echo -e "=================================" | lolcat
-echo -e "           VMESS HTTP"
+echo -e "         VMESS NON-TLS"
 echo -e "---------------------------------" | lolcat
 echo -e "${vmesslink2}"
 echo -e "=================================" | lolcat
