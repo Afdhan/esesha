@@ -8,6 +8,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
+clear
 echo -e "${green}Akses Diizinkan...${NC}"
 sleep 1
 else
@@ -24,7 +25,14 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
-tnggl=$(date +"%d-%m-%Y")
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -39,7 +47,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
 sed -i '/#none$/a\### '"$user $exp"'\
@@ -89,9 +97,9 @@ echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "Port TLS       : ${tls}"
-echo -e "Port NON-TLS   : ${none}"
+echo -e "Port NON-TLS   : ${non}"
 echo -e "ID             : ${uuid}"
-echo -e "AlterId        : 2"
+echo -e "AlterID        : 2"
 echo -e "Security       : auto"
 echo -e "Network        : ws"
 echo -e "Path           : /v2ray"
@@ -106,7 +114,7 @@ echo -e "${vmesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $exp"
+echo -e "Berakhir Pada  : $expe"
 echo -e "---------------------------------" | lolcat
 echo -e "- Mod By M AFDHAN & NezaVPN"
 echo -e ""
