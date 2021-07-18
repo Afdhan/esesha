@@ -6,6 +6,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
+clear
 echo -e "${green}Akses Diizinkan...${NC}"
 sleep 1
 else
