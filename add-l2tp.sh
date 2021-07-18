@@ -6,6 +6,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
+clear
 echo -e "${green}Akses Diizinkan...${NC}"
 sleep 1
 else
@@ -34,7 +35,6 @@ until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 read -p "Password: " VPN_PASSWORD
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
@@ -66,7 +66,7 @@ cat <<EOF
 ================================
 Server Host   : $PUBLIC_IP
 Server IP     : $MYIP
-IPsec PSK     : myvpn
+IPSec PSK     : myvpn
 Username      : $VPN_USER
 Password      : $VPN_PASSWORD
 ================================
