@@ -25,6 +25,10 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-sstp")
 		fi
 	done
 read -p "Expired (days): " masaaktif
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
 user=$(grep -E "^### " "/var/lib/premium-script/data-user-sstp" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/var/lib/premium-script/data-user-sstp" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 now=$(date +%Y-%m-%d)
@@ -38,6 +42,6 @@ clear
 echo ""
 echo " Akun SSTP Berhasil Diperbarui"
 echo " ==========================" | lolcat
-echo " Client Name : $user"
-echo " Expired On  : $exp4"
+echo " Username     : $user"
+echo " Aktif Sampai : $expe"
 echo " ==========================" | lolcat
