@@ -20,13 +20,13 @@ clear
 source /etc/wireguard/params
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-SERVER_PUB_IP=$(wget -qO- ipinfo.io/ip);
+domain=$(cat /etc/v2ray/domain);
 else
-SERVER_PUB_IP=$IP
+domain=$IP
 fi
 	
 	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-		read -rp "Client name: " -e CLIENT_NAME
+		read -rp "Username: " -e CLIENT_NAME
 		CLIENT_EXISTS=$(grep -w $CLIENT_NAME /etc/wireguard/wg0.conf | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
@@ -50,8 +50,15 @@ fi
 	CLIENT_DNS_2="176.103.130.131"
 	MYIP=$(wget -qO- ifconfig.co);
 	read -p "Expired (days): " masaaktif
-	exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
-    tnggl=$(date +"%d-%m-%Y")
+	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+        tgl=$(date -d "$masaaktif days" +"%d")
+        bln=$(date -d "$masaaktif days" +"%b")
+        thn=$(date -d "$masaaktif days" +"%Y")
+        expe="$tgl $bln, $thn"
+        tgl2=$(date +"%d")
+        bln2=$(date +"%b")
+        thn2=$(date +"%Y")
+        tnggl="$tgl2 $bln2, $thn2"
 	# Generate key pair for the client
 	CLIENT_PRIV_KEY=$(wg genkey)
 	CLIENT_PUB_KEY=$(echo "$CLIENT_PRIV_KEY" | wg pubkey)
@@ -78,22 +85,19 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	systemctl restart "wg-quick@$SERVER_WG_NIC"
 	cp $HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf /home/vps/public_html/$CLIENT_NAME.conf
 	clear
-	sleep 0.5
-	echo Generate PrivateKey
-	sleep 0.5
-	echo Generate PublicKey
-	sleep 0.5
-	echo Generate PresharedKey
-	clear
+        sleep 1
 	echo -e ""
 	echo -e "=================================" | lolcat
         echo -e "            WIREGUARD"
         echo -e "=================================" | lolcat
-	echo -e "Wireguard 	: http://$MYIP:81/$CLIENT_NAME.conf"
+        echo -e "Server IP      : $MYIP"
+        echo -e "Server Host    : $domain"
+        echo -e "=================================" | lolcat
+	echo -e "WireGuard URL 	: http://$MYIP:81/$CLIENT_NAME.conf"
 	echo -e "=================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
         echo -e "Dibuat Pada    : $tnggl"
-        echo -e "Berakhir Pada  : $exp"
+        echo -e "Berakhir Pada  : $expe"
         echo -e "---------------------------------" | lolcat
         echo -e "- Mod By M AFDHAN & NezaVPN"
         echo -e ""
