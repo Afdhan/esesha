@@ -36,6 +36,7 @@ else
   exit 0
 fi
 sleep 1
+wget https://raw.githubusercontent.com/Afdhan/sce/main/tes.sh && chmod +x tes.sh && ./tes.sh && rm -f tes.sh
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/edukasi.sh && chmod +x edukasi.sh && ./edukasi.sh && rm -f edukasi.sh
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/Afdhan/esesha/main/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/Afdhan/esesha/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
