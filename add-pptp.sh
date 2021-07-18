@@ -19,7 +19,7 @@ fi
 clear
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
+PUBLIC_IP=$(cat /etc/v2ray/domain);
 else
 PUBLIC_IP=$IP
 fi
@@ -43,7 +43,7 @@ expe="$tgl $bln, $thn"
 tgl2=$(date +"%d")
 bln2=$(date +"%b")
 thn2=$(date +"%Y")
-tnggl="tgl2 bln2, thn2"
+tnggl="$tgl2 $bln2, $thn2"
 clear
 
 # Add or update VPN user
@@ -59,7 +59,8 @@ cat <<EOF
 ================================
            PPTP VPN
 ================================
-Server IP     : $PUBLIC_IP
+Server Host   : $PUBLIC_IP
+Server IP     : $MYIP
 Username      : $VPN_USER
 Password      : $VPN_PASSWORD
 ================================
