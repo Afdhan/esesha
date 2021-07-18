@@ -182,11 +182,6 @@ echo "0 0 * * * root xp" >> /etc/crontab
 cd
 echo "1.0.1" > /home/ver
 clear
-echo " Script Berhasil Di Restart"
-echo " Sekarang Kamu Bisa Ubah Port Di Beberapa Layanan VPN"
-echo ""
-sleep 2
-clear
 figlet -f slant AFDHAN - NEZA | lolcat
 sleep 5
 clear
