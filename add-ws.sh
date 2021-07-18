@@ -25,14 +25,6 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
-tgl=$(date -d "$masaaktif days" +"%d")
-bln=$(date -d "$masaaktif days" +"%b")
-thn=$(date -d "$masaaktif days" +"%Y")
-expe="$tgl $bln, $thn"
-tgl2=$(date +"%d")
-bln2=$(date +"%b")
-thn2=$(date +"%Y")
-tnggl="$tgl2 $bln2, $thn2"
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -47,6 +39,14 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
