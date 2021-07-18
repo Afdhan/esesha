@@ -18,7 +18,7 @@ fi
 clear
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
+PUBLIC_IP=$(cat /etc/v2ray/domain);
 else
 PUBLIC_IP=$IP
 fi
