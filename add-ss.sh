@@ -57,7 +57,7 @@ expe="$tgl $bln, $thn"
 tgl2=$(date +"%d")
 bln2=$(date +"%b")
 thn2=$(date +"%Y")
-tnggl="tgl2 bln2, thn2"
+tnggl="$tgl2 $bln2, $thn2"
 cat > /etc/shadowsocks-libev/$user-tls.json<<END
 {   
     "server":"0.0.0.0",
