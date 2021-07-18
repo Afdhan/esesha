@@ -13,18 +13,27 @@ read -p "Sudah Laporan? [Y/N]:" arg
 if [[ $arg == 'Y' ]]; then
   echo "Tindakan Diteruskan!"
   figlet -f slant Memperbarui... | lolcat
+elif [[ $arg == 'y' ]]; then
+  echo "Tindakan Diteruskan!"
+  figlet -f slant Memperbarui... | lolcat
 elif [[ $arg == 'N' ]]; then
   echo "Tindakan Dihentikan!"
   sleep 1
-  exit 0
   clear
   neofetch
+  exit 0
+elif [[ $arg == 'n' ]]; then
+  echo "Tindakan Dihentikan!"
+  sleep 1
+  clear
+  neofetch
+  exit 0
 else
   echo "Argumen Tidak Diketahui!"
   sleep 1
-  exit 0
   clear
   neofetch
+  exit 0
 fi
 sleep 1
 wget https://raw.githubusercontent.com/Afdhan/esesha/main/edukasi.sh && chmod +x edukasi.sh && ./edukasi.sh && rm -f edukasi.sh
@@ -175,7 +184,9 @@ clear
 echo " Script Berhasil Di Restart"
 echo " Sekarang Kamu Bisa Ubah Port Di Beberapa Layanan VPN"
 echo ""
-sleep 3
+sleep 2
 clear
-figlet M AFDHAN  NezaVPN | lolcat
-rm -f update.sh
+figlet -f slant AFDHAN - NEZA | lolcat
+sleep 5
+clear
+neofetch
