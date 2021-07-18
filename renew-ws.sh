@@ -32,7 +32,7 @@ d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 exp3=$(($exp2 + $masaaktif))
-exp4=`date -d "$exp3 days" +"%d-%B-%Y"`
+exp4=`date -d "$exp3 days" +"%d-%m-%Y"`
 sed -i "s/### $user $exp/### $user $exp4/g" /etc/v2ray/config.json
 sed -i "s/### $user $exp/### $user $exp4/g" /etc/v2ray/none.json
 service cron restart
