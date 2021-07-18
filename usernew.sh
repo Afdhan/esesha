@@ -36,6 +36,10 @@ ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | 
 sleep 1
 echo "Akun Berhasil Dibuat!"
 clear
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
 tgl2=$(date +"%d")
 bln2=$(date +"%b")
 thn2=$(date +"%Y")
