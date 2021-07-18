@@ -95,8 +95,8 @@ systemctl start shadowsocks-libev-server@$user-tls.service
 systemctl enable shadowsocks-libev-server@$user-tls.service
 systemctl start shadowsocks-libev-server@$user-http.service
 systemctl enable shadowsocks-libev-server@$user-http.service
-tmp1=$(echo -n "aes-256-cfb:${user}@${IP}:$tls" | base64 -w0)
-tmp2=$(echo -n "aes-256-cfb:${user}@${IP}:$http" | base64 -w0)
+tmp1=$(echo -n "aes-256-cfb:${user}@${domain}:$tls" | base64 -w0)
+tmp2=$(echo -n "aes-256-cfb:${user}@${domain}:$http" | base64 -w0)
 linkss1="ss://${tmp1}?plugin=obfs-local;obfs=tls;obfs-host=bug-anda.com"
 linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bug-anda.com"
 echo -e "### $user $exp
@@ -108,7 +108,8 @@ clear
 	echo -e "===================================" | lolcat
         echo -e "         SHADOWSOCKS OBFS"
         echo -e "===================================" | lolcat
-	echo -e "Domain/Host   : $domain"
+        echo -e "Server IP     : $MYIP"
+	echo -e "Server Host   : $domain"
 	echo -e "OBFS TLS      : $tls"
 	echo -e "OBFS HTTP     : $http"
 	echo -e "Password      : $user"
