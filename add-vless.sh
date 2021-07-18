@@ -56,7 +56,7 @@ echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "Port TLS       : $tls"
-echo -e "Port HTTP      : $none"
+echo -e "Port NON-TLS   : $none"
 echo -e "ID             : ${uuid}"
 echo -e "Encryption     : none"
 echo -e "Network        : ws"
@@ -66,7 +66,7 @@ echo -e "           VLESS TLS"
 echo -e "---------------------------------" | lolcat
 echo -e "${vlesslink1}"
 echo -e "=================================" | lolcat
-echo -e "           VLESS HTTP"
+echo -e "         VLESS NON-TLS"
 echo -e "---------------------------------" | lolcat
 echo -e "${vlesslink2}"
 echo -e "=================================" | lolcat
