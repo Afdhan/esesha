@@ -25,6 +25,10 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-l2tp")
 		fi
 	done
 read -p "Expired (days): " masaaktif
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
 user=$(grep -E "^### " "/var/lib/premium-script/data-user-l2tp" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/var/lib/premium-script/data-user-l2tp" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 now=$(date +%Y-%m-%d)
@@ -39,5 +43,5 @@ echo ""
 echo " Akun L2TP Berhasil Diperbarui"
 echo " ==========================" | lolcat
 echo " Username     : $user"
-echo " Aktif Sampai : $exp4"
+echo " Aktif Sampai : $expe"
 echo " ==========================" | lolcat
