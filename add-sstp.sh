@@ -35,8 +35,15 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 read -p "Password: " pass
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
-tnggl=$(date +"%d-%m-%Y")
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 cat >> /home/sstp/sstp_account <<EOF
 $user * $pass *
 EOF
@@ -56,7 +63,7 @@ Cert           : http://$MYIP:81/server.crt
 ================================
 Aktif Selama   : $masaaktif Hari
 Dibuat Pada    : $tnggl
-Berakhir Pada  : $exp
+Berakhir Pada  : $expe
 ---------------------------------
 - Mod By M AFDHAN & NezaVPN
 
