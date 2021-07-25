@@ -97,7 +97,7 @@ echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "Port TLS       : ${tls}"
-echo -e "Port NON-TLS   : ${non}"
+echo -e "Port NON-TLS   : ${none}"
 echo -e "ID             : ${uuid}"
 echo -e "AlterID        : 2"
 echo -e "Security       : auto"
