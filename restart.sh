@@ -39,10 +39,15 @@ case $Restart in
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000
                 systemctl daemon-reload
-                systemctl enable edu-proxy
-                systemctl restart edu-proxy
-                systemctl enable edu-vpn
-                systemctl restart edu-vpn
+                systemctl enable ws-dropbear.service
+                systemctl enable ws-openssh.service
+                systemctl enable ws-openvpn.service
+                systemctl enable ws-stunnel.service
+
+                systemctl restart ws-dropbear.service
+                systemctl restart ws-openssh.service
+                systemctl restart ws-openvpn.service
+                systemctl restart ws-stunnel.service
                 echo -e ""
                 echo -e " Services Diperbarui" | lolcat
                 echo -e ""
