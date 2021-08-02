@@ -62,7 +62,7 @@ echo -e "Stunnel        :$ssl"
 echo -e "WS Dropbear    : 2095"
 echo -e "WS OpenSSH     : 2082"
 echo -e "WS OpenVPN     : 2086"
-echo -e "WS TLS         : 445"
+echo -e "WS TLS         : 2053"
 echo -e "Squid          :$sqd"
 echo -e "BadVPN         : 7100, 7200, 7300"
 echo -e "=================================" | lolcat
