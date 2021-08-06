@@ -22,16 +22,20 @@ fi
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo -e "${red}---------------------------------------------------${NC}"
-echo -e "Jumlah : [ $JUMLAH ] User" | lolcat
+echo -e "Jumlah : ${green}[ $JUMLAH ]${NC User"
 echo -e "${red}---------------------------------------------------${NC}"
 echo -e ""
 read -p "Masukkan Username SSH Yang Ingin Dihapus : " userr
 sleep 1
 if getent passwd $userr > /dev/null 2>&1; then
         userdel $userr
+        echo -e ""
         echo -e "User ${green}[ $userr ]${NC} Berhasil Dihapus."
-else
+        echo -e ""
+else 
+        echo -e ""
         echo -e "Gagal, User ${red}[ $userr ]${NC} Tidak Ditemukan!"
+        echo -e ""
         sleep 3
         clear
         hapus
