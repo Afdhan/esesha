@@ -17,8 +17,8 @@ exit 0
 fi
 clear
 sleep 0.5
-figlet -f slant ERROR! | lolcat
-sleep 5
+figlet -f slant E.R.R.O.R ! | lolcat
+sleep 2
 exit 0
 
 
