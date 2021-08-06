@@ -14,9 +14,9 @@ exp="$(chage -l $AKUN | grep "Account expires" | awk -F": " '{print $2}')"
 status="$(passwd -S $AKUN | awk '{print $2}' )"
 if [[ $ID -ge 1000 ]]; then
 if [[ "$status" = "L" ]]; then
-printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "${red}LOCKED${NC}"
+printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "LOCKED"
 else
-printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "${green}UNLOCKED${NC}"
+printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "UNLOCKED"
 fi
 fi
 done < /etc/passwd
