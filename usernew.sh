@@ -81,5 +81,5 @@ echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
 echo -e "Berakhir Pada  : $expe"
 echo -e "---------------------------------" | lolcat
-echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e "- Mod By Dhansss X NezaVPN"
 echo -e ""
