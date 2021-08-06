@@ -49,11 +49,11 @@ exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
 echo -e "=================================" | lolcat
-echo -e "          SSH & OpenVPN "
+echo -e "========[ SSH & OpenVPN ]========" | lolcat
 echo -e "=================================" | lolcat
 echo -e "Username       : $Login "
 echo -e "Password       : $Pass"
-echo -e "Host CDN       : $domain"
+echo -e "Hostname       : $domain"
 echo -e "=================================" | lolcat
 echo -e "Server IP      : $MYIP"
 echo -e "OpenSSH        : 22"
@@ -66,20 +66,20 @@ echo -e "WS TLS         : 2053"
 echo -e "Squid          :$sqd"
 echo -e "BadVPN         : 7100, 7200, 7300"
 echo -e "=================================" | lolcat
-echo -e "         Config OpenVPN"
-echo -e "=================================" | lolcat
+echo -e "=======[ Configs OpenVPN ]=======" | lolcat
+echo -e ""
 echo -e "TCP $ovpn       : http://$MYIP:81/client-tcp-$ovpn.ovpn"
 echo -e "UDP $ovpn2       : http://$MYIP:81/client-udp-$ovpn2.ovpn"
 echo -e "SSL 442        : http://$MYIP:81/client-tcp-ssl.ovpn"
 echo -e "ZIP FILE       : http://$MYIP:81/all-ovpn.zip"
 echo -e "=================================" | lolcat
-echo -e "        Payload WebSocket"
-echo -e "=================================" | lolcat
+echo -e "======[ Payload WebSocket ]======" | lolcat
+echo -e ""
 echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
 echo -e "Berakhir Pada  : $expe"
-echo -e "---------------------------------" | lolcat
+echo -e "=================================" | lolcat
 echo -e "- Mod By Dhansss X NezaVPN"
 echo -e ""
