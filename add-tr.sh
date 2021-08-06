@@ -54,7 +54,7 @@ trojanlink="trojan://${user}@${domain}:${tr}"
 clear
 echo -e ""
 echo -e "=================================" | lolcat
-echo -e "           TROJAN VPN"
+echo -e "=========[ TROJAN  VPN ]=========" | lolcat
 echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "IP             : ${MYIP}"
@@ -66,6 +66,6 @@ echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
 echo -e "Berakhir Pada  : $expe"
-echo -e "---------------------------------" | lolcat
-echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e "=================================" | lolcat
+echo -e "- Mod By Dhansss X NezaVPN"
 echo -e ""
