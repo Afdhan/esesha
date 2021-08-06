@@ -16,6 +16,12 @@ echo "Silahkan Hubungi Admin"
 exit 0
 fi
 clear
+figlet -f slant ERROR! | lolcat
+sleep 5
+exit 0
+
+
+
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
