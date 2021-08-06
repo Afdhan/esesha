@@ -54,20 +54,19 @@ EOF
 # Update file attributes
 chmod 600 /etc/ppp/chap-secrets*
 echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-pptp"
-cat <<EOF
 
-================================
-           PPTP VPN
-================================
-Server Host   : $PUBLIC_IP
-Server IP     : $MYIP
-Username      : $VPN_USER
-Password      : $VPN_PASSWORD
-================================
-Aktif Selama  : $masaaktif Hari
-Dibuat Pada   : $tnggl
-Berakhir Pada : $expe
----------------------------------
-- Mod By M AFDHAN & NezaVPN
-
-EOF
+echo -e ""
+echo -e "================================" | lolcat
+echo -e "==========[ PPTP VPN ]==========" | lolcat
+echo -e "================================" | lolcat
+echo -e "Server Host   : $PUBLIC_IP"
+echo -e "Server IP     : $MYIP"
+echo -e "Username      : $VPN_USER"
+echo -e "Password      : $VPN_PASSWORD"
+echo -e "================================" | lolcat
+echo -e "Aktif Selama  : $masaaktif Hari"
+echo -e "Dibuat Pada   : $tnggl"
+echo -e "Berakhir Pada : $expe"
+echo -e "================================" | lolcat
+echo -e "- Mod By Dhansss X NezaVPN"
+echo -e ""
