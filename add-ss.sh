@@ -106,27 +106,26 @@ service cron restart
 clear
 	echo -e ""
 	echo -e "===================================" | lolcat
-        echo -e "         SHADOWSOCKS OBFS"
+        echo -e "========[ SHADOWSOCKS OBFS ]=======" | lolcat
         echo -e "===================================" | lolcat
-        echo -e "Server IP     : $MYIP"
-	echo -e "Server Host   : $domain"
-	echo -e "OBFS TLS      : $tls"
-	echo -e "OBFS HTTP     : $http"
-	echo -e "Password      : $user"
-	echo -e "Method        : aes-256-cfb"
+        echo -e "Server IP      : $MYIP"
+	echo -e "Server Host    : $domain"
+	echo -e "OBFS TLS       : $tls"
+	echo -e "OBFS HTTP      : $http"
+	echo -e "Password       : $user"
+	echo -e "Method         : aes-256-cfb"
 	echo -e "===================================" | lolcat
-	echo -e "             OBFS TLS  "
-	echo -e "-----------------------------------" | lolcat
+	echo -e "===========[ OBFS  TLS ]===========" | lolcat
+	echo -e ""
         echo -e "$linkss1"
 	echo -e "===================================" | lolcat
-	echo -e "             OBFS HTTP"
-	echo -e "-----------------------------------" | lolcat
+	echo -e "===========[ OBFS HTTP ]===========" | lolcat
+	echo -e ""
         echo -e "$linkss2"
 	echo -e "===================================" | lolcat
 	echo -e "Aktif Selama   : $masaaktif Hari"
         echo -e "Dibuat Pada    : $tnggl"
         echo -e "Berakhir Pada  : $expe"
-        echo -e "-----------------------------------" | lolcat
-        echo -e "- Mod By M AFDHAN & NezaVPN"
-        echo -e ""
-	
+        echo -e "===================================" | lolcat
+        echo -e "- Mod By Dhansss X NezaVPN"
+        echo -e "" 
