@@ -92,7 +92,7 @@ service cron restart
 clear
 echo -e ""
 echo -e "=================================" | lolcat
-echo -e "           V2RAY/VMESS"
+echo -e "=========[ V2RAY/VMESS ]=========" | lolcat
 echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
@@ -104,17 +104,17 @@ echo -e "Security       : auto"
 echo -e "Network        : ws"
 echo -e "Path           : /v2ray"
 echo -e "=================================" | lolcat
-echo -e "           VMESS TLS"
-echo -e "---------------------------------" | lolcat
+echo -e "==========[ VMESS TLS ]==========" | lolcat
+echo -e ""
 echo -e "${vmesslink1}"
 echo -e "=================================" | lolcat
-echo -e "         VMESS NON-TLS"
-echo -e "---------------------------------" | lolcat
+echo -e "========[ VMESS NON-TLS ]========" | lolcat
+echo -e ""
 echo -e "${vmesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
 echo -e "Berakhir Pada  : $expe"
 echo -e "---------------------------------" | lolcat
-echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e "- Mod By Dhansss X NezaVPN"
 echo -e ""
