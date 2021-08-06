@@ -23,7 +23,7 @@ done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo -e ""
 echo -e "${red}---------------------------------------------------${NC}"
-echo -e "  Jumlah : ${green}[ $JUMLAH ]${NC User"
+echo -e "  Jumlah : ${green}[ $JUMLAH ]${NC} User"
 echo -e "${red}---------------------------------------------------${NC}"
 echo -e ""
 read -p "Masukkan Username SSH Yang Ingin Dihapus : " userr
