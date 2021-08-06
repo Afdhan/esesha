@@ -59,7 +59,7 @@ systemctl restart v2ray@vnone
 clear
 echo -e ""
 echo -e "=================================" | lolcat
-echo -e "          V2RAY/VLESS"
+echo -e "=========[ V2RAY/VLESS ]=========" | lolcat
 echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
@@ -70,17 +70,17 @@ echo -e "Encryption     : none"
 echo -e "Network        : ws"
 echo -e "Path           : /v2ray"
 echo -e "=================================" | lolcat
-echo -e "           VLESS TLS"
-echo -e "---------------------------------" | lolcat
+echo -e "==========[ VLESS TLS ]==========" | lolcat
+echo -e ""
 echo -e "${vlesslink1}"
 echo -e "=================================" | lolcat
-echo -e "         VLESS NON-TLS"
-echo -e "---------------------------------" | lolcat
+echo -e "========[ VLESS NON-TLS ]========" | lolcat
+echo -e ""
 echo -e "${vlesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
 echo -e "Berakhir Pada  : $expe"
-echo -e "---------------------------------" | lolcat
-echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e "=================================" | lolcat
+echo -e "- Mod By Dhansss X NezaVPN"
 echo -e ""
