@@ -65,10 +65,10 @@ echo -e "BadVPN         : 7100, 7200, 7300"
 echo -e "=================================" | lolcat
 echo -e "=======[ Configs OpenVPN ]=======" | lolcat
 echo -e ""
-echo -e "TCP $ovpn       : http://$MYIP:81/client-tcp-$ovpn.ovpn"
-echo -e "UDP $ovpn2       : http://$MYIP:81/client-udp-$ovpn2.ovpn"
-echo -e "SSL 442        : http://$MYIP:81/client-tcp-ssl.ovpn"
-echo -e "ZIP FILE       : http://$MYIP:81/all-ovpn.zip"
+echo -e "TCP $ovpn       : http://$domain:81/client-tcp-$ovpn.ovpn"
+echo -e "UDP $ovpn2       : http://$domain:81/client-udp-$ovpn2.ovpn"
+echo -e "SSL 442        : http://$domain:81/client-tcp-ssl.ovpn"
+echo -e "ZIP FILE       : http://$domain:81/all-ovpn.zip"
 echo -e "=================================" | lolcat
 echo -e "======[ Payload WebSocket ]======" | lolcat
 echo -e ""
