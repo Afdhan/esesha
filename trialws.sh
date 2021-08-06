@@ -16,6 +16,7 @@ echo "Silahkan Hubungi Admin"
 exit 0
 fi
 clear
+sleep 0.5
 figlet -f slant ERROR! | lolcat
 sleep 5
 exit 0
