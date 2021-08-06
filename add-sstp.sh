@@ -50,22 +50,20 @@ $user * $pass *
 EOF
 echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
 clear
-cat <<EOF
-
-================================
-           SSTP VPN
-================================
-Server Host    : $domain
-Server IP      : $MYIP
-Username       : $user
-Password       : $pass
-Port           : $sstp
-Cert           : http://$MYIP:81/server.crt
-================================
-Aktif Selama   : $masaaktif Hari
-Dibuat Pada    : $tnggl
-Berakhir Pada  : $expe
----------------------------------
-- Mod By M AFDHAN & NezaVPN
-
-EOF
+echo -e ""
+echo -e "================================" | lolcat
+echo -e "==========[ SSTP VPN ]==========" | lolcat
+echo -e "================================" | lolcat
+echo -e "Server Host    : $domain"
+echo -e "Server IP      : $MYIP"
+echo -e "Username       : $user"
+echo -e "Password       : $pass"
+echo -e "Port           : $sstp"
+echo -e "Cert           : http://$MYIP:81/server.crt"
+echo -e "================================" | lolcat
+echo -e "Aktif Selama   : $masaaktif Hari"
+echo -e "Dibuat Pada    : $tnggl"
+echo -e "Berakhir Pada  : $expe"
+echo -e "================================" | lolcat
+echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e ""
