@@ -3,11 +3,36 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-read -p "Masukkan Username SSH Yang Mau Dihapus : " Pengguna
-
-if getent passwd $Pengguna > /dev/null 2>&1; then
-        userdel $Pengguna
-        echo -e "Username $Pengguna Berhasil Dihapus."
+echo -e "${red}---------------------------------------------------${NC}"
+echo -e "USERNAME          EXP DATE          STATUS" | lolcat
+echo -e "${red}---------------------------------------------------${NC}"
+while read expired
+do
+AKUN="$(echo $expired | cut -d: -f1)"
+ID="$(echo $expired | grep -v nobody | cut -d: -f3)"
+exp="$(chage -l $AKUN | grep "Account expires" | awk -F": " '{print $2}')"
+status="$(passwd -S $AKUN | awk '{print $2}' )"
+if [[ $ID -ge 1000 ]]; then
+if [[ "$status" = "L" ]]; then
+printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "${red}LOCKED${NC}"
 else
-        echo -e "Gagal, Username $Pengguna Tidak Ditemukan!."
+printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "${green}UNLOCKED${NC}"
+fi
+fi
+done < /etc/passwd
+JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+echo -e "${red}---------------------------------------------------${NC}"
+echo -e "Jumlah : [ $JUMLAH ] User" | lolcat
+echo -e "${red}---------------------------------------------------${NC}"
+echo -e ""
+read -p "Masukkan Username SSH Yang Ingin Dihapus : " userr
+sleep 1
+if getent passwd $userr > /dev/null 2>&1; then
+        userdel $userr
+        echo -e "User ${green}[ $userr ]${NC} Berhasil Dihapus."
+else
+        echo -e "Gagal, User ${red}[ $userr ]${NC} Tidak Ditemukan!"
+        sleep 3
+        clear
+        hapus
 fi
