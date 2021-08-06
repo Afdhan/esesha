@@ -88,7 +88,7 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
         sleep 1
 	echo -e ""
 	echo -e "=================================" | lolcat
-        echo -e "            WIREGUARD"
+        echo -e "==========[ WIREGUARD ]==========" | lolcat
         echo -e "=================================" | lolcat
         echo -e "Server IP      : $MYIP"
         echo -e "Server Host    : $SERVER_PUB_IP"
@@ -98,7 +98,7 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo -e "Aktif Selama   : $masaaktif Hari"
         echo -e "Dibuat Pada    : $tnggl"
         echo -e "Berakhir Pada  : $expe"
-        echo -e "---------------------------------" | lolcat
-        echo -e "- Mod By M AFDHAN & NezaVPN"
+        echo -e "=================================" | lolcat
+        echo -e "- Mod By Dhansss X NezaVPN"
         echo -e ""
 	rm -f /root/wg0-client-$CLIENT_NAME.conf
