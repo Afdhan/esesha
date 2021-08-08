@@ -10,7 +10,7 @@ off='\x1b[m'
 clear
 echo -e ""
 echo -e "${cyan}======================================${off}"
-echo -e "             ${green}PANEL V2RAY VLESS${off}"
+echo -e "          ${green}PANEL V2RAY VLESS${off}"
 echo -e "${cyan}======================================${off}"
 echo -e "${green}"
 echo -e "     1 ⸩  Buat Akun Vless Websocket"
