@@ -2,9 +2,14 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
-Info="${Green_font_prefix}[ON]${Font_color_suffix}"
-Error="${Red_font_prefix}[OFF]${Font_color_suffix}"
+Info="${Green_font_prefix}[Enable]${Font_color_suffix}"
+Error="${Red_font_prefix}[Disable]${Font_color_suffix}"
 cek=$(cat /home/limit)
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 function start () {
@@ -36,13 +41,14 @@ else
 sts="${Error}"
 fi
 clear
-echo -e " ==============================" | lolcat
+echo -e "${cyan}===============================${off}"
 echo -e "     Limit Bandwidth Speed         "
-echo -e " ==============================" | lolcat
+echo -e "${cyan}===============================${off}"
 echo -e " Status $sts"
 echo -e "  1. Start Limit"
 echo -e "  2. Stop Limit"
 echo -e " Klik CTRL+C untuk return"
+echo -e "${cyan}===============================${off}"
 read -rp " Masukkan Nomor : " -e num
 if [[ "$num" = "1" ]]; then
 start

@@ -2,6 +2,11 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/shadowsocks-libev/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -15,9 +20,10 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/shadowsocks-libev/akun.conf")
 	echo ""
 	echo " Pilih Klien Yang Ingin Diperbarui"
 	echo " Klik CTRL+C untuk return"
-	echo " ===============================" | lolcat
+	echo -e "${cyan}===============================${off}"
 	echo "     No User Expired  "
 	grep -E "^### " "/etc/shadowsocks-libev/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
+	echo -e "${cyan}===============================${off}"
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Pilih Salah Satu [1]: " CLIENT_NUMBER

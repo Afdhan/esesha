@@ -2,6 +2,9 @@
 
 clear
 figlet -f slant AFDHAN - NEZA   VPN PROJECT \~ | lolcat
+mer='\x1b[91m'
+cyan='\x1b[96m'
+off='\x1b[m'
 
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
@@ -11,8 +14,9 @@ elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 	RCLOCAL='/etc/rc.d/rc.local'
 	chmod +x /etc/rc.d/rc.local
 else
-	echo "Scripy Install Hanya Bekerja Pada Operating System Debian, Ubuntu dan Centos"
-	exit
+    echo -e "${mer}OS TIDAK SUPPORT !!!${off}"
+	echo -e "${mer}Scripy Install Hanya Bekerja Pada Operating System Debian, Ubuntu dan Centos${off}"
+	exit 0
 fi
 color3='\e[031;1m'
 color2='\e[34;1m'
@@ -23,7 +27,7 @@ ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
-jam=$(date +"%T")
+jam=$(TZ='Asia/Jakarta' date +%T)
 hari=$(date +"%A")
 tnggl=$(date +"%d")
 bln=$(date +"%B")
@@ -35,7 +39,7 @@ else
 domain=$IP
 fi
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-	echo -e "                 M AFDHAN - NEZAVPN " | lolcat
+	echo -e "                 ${cyan}M AFDHAN - NEZAVPN${off} "
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -43,6 +47,7 @@ fi
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
+	    echo -e "${green}Zona Waktu                  :${NC} Asia/Jakarta"
         echo -e "${green}Waktu                  :${NC} $jam WIB"
         echo -e "${green}Hari                   :${NC} $hari"
         echo -e "${green}Tanggal                :${NC} $tnggl $bln $thn"
@@ -59,10 +64,10 @@ fi
 	echo -e "${green}Domain                 :${NC}  $domain"
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "                    MENU TUNNELING " | lolcat
+echo -e "                    ${cyan}MENU TUNNELING${off} "
 
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-
+echo -e "${cyan}"
 echo -e " 1 ⸩  Panel SSH & OVPN         5 ⸩  Panel SSR & Shadowsocks"
 
 echo -e " 2 ⸩  Panel Wireguard          6 ⸩  Panel Vmess/V2ray"
@@ -70,14 +75,14 @@ echo -e " 2 ⸩  Panel Wireguard          6 ⸩  Panel Vmess/V2ray"
 echo -e " 3 ⸩  Panel L2TP & PPTP        7 ⸩  Panel Vless"
 
 echo -e " 4 ⸩  Panel SSTP               8 ⸩  Panel Trojan"
-
+echo -e "${off}"
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "                      MENU SYSTEM " | lolcat
+echo -e "                      ${cyan}MENU SYSTEM${off} "
 
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-
-echo -e "  9 ⸩  Masukkan Host          19 ⸩  Limit Bandwith"
+echo -e "${cyan}"
+echo -e "  9 ⸩  Masukkan Host          19 ⸩  Limit Speed"
 
 echo -e " 10 ⸩  Masukkan Subdomain     20 ⸩  Ram VPS"
 
@@ -96,18 +101,18 @@ echo -e " 16 ⸩  Menu Webmin            26 ⸩  Restart Service"
 echo -e " 17 ⸩  Auto Reboot            27 ⸩  Multi Login SSH"
 
 echo -e " 18 ⸩  Edit Banner SSH        28 ⸩  Restart Script"
+echo -e "${off}"
+echo -e "${red}══════════════════════════════════════════════════════════${NC}"
+
+echo -e "  ${cyan}x ⸩  Keluar Dari Terminal${off}"
 
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "  x ⸩  Keluar Dari Terminal"
-
-echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-
-echo -e ""
+echo -e "${cyan}"
 
 read -p " [ # ] Masukkan Nomor Pilihanmu :  "  num
 
-echo -e ""
+echo -e "${off}"
 
 case $num in
 

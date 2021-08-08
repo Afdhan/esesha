@@ -2,27 +2,34 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+
 clear
 echo -e ""
-echo -e "${red}======================================${NC}"
-echo -e ""
-echo -e ""
-echo -e "    [1] Mulai Ulang Services"
-echo -e "    [2] Mulai Ulang OpenSSH"
-echo -e "    [3] Mulai Ulang Dropbear"
-echo -e "    [4] Mulai Ulang Stunnel4"
-echo -e "    [5] Mulai Ulang OpenVPN"
-echo -e "    [6] Mulai Ulang Squid"
-echo -e "    [7] Mulai Ulang Nginx"
-echo -e "    [8] Mulai Ulang BadVPN"
-echo -e "    [9] Mulai Ulang WebSocket"
-echo -e "    [x] Keluar"
-echo -e ""
-echo -e "${red}======================================${NC}"
-echo -e ""
-read -p "    Masukkan Nomor :  " Restart
-echo -e ""
+echo -e "${cyan}======================================${off}"
+echo -e "                         ${green}RESTART SERVICES${off}"
+echo -e "${cyan}======================================${off}"
+echo -e "${green}"
+echo -e "     1 ⸩  Mulai Ulang Services"
+echo -e "     2 ⸩  Mulai Ulang OpenSSH"
+echo -e "     3 ⸩  Mulai Ulang Dropbear"
+echo -e "     4 ⸩  Mulai Ulang Stunnel4"
+echo -e "     5 ⸩  Mulai Ulang OpenVPN"
+echo -e "     6 ⸩  Mulai Ulang Squid"
+echo -e "     7 ⸩  Mulai Ulang Nginx"
+echo -e "     8 ⸩  Mulai Ulang BadVPN"
+echo -e "     9 ⸩  Mulai Ulang WebSocket"
+echo -e "     x ⸩  Keluar"
+echo -e "${off}"
+echo -e "${cyan}======================================${off}"
+echo -e "${green}"
+read -p "    Masukkan Nomor  [1-9 / x] :  " Restart
+echo -e "${off}"
 sleep 1
+
 clear
 case $Restart in
                 1)
@@ -38,6 +45,7 @@ case $Restart in
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 1000
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000
+
                 systemctl daemon-reload
                 systemctl enable ws-dropbear.service
                 systemctl enable ws-openssh.service
@@ -119,10 +127,15 @@ case $Restart in
                 ;;
                 9)
                 systemctl daemon-reload
-                systemctl enable edu-proxy
-                systemctl restart edu-proxy
-                systemctl enable edu-vpn
-                systemctl restart edu-vpn
+                systemctl enable ws-dropbear.service
+                systemctl enable ws-openssh.service
+                systemctl enable ws-openvpn.service
+                systemctl enable ws-stunnel.service
+
+                systemctl restart ws-dropbear.service
+                systemctl restart ws-openssh.service
+                systemctl restart ws-openvpn.service
+                systemctl restart ws-stunnel.service
                 echo -e ""
                 echo -e " WebSocket Services Diperbarui" | lolcat
                 echo -e ""

@@ -1,17 +1,64 @@
 #!/bin/bash
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+# DELETE AKUN EXPIRED
+               hariini=`date +%Y-%m-%d`
+               cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
+               totalaccounts=`cat /tmp/expirelist.txt | wc -l`
+               for((i=1; i<=$totalaccounts; i++ ))
+               do
+               tuserval=`head -n $i /tmp/expirelist.txt | tail -n 1`
+               username=`echo $tuserval | cut -f1 -d:`
+               userexp=`echo $tuserval | cut -f2 -d:`
+               userexpireinseconds=$(( $userexp * 86400 ))
+               tglexp=`date -d @$userexpireinseconds`             
+               tgl=`echo $tglexp |awk -F" " '{print $3}'`
+               while [ ${#tgl} -lt 2 ]
+               do
+               tgl="0"$tgl
+               done
+               while [ ${#username} -lt 15 ]
+               do
+               username=$username" " 
+               done
+               bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
+               echo "echo "Expired- User : $username Expire at : $tgl $bulantahun"" >> /usr/local/bin/alluser
+               todaystime=`date +%s`
+               if [ $userexpireinseconds -ge $todaystime ] ;
+               then
+		    	:
+               else
+               echo "echo "Expired- Username : $username are expired at: $tgl $bulantahun and removed : $hariini "" >> /usr/local/bin/deleteduser
+	           
+               userdel $username
+               fi
+               done
+# DELETE
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
-echo -e "${green}Akses Diizinkan...${NC}"
+echo -e "${green}Akses Diizinkan...${off}"
 sleep 1
 else
 clear
-echo -e "${red}Akses Diblokir!${NC}";
+echo -e "${red}Akses Diblokir!${off}";
 echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
 exit 0
@@ -21,8 +68,6 @@ read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
 
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
@@ -48,13 +93,16 @@ useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "=================================" | lolcat
-echo -e "========[ SSH & OpenVPN ]========" | lolcat
-echo -e "=================================" | lolcat
+echo -e "${cyan}=================================${off}"
+echo -e "${purple} ~> SSH & OpenVPN${off}"
+echo -e "${cyan}=================================${off}"
 echo -e "Username       : $Login "
 echo -e "Password       : $Pass"
 echo -e "Hostname       : $domain"
-echo -e "=================================" | lolcat
+echo -e "${cyan}=================================${off}"
+echo -e "${green}ISP      : $ISP"
+echo -e "CITY      : $CITY"
+echo -e "COUNTRY      : $COUNTRY"
 echo -e "Server IP      : $MYIP"
 echo -e "OpenSSH        : 22"
 echo -e "Dropbear       : 109, 143"
@@ -64,22 +112,22 @@ echo -e "WS OpenSSH     : 2082"
 echo -e "WS OpenVPN     : 2086"
 echo -e "WS TLS         : 2053"
 echo -e "Squid          :$sqd"
-echo -e "BadVPN         : 7100, 7200, 7300"
-echo -e "=================================" | lolcat
-echo -e "=======[ Configs OpenVPN ]=======" | lolcat
-echo -e ""
-echo -e "TCP $ovpn       : http://$domain:81/client-tcp-$ovpn.ovpn"
-echo -e "UDP $ovpn2       : http://$domain:81/client-udp-$ovpn2.ovpn"
-echo -e "SSL 442        : http://$domain:81/client-tcp-ssl.ovpn"
-echo -e "ZIP FILE       : http://$domain:81/all-ovpn.zip"
-echo -e "=================================" | lolcat
-echo -e "======[ Payload WebSocket ]======" | lolcat
-echo -e ""
-echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]"
-echo -e "=================================" | lolcat
-echo -e "Aktif Selama   : $masaaktif Hari"
+echo -e "BadVPN         : 7100, 7200, 7300${off}"
+echo -e "${cyan}=================================${off}"
+echo -e "${purple}~> Configs OpenVPN${off}"
+echo -e "${green}"
+echo -e "TCP $ovpn       : http://$domain:81/TCP.ovpn"
+echo -e "UDP $ovpn2       : http://$domain:81/UDP.ovpn"
+echo -e "SSL 442        : http://$domain:81/SSL.ovpn"
+echo -e "ZIP FILE       : http://$domain:81/ALL.zip${off}"
+echo -e "${cyan}=================================${off}"
+echo -e "${purple}~> Payload WebSocket${off}"
+echo -e "${green}"
+echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]${off}"
+echo -e "${cyan}=================================${off}"
+echo -e "${green}Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $expe"
-echo -e "=================================" | lolcat
-echo -e "- Mod By Dhansss X NezaVPN"
+echo -e "Berakhir Pada  : $expe${off}"
+echo -e "${cyan}=================================${off}"
+echo -e "${purple}- Mod By Dhansss X NezaVPN${off}"
 echo -e ""

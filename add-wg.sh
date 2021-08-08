@@ -1,16 +1,29 @@
 #!/bin/bash
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
-echo -e "${green}Akses Diizinkan...${NC}"
+echo -e "${green}Akses Diizinkan...${off}"
 sleep 1
 else
 clear
-echo -e "${red}Akses Diblokir!${NC}";
+echo -e "${red}Akses Diblokir!${off}";
 echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
 exit 0
@@ -49,7 +62,7 @@ fi
 
 	CLIENT_DNS_2="176.103.130.131"
 	
-	read -p "Expired (days): " masaaktif
+	read -p "Expired (hari): " masaaktif
 	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
         tgl=$(date -d "$masaaktif days" +"%d")
         bln=$(date -d "$masaaktif days" +"%b")
@@ -87,18 +100,21 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	clear
         sleep 1
 	echo -e ""
-	echo -e "=================================" | lolcat
-        echo -e "==========[ WIREGUARD ]==========" | lolcat
-        echo -e "=================================" | lolcat
-        echo -e "Server IP      : $MYIP"
-        echo -e "Server Host    : $SERVER_PUB_IP"
-        echo -e "=================================" | lolcat
-	echo -e "WireGuard URL 	: http://$SERVER_PUB_IP:81/$CLIENT_NAME.conf"
-	echo -e "=================================" | lolcat
-	echo -e "Aktif Selama   : $masaaktif Hari"
-        echo -e "Dibuat Pada    : $tnggl"
-        echo -e "Berakhir Pada  : $expe"
-        echo -e "=================================" | lolcat
-        echo -e "- Mod By Dhansss X NezaVPN"
-        echo -e ""
+	echo -e "${cyan}=================================${off}"
+        echo -e "${purple} ~> WIREGUARD${off}"
+        echo -e "${cyan}=================================${off}"
+        echo -e "${green}ISP      : ${ISP}"
+        echo -e "CITY      : ${CITY}"
+        echo -e "COUNTRY      : ${COUNTRY}"
+        echo -e "Server IP      : ${MYIP}"
+        echo -e "Server Host    : ${SERVER_PUB_IP}${off}"
+        echo -e "${cyan}=================================${off}"
+	echo -e "${green}WireGuard URL 	: http://$SERVER_PUB_IP:81/$CLIENT_NAME.conf${off}"
+	echo -e "${cyan}=================================${off}"
+	echo -e "${green}Aktif Selama   : $masaaktif Hari"
+echo -e "Dibuat Pada    : $tnggl"
+echo -e "Berakhir Pada  : $expe${off}"
+echo -e "${cyan}=================================${off}"
+echo -e "${purple}- Mod By Dhansss X NezaVPN${off}"
+echo -e ""
 	rm -f /root/wg0-client-$CLIENT_NAME.conf

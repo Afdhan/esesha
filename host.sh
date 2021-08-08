@@ -1,28 +1,84 @@
 #!/bin/bash
-echo "==============================" | lolcat
+
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+
+
+echo -e "${cyan}=================================${off}"
+echo -e "          SILAHKAN PILIH DOMAIN " lolcat
+echo -e "${cyan}=================================${off}"
+echo -e ""
+echo -e "      1. dhans-project.xyz"
+echo -e "      2. dhans-vpn.eu.org"
+echo -e "      3. nezavpn.my.id"
+echo -e "---------------------------------" | lolcat
+echo -e "      x. Custom domain"
+echo -e ""
+echo -e "${cyan}=================================${off}"
 echo ""
-read -rp "Masukkan Domain: " -e DOMAIN
+read -p "  [#]  Masukkan Nomor :  " nom
+
+if [[ $nom == '1' ]]; then
+   DOMAIN=dhans-project.xyz
+   CF_ID=afdhan134@gmail.com
+   CF_KEY=57fc95a923222474d5b90ff5444e0ee6f19ef
+elif [[ $nom == '2' ]]; then
+   DOMAIN=dhans-vpn.eu.org
+   CF_ID=afdhan134@gmail.com
+   CF_KEY=57fc95a923222474d5b90ff5444e0ee6f19ef
+elif [[ $nom == '3' ]]; then
+   DOMAIN=nezavpn.my.id
+   CF_ID=neza.afdhan@gmail.com
+   CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
+elif [[ $nom == 'x' ]]; then
+   sleep 1
+   read -rp "Masukkan Domain Anda : " -e DOMAIN
+sleep 0.5
+   read -rp "Masukkan Email Cloudflare : " -e CF_ID
+sleep 0.5
+   read -rp "Masukkan Api Key Cloudflare : " -e CF_KEY
 clear
-echo "==============================" | lolcat
-echo ""
-echo "Domain Enable: $DOMAIN" 
-echo ""
+else
+   echo -e "${red}Masukkan Nomor Yang Benar!${off}"
+   sleep 1
+   clear
+   hostnya
+fi
+sleep 1
+echo -e "${green}Domain Anda: ${DOMAIN} ${off}"
 read -rp "Masukkan Subdomain: " -e sub
-echo "Menganalisis Subomain..."
+echo -e "${green}Menganalisis Subomain...${off}"
 sleep 0.5
 clear
+
 SUB_DOMAIN=${sub}.${DOMAIN}
-CF_ID=neza.afdhan@gmail.com
-CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
-echo "Pointing DNS Untuk Domain ${SUB_DOMAIN}..."
+echo -e "${green}Pointing DNS Untuk Domain ${SUB_DOMAIN}...${off}"
 sleep 1
 clear
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" | jq -r .result[0].id)
+     
+if [[ $ZONE == 'null' ]]; then
+if [[ $ZONE == "" ]]; then
+  echo -e "${red}ERROR!${off} ${cyan}Result Gagal, Kemungkinan Api Key Tidak Valid!${off}"
+  sleep 1
+  exit 0
+fi
+fi
 
 RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${SUB_DOMAIN}" \
      -H "X-Auth-Email: ${CF_ID}" \
@@ -42,9 +98,13 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
-echo "Host/Domain Berhasil Disimpan"
+   
+#hasil=$(wget -qO- "http://api.domaintools.com/v1/domaintools.com/reverse-ip/?limit=1" | jq -r .response.ip_addresses.ip_address)
+
 echo ""
-echo "Domain Anda : $SUB_DOMAIN"
+echo -e "${cyan}DOMAIN BERHASIL DISIMPAN${off}"
+echo ""
+echo -e "${cyan}Domain Anda :${off} ${green}$SUB_DOMAIN${off}"
 echo ""
 echo "- Mod By M AFDHAN & NezaVPN" | lolcat
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf

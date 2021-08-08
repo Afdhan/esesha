@@ -1,17 +1,30 @@
 #!/bin/bash
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
-echo -e "${green}Akses Diizinkan...${NC}"
+echo -e "${green}Akses Diizinkan...${off}"
 sleep 1
 else
 clear
-echo -e "${red}Akses Diblokir!${NC}";
+echo -e "${red}Akses Diblokir!${off}"
 echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
 exit 0
@@ -105,27 +118,30 @@ port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
 	echo -e ""
-	echo -e "===================================" | lolcat
-        echo -e "========[ SHADOWSOCKS OBFS ]=======" | lolcat
-        echo -e "===================================" | lolcat
+	echo -e "${cyan}===================================${off}"
+        echo -e "${purple} ~> SHADOWSOCKS OBFS${off}"
+        echo -e "${cyan}===================================${off}"
+        echo -e "${green}ISP      : $ISP"
+echo -e "CITY      : $CITY"
+echo -e "COUNTRY      : $COUNTRY"
         echo -e "Server IP      : $MYIP"
 	echo -e "Server Host    : $domain"
 	echo -e "OBFS TLS       : $tls"
 	echo -e "OBFS HTTP      : $http"
 	echo -e "Password       : $user"
-	echo -e "Method         : aes-256-cfb"
-	echo -e "===================================" | lolcat
-	echo -e "===========[ OBFS  TLS ]===========" | lolcat
+	echo -e "Method         : aes-256-cfb${off}"
+	echo -e "${cyan}===================================${off}"
+	echo -e "${purple}~> OBFS  TLS${off}"
 	echo -e ""
-        echo -e "$linkss1"
-	echo -e "===================================" | lolcat
-	echo -e "===========[ OBFS HTTP ]===========" | lolcat
+        echo -e "$linkss1" | lolcat
+	echo -e "${cyan}===================================${off}"
+	echo -e "${purple}~> OBFS HTTP${off}"
 	echo -e ""
-        echo -e "$linkss2"
-	echo -e "===================================" | lolcat
-	echo -e "Aktif Selama   : $masaaktif Hari"
-        echo -e "Dibuat Pada    : $tnggl"
-        echo -e "Berakhir Pada  : $expe"
-        echo -e "===================================" | lolcat
-        echo -e "- Mod By Dhansss X NezaVPN"
-        echo -e "" 
+        echo -e "$linkss2" | lolcat
+	echo -e "${cyan}===================================${off}"
+	echo -e "${green}Aktif Selama   : $masaaktif Hari"
+echo -e "Dibuat Pada    : $tnggl"
+echo -e "Berakhir Pada  : $expe${off}"
+echo -e "${cyan}=================================${off}"
+echo -e "${purple}- Mod By Dhansss X NezaVPN${off}"
+echo -e ""

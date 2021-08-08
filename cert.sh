@@ -3,7 +3,8 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 clear
-echo start
+
+figlet -f smslant Starting Replace Certificate | lolcat
 sleep 0.5
 source /var/lib/premium-script/ipvps.conf
 domain=$IP
@@ -13,7 +14,7 @@ systemctl stop v2ray@none
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
 systemctl start v2ray
 systemctl start v2ray@none
-echo Done
+figlet -f slant Done | lolcat
 sleep 0.5
 clear 
 neofetch

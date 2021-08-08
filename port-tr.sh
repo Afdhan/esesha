@@ -2,13 +2,23 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+
 clear
 tr="$(cat ~/log-install.txt | grep -i Trojan | cut -d: -f2|sed 's/ //g')"
-echo -e "      Ubah Port $tr"
-read -p "Port Baru Trojan: " tr2
+echo -e "     ${green}Ubah Port Trojan Saat Ini $tr ${off}"
+echo -e ""
+echo -e "${green}"
+read -p "Masukkan Port Baru Trojan :  " tr2
+echo -e "${off}"
 if [ -z $tr2 ]; then
-echo "Masukkan Port!"
-exit 0
+echo -e "${red}Port Tidak Dimasukkan !!!${off}"
+sleep 1
+clear
+menu
 fi
 cek=$(netstat -nutlp | grep -w $tr2)
 if [[ -z $cek ]]; then
@@ -23,7 +33,10 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 systemctl restart trojan > /dev/null
-echo -e "\e[032;1mPort $tr2 modified successfully\e[0m"
+echo -e "${cyan}Port Trojan Berhasil Diganti Menjadi :${off} ${green} $tr2 ${off}"
 else
-echo "Port $tr2 Sudah Digunakan!"
+echo -e "${red}ERROR! Port{off} ${green}[ $tr2 ]${off} ${red}Sudah Beroperasi Pada System!${off}"
+echo -e "${cyan}Silahkan Gunakan Port Lain...${off}"
+sleep 2
+exit 0
 fi

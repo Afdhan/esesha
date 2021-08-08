@@ -2,24 +2,39 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
-echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     [1]  Ubah Port Vmess TLS $tls"
-echo -e "     [2]  Ubah Port Vmess None TLS $none"
-echo -e "     [x]  Keluar"
-echo -e "======================================" | lolcat
-echo -e ""
+echo -e "${cyan}======================================${off}"
+echo -e "                 ${green}PORT V2RAY VMESS${off}"
+echo -e "${cyan}======================================${off}"
+echo -e "${green}"
+echo -e "     1 ⸩  Ubah Port VMess TLS $tls"
+echo -e "     2 ⸩  Ubah Port VMess NON-TLS $none"
+echo -e "     x ⸩  Keluar"
+echo -e "${off}"
+echo -e "${cyan}======================================${off}"
+echo -e "${green}"
 read -p "     Pilih Nomor  [1-2 / x] :  " prot
-echo -e ""
+echo -e "${off}"
+
 case $prot in
 1)
-read -p "Port Baru Vmess TLS: " tls1
+echo -e ""
+echo -e "${green}"
+read -p "Port Baru VMess TLS : " tls1
+echo -e "${off}"
 if [ -z $tls1 ]; then
-echo "Masukkan Port!"
-exit 0
+echo -e "${red}Port Tidak Dimasukkan !!!${off}"
+sleep 1
+clear
+menu
 fi
 cek=$(netstat -nutlp | grep -w $tls1)
 if [[ -z $cek ]]; then
@@ -40,11 +55,16 @@ echo "Port $tls1 Sudah Digunakan"
 fi
 ;;
 2)
-echo "Masukkan Hanya Dua Angka (eg : 69)"
-read -p "Port Baru Vmess None TLS: " none1
+echo -e "${cyan}Masukkan Hanya Dua Angka (ex : 77)${off}"
+echo -e ""
+echo -e "${green}"
+read -p "Port Baru VMess NON-TLS : " none1
+echo -e "${off}"
 if [ -z $none1 ]; then
-echo "Masukkan Port!"
-exit 0
+echo -e "${red}Port Tidak Dimasukkan !!!${off}"
+sleep 1
+clear
+menu
 fi
 cek=$(netstat -nutlp | grep -w $none1)
 if [[ -z $cek ]]; then
@@ -59,9 +79,12 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 systemctl restart v2ray@none > /dev/null
-echo -e "\e[032;1mPort $none1 Berhasil Diperbarui\e[0m"
+echo -e "${cyan}Port VMess TLS Berhasil Diganti Menjadi :${off} ${green} $none1 ${off}"
 else
-echo "Port $none1 Sudah Digunakan"
+echo -e "${red}ERROR! Port{off} ${green}[ $none1 ]${off} ${red}Sudah Beroperasi Pada System!${off}"
+echo -e "${cyan}Silahkan Gunakan Port Lain...${off}"
+sleep 2
+exit 0
 fi
 ;;
 x)
@@ -69,6 +92,9 @@ exit
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada!"
+echo -e "${red}Masukkan Nomor Yang Ada!${off}"
+sleep 1
+clear
+menu
 ;;
 esac

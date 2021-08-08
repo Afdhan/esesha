@@ -2,6 +2,11 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/v2ray/vless.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -15,8 +20,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/v2ray/vless.json")
 	echo ""
 	echo "Pilih Klien Yang Ingin Diperbarui"
 	echo " Klik CTRL+C untuk return"
-	echo -e "===============================" | lolcat
+	echo -e "${cyan}===============================${off}"
 	grep -E "^### " "/etc/v2ray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
+	echo -e "${cyan}===============================${off}"
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Pilih Salah Satu [1]: " CLIENT_NUMBER
@@ -24,7 +30,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/v2ray/vless.json")
 			read -rp "Pilih Salah Satu [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-read -p "Expired (days): " masaaktif
+read -p "Expired (hari): " masaaktif
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
 thn=$(date -d "$masaaktif days" +"%Y")

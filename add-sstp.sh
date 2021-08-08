@@ -1,17 +1,31 @@
 #!/bin/bash
 red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
-echo -e "${green}Akses Diizinkan...${NC}"
+echo -e "${green}Akses Diizinkan...${off}"
 sleep 1
 else
 clear
-echo -e "${red}Akses Diblokir!${NC}";
+echo -e "${red}Akses Diblokir!${off}"
 echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
 exit 0
@@ -35,7 +49,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		fi
 	done
 read -p "Password: " pass
-read -p "Expired (days): " masaaktif
+read -p "Expired (hari): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
@@ -51,19 +65,22 @@ EOF
 echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
 clear
 echo -e ""
-echo -e "================================" | lolcat
-echo -e "==========[ SSTP VPN ]==========" | lolcat
-echo -e "================================" | lolcat
-echo -e "Server Host    : $domain"
+echo -e "${cyan}================================${off}"
+echo -e "${cyan} ~> SSTP VPN${off}"
+echo -e "${cyan}================================${off}"
+echo -e "${green}ISP      : $ISP"
+echo -e "CITY      : $CITY"
+echo -e "COUNTRY      : $COUNTRY"
 echo -e "Server IP      : $MYIP"
+echo -e "Server Host    : $domain"
+echo -e "Port           : $sstp"
 echo -e "Username       : $user"
 echo -e "Password       : $pass"
-echo -e "Port           : $sstp"
-echo -e "Cert           : http://$MYIP:81/server.crt"
-echo -e "================================" | lolcat
-echo -e "Aktif Selama   : $masaaktif Hari"
+echo -e "Cert           : http://$domain:81/server.crt${off}"
+echo -e "${cyan}================================${off}"
+echo -e "${green}Aktif Selama   : $masaaktif Hari"
 echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $expe"
-echo -e "================================" | lolcat
-echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e "Berakhir Pada  : $expe${off}"
+echo -e "${cyan}=================================${off}"
+echo -e "${purple}- Mod By Dhansss X NezaVPN${off}"
 echo -e ""

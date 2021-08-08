@@ -2,6 +2,11 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+
 clear
 source /etc/wireguard/params
 	NUMBER_OF_CLIENTS=$(grep -c -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf")
@@ -16,9 +21,10 @@ source /etc/wireguard/params
 	echo ""
 	echo "Pilih Klien Yang Ingin Diperbarui"
 	echo " Klik CTRL+C untuk return"
-	echo -e "===============================" | lolcat
+	echo -e "${cyan}===============================${off}"
 	echo "     No  Expired   User"
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
+	echo -e "${cyan}===============================${off}"
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Pilih Salah Satu [1]: " CLIENT_NUMBER
@@ -26,7 +32,7 @@ source /etc/wireguard/params
 			read -rp "Pilih Salah Satu [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-read -p "Expired (days): " masaaktif
+read -p "Expired (hari): " masaaktif
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
 thn=$(date -d "$masaaktif days" +"%Y")
