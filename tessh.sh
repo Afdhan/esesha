@@ -10,7 +10,7 @@ off='\x1b[m'
 clear
 echo -e ""
 echo -e "${cyan}======================================${off}"
-echo -e "           ${green}PANEL SSH & OVPN WS${off}"
+echo -e "         ${green}PANEL SSH & OVPN WS${off}"
 echo -e "${cyan}======================================${off}"
 echo -e "${green}"
 echo -e "     1 ⸩  Buat Akun SSH & OpenVPN"
