@@ -12,7 +12,7 @@ sqd="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | head -
 sqd2="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | tail -n1)"
 echo -e ""
 echo -e "${cyan}======================================${off}"
-echo -e "                         ${green}PORT SQUID${off}"
+echo -e "             ${green}PORT SQUID${off}"
 echo -e "${cyan}======================================${off}"
 echo -e "${green}"
 echo -e "     1 ⸩  Ubah Port Squid $sqd"
