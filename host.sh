@@ -15,18 +15,18 @@ flag='\x1b[47;41m'
 
 
 echo -e "${cyan}=================================${off}"
-echo -e "          SILAHKAN PILIH DOMAIN " lolcat
+echo -e "      SILAHKAN PILIH DOMAIN " | lolcat
 echo -e "${cyan}=================================${off}"
 echo -e ""
-echo -e "      1. dhans-project.xyz"
-echo -e "      2. dhans-vpn.eu.org"
-echo -e "      3. nezavpn.my.id"
+echo -e "    1. dhans-project.xyz"
+echo -e "    2. dhans-vpn.eu.org"
+echo -e "    3. nezavpn.my.id"
 echo -e "---------------------------------" | lolcat
-echo -e "      x. Custom domain"
+echo -e "    x. Custom domain"
 echo -e ""
 echo -e "${cyan}=================================${off}"
 echo ""
-read -p "  [#]  Masukkan Nomor :  " nom
+read -p "   [#]  Masukkan Nomor :  " nom
 
 if [[ $nom == '1' ]]; then
    DOMAIN=dhans-project.xyz
@@ -55,7 +55,8 @@ else
    hostnya
 fi
 sleep 1
-echo -e "${green}Domain Anda: ${DOMAIN} ${off}"
+echo -e "${green}Domain Input : ${DOMAIN} ${off}"
+echo -e ""
 read -rp "Masukkan Subdomain: " -e sub
 echo -e "${green}Menganalisis Subomain...${off}"
 sleep 0.5
@@ -104,7 +105,7 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 echo ""
 echo -e "${cyan}DOMAIN BERHASIL DISIMPAN${off}"
 echo ""
-echo -e "${cyan}Domain Anda :${off} ${green}$SUB_DOMAIN${off}"
+echo -e "${cyan}Domain Anda Sekarang :${off} ${green}$SUB_DOMAIN${off}"
 echo ""
 echo "- Mod By M AFDHAN & NezaVPN" | lolcat
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
