@@ -23,6 +23,7 @@ color2='\e[34;1m'
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+COUNTRY=$(curl -s ipinfo.io/country )
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
@@ -47,21 +48,22 @@ fi
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-	echo -e "${green}Zona Waktu             :${NC} Asia/Jakarta"
-        echo -e "${green}Waktu                  :${NC} $jam WIB"
-        echo -e "${green}Hari                   :${NC} $hari"
-        echo -e "${green}Tanggal                :${NC} $tnggl $bln $thn"
+	echo -e "${cyan}Zona Waktu             :${NC} Asia/Jakarta"
+        echo -e "${cyan}Waktu                  :${NC} $jam WIB"
+        echo -e "${cyan}Hari                   :${NC} $hari"
+        echo -e "${cyan}Tanggal                :${NC} $tnggl $bln $thn"
         echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-	echo -e "${green}CPU Model              :${NC} $cname"
-	echo -e "${green}Number Of Cores        :${NC}  $cores"
-	echo -e "${green}CPU Frequency          :${NC} $freq MHz"
-	echo -e "${green}Amount Of RAM          :${NC}  $tram MB"
-	echo -e "${green}Amount Of Swap         :${NC}  $swap MB"
-	echo -e "${green}System Uptime          :${NC} $up"
-	echo -e "${green}ISP Name               :${NC}  $ISP"
-	echo -e "${green}City                   :${NC}  $CITY"
-	echo -e "${green}IP VPS                 :${NC}  $IPVPS"
-	echo -e "${green}Domain                 :${NC}  $domain"
+	echo -e "${cyan}CPU Model              :${NC} $cname"
+	echo -e "${cyan}Number Of Cores        :${NC}  $cores"
+	echo -e "${cyan}CPU Frequency          :${NC} $freq MHz"
+	echo -e "${cyan}Amount Of RAM          :${NC}  $tram MB"
+	echo -e "${cyan}Amount Of Swap         :${NC}  $swap MB"
+	echo -e "${cyan}Waktu Aktif            :${NC} $up"
+	echo -e "${cyan}ISP                    :${NC}  $ISP"
+        echo -e "${cyan}COUNTRY                :${NC}  $COUNTRY"
+	echo -e "${cyan}CITY                   :${NC}  $CITY"
+	echo -e "${cyan}IP VPS                 :${NC}  $IPVPS"
+	echo -e "${cyan}Domain CDN             :${NC}  $domain"
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
 echo -e "                    ${cyan}MENU TUNNELING${off} "
@@ -84,7 +86,7 @@ echo -e "${red}═════════════════════�
 echo -e "${green}"
 echo -e "  9 ⸩  Masukkan Host          19 ⸩  Limit Speed"
 
-echo -e " 10 ⸩  Masukkan Subdomain     20 ⸩  Ram VPS"
+echo -e " 10 ⸩  Record Domain          20 ⸩  Ram VPS"
 
 echo -e " 11 ⸩  Sertifikat V2RAY       21 ⸩  Ganti Password"
 
