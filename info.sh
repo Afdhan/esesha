@@ -34,6 +34,7 @@ nginx=$(systemctl status nginx | grep -i "active (running)")
 squid=$(systemctl status squid | grep -i "active (running)")
 cron=$(systemctl status cron | grep -i "active (running)")
 fail2ban=$(systemctl status fail2ban | grep -i "active (running)")
+vnstat=$(systemctl status vnstat | grep -i "active (running)")
 
 #=================================================================================================
 
@@ -157,6 +158,12 @@ else
       sfail2ban=$AKTIF
 fi
 
+if [[ $vnstat == "" ]]; then
+      svnstat=$ERROR
+else
+      svnstat=$AKTIF
+fi
+
 #=================================================================================================
 clear
 neofetch
@@ -185,6 +192,7 @@ echo -e "   - Nginx                                 : $snginx "
 echo -e "   - Squid                                 : $ssquid "
 echo -e "   - Cron                                  : $scron "
 echo -e "   - Fail2Ban                              : $sfail2ban "
+echo -e "   - VnStat                                : $svnstat "
 echo -e ""
 echo -e "${cyan}==================================-[ SERVICES STATUS ]-=============================${off}"
 echo -e ""
