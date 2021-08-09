@@ -15,7 +15,7 @@ ERROR="${red}Error [Not Running]${NC}"
 wsdrop=$(systemctl status ws-dropbear | grep -i "active (running)")
 wstls=$(systemctl status ws-stunnel | grep -i "active (running)")
 wsopen=$(systemctl status ws-openssh | grep -i "active (running)")
-wsovpn=$(systemctl status ws-ovpn | grep -i "active (running)")
+wsovpn=$(systemctl status ws-openvpn | grep -i "active (running)")
 
 v2ray=$(systemctl status v2ray | grep -i "active (running)")
 trojan=$(systemctl status trojan | grep -i "active (running)")
@@ -29,7 +29,7 @@ pptp=$(systemctl status pptpd | grep -i "active (running)")
 ssh=$(systemctl status ssh | grep -i "active (running)")
 ssl=$(systemctl status stunnel4 | grep -i "active (running)")
 drop=$(systemctl status dropbear | grep -i "active (running)")
-ovpn=$(systemctl status openvpn | grep -i "active (running)")
+ovpn=$(systemctl status openvpn | grep -i "active (exited)")
 nginx=$(systemctl status nginx | grep -i "active (running)")
 squid=$(systemctl status squid | grep -i "active (running)")
 cron=$(systemctl status cron | grep -i "active (running)")
@@ -67,7 +67,7 @@ else
       sv2ray=$AKTIF
 fi
 
-if [[ $trojan = "" ]]; then
+if [[ $trojan == "" ]]; then
       strojan=$ERROR
 else
       strojan=$AKTIF
