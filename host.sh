@@ -17,12 +17,12 @@ flag='\x1b[47;41m'
 echo -e "${cyan}=================================${off}"
 echo -e "      SILAHKAN PILIH DOMAIN " | lolcat
 echo -e "${cyan}=================================${off}"
-echo -e ""
-echo -e "    1. dhans-project.xyz"
-echo -e "    2. dhans-vpn.eu.org"
-echo -e "    3. nezavpn.my.id"
+echo -e "$green"
+echo -e "    1 ⸩  dhans-project.xyz"
+echo -e "    2 ⸩  dhans-vpn.eu.org"
+echo -e "    1 ⸩  nezavpn.my.id $off"
 echo -e "---------------------------------" | lolcat
-echo -e "    x. Custom domain"
+echo -e "     ${green}x ⸩  Custom domain ${off}"
 echo -e ""
 echo -e "${cyan}=================================${off}"
 echo ""
@@ -41,6 +41,8 @@ elif [[ $nom == '3' ]]; then
    CF_ID=neza.afdhan@gmail.com
    CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
 elif [[ $nom == 'x' ]]; then
+   echo -e "${green}Anda Harus Mempunyai Email Akun Cloudflare Dan Domain Aktif!${off}"
+   echo -e "${green}Untuk Api Key Bisa Anda Dapat Di Profil Akun Cloudflare Anda."${off}"
    sleep 1
    read -rp "Masukkan Domain Anda : " -e DOMAIN
 sleep 0.5
@@ -100,8 +102,13 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
    
-#hasil=$(wget -qO- "http://api.domaintools.com/v1/domaintools.com/reverse-ip/?limit=1" | jq -r .response.ip_addresses.ip_address)
-
+hasil="ping $SUB_DOMAIN"
+if [[ $hasil == "" ]]; then
+  echo -e "${red}ERROR! Domain Anda Tidak Dapat Di Record, Harap Periksa Kembali!${off}"
+  echo ""
+  exit 0
+else
+sleep 0.5
 echo ""
 echo -e "${cyan}DOMAIN BERHASIL DISIMPAN${off}"
 echo ""
@@ -110,3 +117,4 @@ echo ""
 echo "- Mod By M AFDHAN & NezaVPN" | lolcat
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
 figlet -f slant AFDHAN - NEZA | lolcat
+fi
