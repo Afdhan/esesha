@@ -12,10 +12,10 @@ ERROR="${red}Error [Not Running]${NC}"
 
 #=================================================================================================
 
-ws-drop=$(systemctl status ws-dropbear | grep -i "active (running)")
-ws-tls=$(systemctl status ws-stunnel | grep -i "active (running)")
-ws-open=$(systemctl status ws-openssh | grep -i "active (running)")
-ws-ovpn=$(systemctl status ws-ovpn | grep -i "active (running)")
+wsdrop=$(systemctl status ws-dropbear | grep -i "active (running)")
+wstls=$(systemctl status ws-stunnel | grep -i "active (running)")
+wsopen=$(systemctl status ws-openssh | grep -i "active (running)")
+wsovpn=$(systemctl status ws-ovpn | grep -i "active (running)")
 
 v2ray=$(systemctl status v2ray | grep -i "active (running)")
 trojan=$(systemctl status trojan | grep -i "active (running)")
@@ -37,25 +37,25 @@ fail2ban=$(systemctl status fail2ban | grep -i "active (running)")
 
 #=================================================================================================
 
-if [ ! -e $ws-drop ]; then
+if [ ! -e $wsdrop ]; then
       swsdrop=$ERROR
 else
       swsdrop=$AKTIF
 fi
 
-if [ ! -e $ws-tls ]; then
+if [ ! -e $wstls ]; then
       swstls=$ERROR
 else
       swstls=$AKTIF
 fi
 
-if [ ! -e $ws-open ]; then
+if [ ! -e $wsopen ]; then
       swsopen=$ERROR
 else
       swsopen=$AKTIF
 fi
 
-if [ ! -e $ws-ovpn ]; then
+if [ ! -e $wsovpn ]; then
       swsovpn=$ERROR
 else
       swsovpn=$AKTIF
