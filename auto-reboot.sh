@@ -18,22 +18,22 @@ chmod +x /usr/local/bin/reboot_otomatis
 fi
 
 echo -e "${cyan}===============================${off}"
-echo -e "             AUTO REBOOT SYSTEM " | lolcat
+echo -e "       AUTO REBOOT SYSTEM " | lolcat
 echo -e "${cyan}===============================${off}"
 echo -e "${green}"
-echo -e "     1 ⸩  Set Auto-Reboot Setiap 1 Jam"
-echo -e "     2 ⸩  Set Auto-Reboot Setiap 6 Jam"
-echo -e "     3 ⸩  Set Auto-Reboot Setiap 12 Jam"
-echo -e "     4 ⸩  Set Auto-Reboot Setiap 1 Hari"
-echo -e "     5 ⸩  Set Auto-Reboot Setiap 1 Minggu"
-echo -e "     6 ⸩  Set Auto-Reboot Setiap 1 Bulan"
-echo -e "     7 ⸩  Matikan Auto-Reboot"
-echo -e "     8 ⸩  Lihat reboot log"
-echo -e "     9 ⸩  Hapus reboot log"
+echo -e "   1 ⸩  Set Auto-Reboot Setiap 1 Jam"
+echo -e "   2 ⸩  Set Auto-Reboot Setiap 6 Jam"
+echo -e "   3 ⸩  Set Auto-Reboot Setiap 12 Jam"
+echo -e "   4 ⸩  Set Auto-Reboot Setiap 1 Hari"
+echo -e "   5 ⸩  Set Auto-Reboot Setiap 1 Minggu"
+echo -e "   6 ⸩  Set Auto-Reboot Setiap 1 Bulan"
+echo -e "   7 ⸩  Matikan Auto-Reboot"
+echo -e "   8 ⸩  Lihat reboot log"
+echo -e "   9 ⸩  Hapus reboot log"
 echo -e "${off}"
 echo -e "${cyan}===============================${off}"
 echo -e "${green}"
-read -p "Pilih Nomor [1-9]: " x
+read -p "   Pilih Nomor [1-9]: " x
 echo -e "${off}"
 
 if test $x -eq 1; then
