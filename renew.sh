@@ -34,7 +34,7 @@ echo -e "${cyan}---------------------------------------------------${off}"
 echo -e ""
 
 echo -e "${green}"
-read -p "         Username       :  " User
+read -p " Username       :  " User
 echo -e "${off}"
 egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
