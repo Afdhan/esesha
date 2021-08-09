@@ -9,7 +9,7 @@ off='\x1b[m'
 
 clear
 tr="$(cat ~/log-install.txt | grep -i Trojan | cut -d: -f2|sed 's/ //g')"
-echo -e "     ${green}Ubah Port Trojan Saat Ini $tr ${off}"
+echo -e "${green}Ubah Port Trojan Saat Ini${off} ${cyan}[ $tr ]${off}"
 echo -e ""
 echo -e "${green}"
 read -p "Masukkan Port Baru Trojan :  " tr2
