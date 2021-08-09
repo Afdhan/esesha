@@ -28,7 +28,7 @@ ssr=$(systemctl status ssrmu | grep -i "active (running)")
 sstp=$(systemctl status accel-ppp | grep -i "active (running)")
 l2tp=$(systemctl status xl2tpd | grep -i "active (running)")
 pptp=$(systemctl status pptpd | grep -i "active (running)")
-wg=$(systemctl status wg-quick@wg0 | grep -i "active (running)")
+wg=$(systemctl status wg-quick@wg0 | grep -i "active (exited)")
 
 ssh=$(systemctl status ssh | grep -i "active (running)")
 ssl=$(systemctl status stunnel4 | grep -i "active (running)")
