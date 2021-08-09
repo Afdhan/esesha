@@ -18,6 +18,9 @@ wsopen=$(systemctl status ws-openssh | grep -i "active (running)")
 wsovpn=$(systemctl status ws-openvpn | grep -i "active (running)")
 
 v2ray=$(systemctl status v2ray | grep -i "active (running)")
+v2none=$(systemctl status v2ray@none | grep -i "active (running)")
+vless=$(systemctl status v2ray@vless | grep -i "active (running)")
+vnone=$(systemctl status v2ray@vnone | grep -i "active (running)")
 trojan=$(systemctl status trojan | grep -i "active (running)")
 ipsec=$(systemctl status ipsec | grep -i "active (running)")
 shadow=$(systemctl status shadowsocks-libev | grep -i "active (running)")
@@ -66,6 +69,24 @@ if [[ $v2ray == "" ]]; then
       sv2ray=$ERROR
 else
       sv2ray=$AKTIF
+fi
+
+if [[ $v2none == "" ]]; then
+      sv2none=$ERROR
+else
+      sv2none=$AKTIF
+fi
+
+if [[ $vless == "" ]]; then
+      svless=$ERROR
+else
+      svless=$AKTIF
+fi
+
+if [[ $vnone == "" ]]; then
+      svnone=$ERROR
+else
+      svnone=$AKTIF
 fi
 
 if [[ $trojan == "" ]]; then
@@ -176,7 +197,10 @@ echo -e "   - Dropbear                              : $sdrop "
 echo -e "   - OpenSSH                               : $sssh "
 echo -e "   - Stunnel4                              : $sssl "
 echo -e "   - OpenVPN                               : $sovpn "
-echo -e "   - V2ray                                 : $sv2ray "
+echo -e "   - VMess TLS                             : $sv2ray "
+echo -e "   - VMess NON-TLS                         : $sv2none "
+echo -e "   - VLess TLS                             : $svless "
+echo -e "   - VLess NON-TLS                         : $svnone "
 echo -e "   - Trojan                                : $strojan "
 echo -e "   - IPSec                                 : $sipsec "
 echo -e "   - SSR                                   : $sssr "
