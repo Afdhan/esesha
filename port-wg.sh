@@ -9,7 +9,7 @@ off='\x1b[m'
 
 clear
 wg="$(cat ~/log-install.txt | grep -i Wireguard | cut -d: -f2|sed 's/ //g')"
-echo -e "     ${green}Ubah Port Wireguard Saat Ini $wg ${off}"
+echo -e "${green}Ubah Port Wireguard Saat Ini${off} ${cyan}[ $wg ]${off}"
 echo -e ""
 echo -e "${green}"
 read -p "Masukkan Port Baru Wireguard :  " wg2
