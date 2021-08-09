@@ -22,8 +22,8 @@ echo -e "    1 ⸩  dhans-project.xyz"
 echo -e "    2 ⸩  dhans-vpn.eu.org"
 echo -e "    1 ⸩  nezavpn.my.id $off"
 echo -e "---------------------------------" | lolcat
-echo -e "     ${green}x ⸩  Custom domain ${off}"
-echo -e ""
+echo -e "    ${green}0 ⸩  Custom domain ${off}"
+echo -e "    ${green}x ⸩  Keluar ${off}"
 echo -e "${cyan}=================================${off}"
 echo ""
 read -p "   [#]  Masukkan Nomor :  " nom
@@ -40,7 +40,7 @@ elif [[ $nom == '3' ]]; then
    DOMAIN=nezavpn.my.id
    CF_ID=neza.afdhan@gmail.com
    CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
-elif [[ $nom == 'x' ]]; then
+elif [[ $nom == '0' ]]; then
    echo -e "${green}Anda Harus Mempunyai Email Akun Cloudflare Dan Domain Aktif!${off}"
    echo -e "${green}Untuk Api Key Bisa Anda Dapat Di Profil Akun Cloudflare Anda."${off}"
    sleep 1
@@ -50,6 +50,9 @@ sleep 0.5
 sleep 0.5
    read -rp "Masukkan Api Key Cloudflare : " -e CF_KEY
 clear
+elif [[ $nom == 'x' ]]; then
+   clear
+   menu
 else
    echo -e "${red}Masukkan Nomor Yang Benar!${off}"
    sleep 1
