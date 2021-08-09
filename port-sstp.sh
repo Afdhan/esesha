@@ -9,7 +9,7 @@ off='\x1b[m'
 
 clear
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
-echo -e "     ${green}Ubah Port SSTP Saat Ini $sstp ${off}"
+echo -e "${green}Ubah Port SSTP Saat Ini${off} ${cyan}[ $sstp ]${off}"
 echo -e ""
 echo -e "${green}"
 read -p "Masukkan Port Baru SSTP :  " sstp2
