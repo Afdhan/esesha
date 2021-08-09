@@ -82,7 +82,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "bimbel.ruangguru.com",
+      "add": "IP_Bug_Anda",
       "port": "${none}",
       "id": "${uuid}",
       "aid": "2",
@@ -105,18 +105,18 @@ echo -e ""
 echo -e "${cyan}=================================${off}"
 echo -e "${purple} ~> V2RAY VMESS${off}"
 echo -e "${cyan}=================================${off}"
-echo -e "${green}ISP      : ${ISP}"
-echo -e "CITY      : ${CITY}"
-echo -e "COUNTRY      : ${COUNTRY}"
-echo -e "Remarks        : ${user}"
-echo -e "Domain         : ${domain}"
-echo -e "Port TLS       : ${tls}"
-echo -e "Port NON-TLS   : ${none}"
-echo -e "ID             : ${uuid}"
-echo -e "AlterID        : 2"
-echo -e "Security       : auto"
-echo -e "Network        : ws"
-echo -e "Path           : /v2ray${off}"
+echo -e " ${green}ISP            : ${ISP}"
+echo -e " CITY           : ${CITY}"
+echo -e " COUNTRY        : ${COUNTRY}"
+echo -e " Remarks        : ${user}"
+echo -e " Domain         : ${domain}"
+echo -e " Port TLS       : ${tls}"
+echo -e " Port NON-TLS   : ${none}"
+echo -e " ID             : ${uuid}"
+echo -e " AlterID        : 2"
+echo -e " Security       : auto"
+echo -e " Network        : ws"
+echo -e " Path           : /v2ray${off}"
 echo -e "${cyan}=================================${off}"
 echo -e "${purple}~> VMESS TLS${off}"
 echo -e ""
@@ -126,9 +126,9 @@ echo -e "${purple}~> VMESS NON-TLS${off}"
 echo -e ""
 echo -e "${vmesslink2}" | lolcat
 echo -e "${cyan}=================================${off}"
-echo -e "${green}Aktif Selama   : $masaaktif Hari"
-echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $expe${off}"
+echo -e " ${green}Aktif Selama   : $masaaktif Hari"
+echo -e " Dibuat Pada    : $tnggl"
+echo -e " Berakhir Pada  : $expe${off}"
 echo -e "${cyan}=================================${off}"
-echo -e "${purple}- Mod By Dhansss X NezaVPN${off}"
+echo -e " ${purple}- Mod By Dhansss X NezaVPN${off}"
 echo -e ""
