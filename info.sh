@@ -38,27 +38,27 @@ fail2ban=$(systemctl status fail2ban | grep -i "active (running)")
 #=================================================================================================
 
 if [ ! -e $ws-drop ]; then
-      swsDrop=$ERROR
+      swsdrop=$ERROR
 else
-      swsDrop=$AKTIF
+      swsdrop=$AKTIF
 fi
 
 if [ ! -e $ws-tls ]; then
-      swsTls=$ERROR
+      swstls=$ERROR
 else
-      swsTls=$AKTIF
+      swstls=$AKTIF
 fi
 
 if [ ! -e $ws-open ]; then
-      swsOpen=$ERROR
+      swsopen=$ERROR
 else
-      swsOpen=$AKTIF
+      swsopen=$AKTIF
 fi
 
 if [ ! -e $ws-ovpn ]; then
-      swsOvpn=$ERROR
+      swsovpn=$ERROR
 else
-      swsOvpn=$AKTIF
+      swsovpn=$AKTIF
 fi
 
 if [ ! -e $v2ray ]; then
@@ -165,26 +165,26 @@ echo -e "######################################################################"
 echo -e ""
 echo -e "${cyan}===================================-[ SERVICES STATUS ]-=============================${off}"
 echo -e "${green}"
-echo -e "   - Dropbear                                                                             : $sdrop "
-echo -e "   - OpenSSH                                                                             : $sssh "
-echo -e "   - Stunnel4                                                                             : $sssl "
-echo -e "   - OpenVPN                                                                             : $sovpn "
-echo -e "   - V2ray                                                                             : $sv2ray "
-echo -e "   - Trojan                                                                             : $strojan "
-echo -e "   - IPSec                                                                             : $sipsec "
-echo -e "   - SSR                                                                             : $sssr "
-echo -e "   - Shadowsocks                                                                             : $sshadow "
-echo -e "   - SSTP                                                                             : $ssstp "
-echo -e "   - PPTP                                                                             : $spptp "
-echo -e "   - L2TP   "
-echo -e "   - WebSocket Dropbear                                                                             : $swsDrop"
-echo -e "   - WebSocket OpwnSSH                                                                             : $swsOpen"
-echo -e "   - WebSocket TLS                                                                             : $swsTls"
-echo -e "   - WebSocket OpenVPN                                                                             : $swsOvpn"
-echo -e "   - Nginx                                                                             : $snginx "
-echo -e "   - Squid                                                                             : $ssquid "
-echo -e "   - Cron                                                                             : $scron "
-echo -e "   - Fail2Ban                                                                             : $sfail2ban "
+echo -e "   - Dropbear                                    : $sdrop "
+echo -e "   - OpenSSSH                                    : $sssh "
+echo -e "   - Stunnel4                                    : $sssl "
+echo -e "   - OpenVPN                                     : $sovpn "
+echo -e "   - V2ray                                       : $sv2ray "
+echo -e "   - Trojan                                      : $strojan "
+echo -e "   - IPSec                                       : $sipsec "
+echo -e "   - SSR                                         : $sssr "
+echo -e "   - Shadowsocks                                 : $sshadow "
+echo -e "   - SSTP                                        : $ssstp "
+echo -e "   - PPTP                                        : $spptp "
+echo -e "   - L2TP                                        : $sl2tp"
+echo -e "   - WebSocket Dropbear                          : $swsdrop"
+echo -e "   - WebSocket OpwnSSH                           : $swsopen"
+echo -e "   - WebSocket TLS                               : $swstls"
+echo -e "   - WebSocket OpenVPN                           : $swsovpn"
+echo -e "   - Nginx                                       : $snginx "
+echo -e "   - Squid                                       : $ssquid "
+echo -e "   - Cron                                        : $scron "
+echo -e "   - Fail2Ban                                    : $sfail2ban "
 echo -e "${off}"
 echo -e "${cyan}===================================-[ SERVICES STATUS ]-=============================${off}"
 echo -e ""
