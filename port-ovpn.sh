@@ -13,7 +13,7 @@ ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | c
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 echo -e ""
 echo -e "${cyan}======================================${off}"
-echo -e "                         ${green}PORT OPENVPN${off}"
+echo -e "             ${green}PORT OPENVPN${off}"
 echo -e "${cyan}======================================${off}"
 echo -e "${green}"
 echo -e "     1 ⸩  Ubah Port OVPN TCP $ovpn"
