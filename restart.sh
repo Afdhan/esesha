@@ -10,7 +10,7 @@ off='\x1b[m'
 clear
 echo -e ""
 echo -e "${cyan}======================================${off}"
-echo -e "                         ${green}RESTART SERVICES${off}"
+echo -e "         ${green}RESTART SERVICES${off}"
 echo -e "${cyan}======================================${off}"
 echo -e "${green}"
 echo -e "     1 ⸩  Mulai Ulang Services"
