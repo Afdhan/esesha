@@ -231,3 +231,5 @@ echo -e ""
 echo -e "${green}Dalam Project Ini, Kami Tidak Bertanggung Jawab Jika Terjadi Kesalahan Pada Saat Anda Merubah Pengaturan System!${off}"
 echo -e "${green}Baik Itu Tampilan Menu, Banner SSH, Port VPN, Ataupun Yang Lainnya.${off}"
 echo -e ""
+echo -e " - Mod By Dhansss X NezaVPN" | lolcat
+echo -e ""
