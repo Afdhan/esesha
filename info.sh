@@ -163,7 +163,7 @@ neofetch
 cat /root/log-install.txt
 echo -e "###################################################################################" | lolcat
 echo -e ""
-echo -e "${cyan}==================================-[ SERVICES STATUS ]-============================${off}"
+echo -e "${cyan}==================================-[ SERVICES STATUS ]-=============================${off}"
 echo -e ""
 echo -e "   - Dropbear                              : $sdrop "
 echo -e "   - OpenSSSH                              : $sssh "
@@ -186,5 +186,5 @@ echo -e "   - Squid                                 : $ssquid "
 echo -e "   - Cron                                  : $scron "
 echo -e "   - Fail2Ban                              : $sfail2ban "
 echo -e ""
-echo -e "${cyan}==================================-[ SERVICES STATUS ]-============================${off}"
+echo -e "${cyan}==================================-[ SERVICES STATUS ]-=============================${off}"
 echo -e ""
