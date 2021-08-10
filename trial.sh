@@ -40,7 +40,7 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-Login=Trial-`</dev/urandom tr -dc X-Z0-9 | head -c2`
+Login=Trial_`</dev/urandom tr -dc X-Z0-9 | head -c2`
 hari="1"
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
@@ -58,9 +58,9 @@ echo -e ""
 echo -e "${cyan}=================================${off}"
 echo -e "${purple} ~> Trial SSH & OpenVPN${off}"
 echo -e "${cyan}=================================${off}"
-echo -e "${green}Username       : $Login "
-echo -e "Password       : $Pass"
-echo -e "Hostname       : $domain${off}"
+echo -e " ${green}Username       : $Login "
+echo -e " Password       : $Pass"
+echo -e " Hostname       : $domain${off}"
 echo -e "${cyan}=================================${off}"
 echo -e " ${green}ISP            : $ISP"
 echo -e " CITY           : $CITY"
