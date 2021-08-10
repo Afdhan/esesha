@@ -12,5 +12,5 @@ echo "Username   ---   IP" | lolcat
 echo -e "${green}------------------------------------- ${NC}";
 cat /tmp/login-db-pptp.txt
 echo " "
-echo -e "${red}============================${green}";
+echo -e "${red}============================${NC}";
 echo " ";
