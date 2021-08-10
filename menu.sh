@@ -40,7 +40,7 @@ else
 domain=$IP
 fi
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-	echo -e "                 ${cyan}M AFDHAN - NEZAVPN${off} "
+	echo -e "                       M AFDHAN - NEZAVPN$ " | lolcat
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -66,10 +66,10 @@ fi
 	echo -e " ${cyan}Host VPS               :${NC}  $domain"
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "                    ${cyan}MENU TUNNELING${off} "
+echo -e "                         MENU TUNNELING " | lolcat
 
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-echo -e "${green}"
+echo -e "${cyan}"
 echo -e " 1 ⸩  Panel SSH & OVPN         5 ⸩  Panel SSR & Shadowsocks"
 
 echo -e " 2 ⸩  Panel Wireguard          6 ⸩  Panel Vmess/V2ray"
@@ -80,10 +80,10 @@ echo -e " 4 ⸩  Panel SSTP               8 ⸩  Panel Trojan"
 echo -e "${off}"
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "                      ${cyan}MENU SYSTEM${off} "
+echo -e "                           MENU SYSTEM " | lolcat
 
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-echo -e "${green}"
+echo -e "${cyan}"
 echo -e "  9 ⸩  Masukkan Host          19 ⸩  Limit Speed"
 
 echo -e " 10 ⸩  Record Domain          20 ⸩  Ram VPS"
@@ -106,11 +106,11 @@ echo -e " 18 ⸩  Edit Banner SSH        28 ⸩  Restart Script"
 echo -e "${off}"
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "  ${green}x ⸩  Keluar Dari Terminal${off}"
+echo -e "  ${cyan}x ⸩  Keluar Dari Terminal${off}"
 
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "${green}"
+echo -e "${cyan}"
 
 read -p " [ # ] Masukkan Nomor Pilihanmu :  "  num
 
