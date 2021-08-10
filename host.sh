@@ -42,7 +42,7 @@ elif [[ $nom == '3' ]]; then
    CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
 elif [[ $nom == '0' ]]; then
    echo -e "${green}Anda Harus Mempunyai Email Akun Cloudflare Dan Domain Aktif!${off}"
-   echo -e "${green}Untuk Api Key Bisa Anda Dapat Di Profil Akun Cloudflare Anda."${off}"
+   echo -e "${green}Untuk Api Key Bisa Anda Dapat Di Profil Akun Cloudflare Anda.${off}"
    sleep 1
    read -rp "Masukkan Domain Anda : " -e DOMAIN
 sleep 0.5
@@ -78,12 +78,10 @@ ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" | jq -r .result[0].id)
      
-if [[ $ZONE == 'null' ]]; then
-if [[ $ZONE == "" ]]; then
+if [[ $ZONE == 'null' ]] || [[ $ZONE == "" ]]; then
   echo -e "${red}ERROR!${off} ${cyan}Result Gagal, Kemungkinan Api Key Tidak Valid!${off}"
   sleep 1
   exit 0
-fi
 fi
 
 RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${SUB_DOMAIN}" \
@@ -105,8 +103,8 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
    
-hasil="ping $SUB_DOMAIN"
-if [[ $hasil == "" ]]; then
+hasil=$(ping $SUB_DOMAIN | grep -i $IPLU )
+if [[ $hasil != $IPLU ]]; then
   echo -e "${red}ERROR! Domain Anda Tidak Dapat Di Record, Harap Periksa Kembali!${off}"
   echo ""
   exit 0
