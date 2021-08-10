@@ -115,8 +115,8 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
    
-hasil='ping $SUB_DOMAIN' | grep -i $IP 
-if [[ $hasil == $IP ]]; then
+# hasil='ping $SUB_DOMAIN' | grep -i $IP 
+# if [[ $hasil == $IP ]]; then
 
 sleep 0.5
 echo -e ""
@@ -126,8 +126,8 @@ echo -e "${cyan}Domain Anda Sekarang :${off} ${green}$SUB_DOMAIN${off}"
 echo -e ""
 echo "- Mod By Dhansss X NezaVPN" | lolcat
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
-else
-echo -e "${red}ERROR! Domain Anda Tidak Dapat Di Record, Harap Periksa Kembali!${off}"
+#else
+#echo -e "${red}ERROR! Domain Anda Tidak Dapat Di Record, Harap Periksa Kembali!${off}"
   echo ""
-  exit 0
-fi
+ # exit 0
+#fi
