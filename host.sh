@@ -122,12 +122,11 @@ if [[ $hasil != $IP ]]; then
   exit 0
 else
 sleep 0.5
-echo ""
+echo -e ""
 echo -e "${cyan}DOMAIN BERHASIL DISIMPAN${off}"
-echo ""
+echo -e ""
 echo -e "${cyan}Domain Anda Sekarang :${off} ${green}$SUB_DOMAIN${off}"
-echo ""
-echo "- Mod By M AFDHAN & NezaVPN" | lolcat
+echo -e ""
+echo "- Mod By Dhansss X NezaVPN" | lolcat
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
-figlet -f slant AFDHAN - NEZA | lolcat
 fi
