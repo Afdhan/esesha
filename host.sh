@@ -12,7 +12,9 @@ bold='\033[1m'
 off='\x1b[m'
 flag='\x1b[47;41m'
 
-
+DM1=dhans-project.xyz
+DM2=dhans-vpn.eu.org
+DM3=nezavpn.my.id
 
 echo -e "${cyan}=================================${off}"
 echo -e "      SILAHKAN PILIH DOMAIN " | lolcat
@@ -44,10 +46,20 @@ elif [[ $nom == '0' ]]; then
    echo -e "${green}Anda Harus Mempunyai Email Akun Cloudflare Dan Domain Aktif!${off}"
    echo -e "${green}Untuk Api Key Bisa Anda Dapat Di Profil Akun Cloudflare Anda.${off}"
    sleep 1
+   echo ""
    read -rp "Masukkan Domain Anda : " -e DOMAIN
+   if [[ $DOMAIN == $DM1 ]] || [[ $DOMAIN == $DM2 ]] || [[ $DOMAIN == $DM3 ]]; then
+   sleep 1
+   echo -e "${red}Masukkan Domain Mu Sendiri! Bukan Domain System!!!${off}"
+   sleep 1
+   echo ""
+   exit 0
+   fi
 sleep 0.5
+   echo ""
    read -rp "Masukkan Email Cloudflare : " -e CF_ID
 sleep 0.5
+   echo ""
    read -rp "Masukkan Api Key Cloudflare : " -e CF_KEY
 clear
 elif [[ $nom == 'x' ]]; then
@@ -103,8 +115,8 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
    
-hasil=$(ping $SUB_DOMAIN | grep -i $IPLU )
-if [[ $hasil != $IPLU ]]; then
+hasil=$(ping $SUB_DOMAIN | grep -i $IP )
+if [[ $hasil != $IP ]]; then
   echo -e "${red}ERROR! Domain Anda Tidak Dapat Di Record, Harap Periksa Kembali!${off}"
   echo ""
   exit 0
