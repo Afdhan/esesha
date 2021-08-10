@@ -40,7 +40,7 @@ else
 domain=$IP
 fi
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
-	echo -e "                       M AFDHAN - NEZAVPN$ " | lolcat
+	echo -e "                    M AFDHAN - NEZAVPN$ " | lolcat
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -66,7 +66,7 @@ fi
 	echo -e " ${cyan}Host VPS               :${NC}  $domain"
 	echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "                         MENU TUNNELING " | lolcat
+echo -e "                      MENU TUNNELING " | lolcat
 
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 echo -e "${cyan}"
@@ -80,7 +80,7 @@ echo -e " 4 ⸩  Panel SSTP               8 ⸩  Panel Trojan"
 echo -e "${off}"
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 
-echo -e "                           MENU SYSTEM " | lolcat
+echo -e "                        MENU SYSTEM " | lolcat
 
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 echo -e "${cyan}"
