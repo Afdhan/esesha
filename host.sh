@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Feature By Muhammad Afdhan
 grey='\x1b[90m'
 red='\x1b[91m'
 green='\x1b[92m'
@@ -15,30 +15,38 @@ flag='\x1b[47;41m'
 DM1=dhans-project.xyz
 DM2=dhans-vpn.eu.org
 DM3=nezavpn.my.id
+DM4=premium-server.xyz
 
 echo -e "${cyan}=================================${off}"
+echo -e " DNS Record For Custom Subdomain" | lolcat
+echo -e "${red}---------------------------------${off}"
 echo -e "      SILAHKAN PILIH DOMAIN " | lolcat
 echo -e "${cyan}=================================${off}"
 echo -e "$green"
-echo -e "    1 ⸩  dhans-project.xyz"
-echo -e "    2 ⸩  dhans-vpn.eu.org"
-echo -e "    1 ⸩  nezavpn.my.id $off"
+echo -e "    1 ⸩  premium-server.xyz"
+echo -e "    2 ⸩  dhans-project.xyz"
+echo -e "    3 ⸩  dhans-vpn.eu.org"
+echo -e "    4 ⸩  nezavpn.my.id $off"
 echo -e "---------------------------------" | lolcat
 echo -e "    ${green}0 ⸩  Custom domain ${off}"
 echo -e "    ${green}x ⸩  Keluar ${off}"
 echo -e "${cyan}=================================${off}"
 echo ""
-read -p "   [#]  Masukkan Nomor :  " nom
+read -p "   [☆]  Masukkan Nomor :  " nom
 
 if [[ $nom == '1' ]]; then
-   DOMAIN=dhans-project.xyz
+   DOMAIN=premium-server.xyz
    CF_ID=afdhan134@gmail.com
    CF_KEY=57fc95a923222474d5b90ff5444e0ee6f19ef
 elif [[ $nom == '2' ]]; then
-   DOMAIN=dhans-vpn.eu.org
+   DOMAIN=dhans-project.xyz
    CF_ID=afdhan134@gmail.com
    CF_KEY=57fc95a923222474d5b90ff5444e0ee6f19ef
 elif [[ $nom == '3' ]]; then
+   DOMAIN=dhans-vpn.eu.org
+   CF_ID=afdhan134@gmail.com
+   CF_KEY=57fc95a923222474d5b90ff5444e0ee6f19ef
+elif [[ $nom == '4' ]]; then
    DOMAIN=nezavpn.my.id
    CF_ID=neza.afdhan@gmail.com
    CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
@@ -48,7 +56,7 @@ elif [[ $nom == '0' ]]; then
    sleep 1
    echo ""
    read -rp "Masukkan Domain Anda : " -e DOMAIN
-   if [[ $DOMAIN == $DM1 ]] || [[ $DOMAIN == $DM2 ]] || [[ $DOMAIN == $DM3 ]]; then
+   if [[ $DOMAIN == $DM1 ]] || [[ $DOMAIN == $DM2 ]] || [[ $DOMAIN == $DM3 ]] || [[ $DOMAIN == $DM4 ]]; then
    sleep 1
    echo -e "${red}Masukkan Domain Mu Sendiri! Bukan Domain System!!!${off}"
    sleep 1
@@ -72,7 +80,11 @@ else
    hostnya
 fi
 sleep 1
-echo -e "${green}Domain Input : ${DOMAIN} ${off}"
+if [[ $nom == '0' ]]; then
+echo -e "${cyan}Domain Anda :${off}${green} ${DOMAIN} ${off}"
+else
+echo -e "${cyan}Domain Dipilih :${off}${green} ${DOMAIN} ${off}"
+fi
 echo -e ""
 read -rp "Masukkan Subdomain: " -e sub
 echo -e "${green}Menganalisis Subomain...${off}"
@@ -82,7 +94,7 @@ clear
 SUB_DOMAIN=${sub}.${DOMAIN}
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
-echo -e "${green}Pointing DNS Untuk Domain ${SUB_DOMAIN}...${off}"
+echo -e "${cyan}Pointing DNS Untuk Domain ${SUB_DOMAIN}...${off}"
 sleep 1
 clear
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
@@ -91,7 +103,7 @@ ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&
      -H "Content-Type: application/json" | jq -r .result[0].id)
      
 if [[ $ZONE == 'null' ]] || [[ $ZONE == "" ]]; then
-  echo -e "${red}ERROR!${off} ${cyan}Result Gagal, Kemungkinan Api Key Tidak Valid!${off}"
+  echo -e "${red}ERROR!${off} ${green}Result Gagal, Kemungkinan Api Key Tidak Valid!${off}"
   sleep 1
   exit 0
 fi
@@ -115,19 +127,15 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
    
-# hasil='ping $SUB_DOMAIN' | grep -i $IP 
-# if [[ $hasil == $IP ]]; then
-
 sleep 0.5
+echo -e "${cyan}=================================${off}"
+echo -e "     ${red}DOMAIN BERHASIL DISIMPAN${off}"
+echo -e "${cyan}=================================${off}"
 echo -e ""
-echo -e "${cyan}DOMAIN BERHASIL DISIMPAN${off}"
+echo -e "${green}Domain Anda Sekarang :${off} ${cyan}$SUB_DOMAIN${off}"
 echo -e ""
-echo -e "${cyan}Domain Anda Sekarang :${off} ${green}$SUB_DOMAIN${off}"
-echo -e ""
+echo -e "${cyan}=================================${off}"
+echo ""
 echo "- Mod By Dhansss X NezaVPN" | lolcat
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
-#else
-#echo -e "${red}ERROR! Domain Anda Tidak Dapat Di Record, Harap Periksa Kembali!${off}"
-  echo ""
- # exit 0
-#fi
+echo ""
