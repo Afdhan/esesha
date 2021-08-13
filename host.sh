@@ -12,44 +12,50 @@ bold='\033[1m'
 off='\x1b[m'
 flag='\x1b[47;41m'
 
-DM1=dhans-project.xyz
-DM2=dhans-vpn.eu.org
-DM3=nezavpn.my.id
-DM4=premium-server.xyz
+Nezavpn=neza.afdhan@gmail.com
+Neza=c7ce6739f7548dcb626dcbee71140345f2625
+Dhansss=afdhan134@gmail.com
+Dhans=57fc95a923222474d5b90ff5444e0ee6f19ef
+
+DM1=premium-server.xyz
+DM2=dhans-project.xyz
+DM3=dhans-vpn.eu.org
+DM4=nezavpn.my.id
 
 echo -e "${cyan}=================================${off}"
 echo -e " DNS Record For Custom Subdomain" | lolcat
 echo -e "${red}---------------------------------${off}"
 echo -e "      SILAHKAN PILIH DOMAIN " | lolcat
 echo -e "${cyan}=================================${off}"
-echo -e "$green"
-echo -e "    1 ⸩  premium-server.xyz"
-echo -e "    2 ⸩  dhans-project.xyz"
-echo -e "    3 ⸩  dhans-vpn.eu.org"
-echo -e "    4 ⸩  nezavpn.my.id $off"
+echo -e "${green}"
+echo -e "    1 ⸩  $DM1"
+echo -e "    2 ⸩  $DM2"
+echo -e "    3 ⸩  $DM3"
+echo -e "    4 ⸩  $DM4"
+echo -e "${off}"
 echo -e "---------------------------------" | lolcat
-echo -e "    ${green}0 ⸩  Custom domain ${off}"
+echo -e "    ${green}0 ⸩  Custom Domain ${off}"
 echo -e "    ${green}x ⸩  Keluar ${off}"
 echo -e "${cyan}=================================${off}"
 echo ""
 read -p "   [☆]  Masukkan Nomor :  " nom
 
 if [[ $nom == '1' ]]; then
-   DOMAIN=premium-server.xyz
-   CF_ID=afdhan134@gmail.com
-   CF_KEY=57fc95a923222474d5b90ff5444e0ee6f19ef
+   DOMAIN=$DM1
+   CF_ID=$Dhansss
+   CF_KEY=$Dhans
 elif [[ $nom == '2' ]]; then
-   DOMAIN=dhans-project.xyz
-   CF_ID=afdhan134@gmail.com
-   CF_KEY=57fc95a923222474d5b90ff5444e0ee6f19ef
+   DOMAIN=$DM2
+   CF_ID=$Dhansss
+   CF_KEY=$Dhans
 elif [[ $nom == '3' ]]; then
-   DOMAIN=dhans-vpn.eu.org
-   CF_ID=afdhan134@gmail.com
-   CF_KEY=57fc95a923222474d5b90ff5444e0ee6f19ef
+   DOMAIN=$DM3
+   CF_ID=$Dhansss
+   CF_KEY=$Dhans
 elif [[ $nom == '4' ]]; then
-   DOMAIN=nezavpn.my.id
-   CF_ID=neza.afdhan@gmail.com
-   CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
+   DOMAIN=$DM4
+   CF_ID=$Nezavpn
+   CF_KEY=$Neza
 elif [[ $nom == '0' ]]; then
    echo -e "${green}Anda Harus Mempunyai Email Akun Cloudflare Dan Domain Aktif!${off}"
    echo -e "${green}Untuk Api Key Bisa Anda Dapat Di Profil Akun Cloudflare Anda.${off}"
