@@ -22,6 +22,7 @@ DM2=dhans-project.xyz
 DM3=dhans-vpn.eu.org
 DM4=nezavpn.my.id
 
+echo -e ""
 echo -e "${cyan}=================================${off}"
 echo -e " DNS Record For Custom Subdomain" | lolcat
 echo -e "${red}---------------------------------${off}"
