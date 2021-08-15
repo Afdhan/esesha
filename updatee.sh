@@ -53,8 +53,6 @@ rm -rf /root/OpenVPN
 rm -f /root/openvpn.zip
 fi
 
-wget https://raw.githubusercontent.com/Afdhan/CDN/main/ws-up.sh && chmod +x ws-up.sh && ./ws-up.sh
-
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/Afdhan/esesha/main/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/Afdhan/esesha/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
 wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/Afdhan/esesha/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
