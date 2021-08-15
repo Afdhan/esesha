@@ -20,6 +20,21 @@ else
 	echo -e "${mer}Scripy Install Hanya Bekerja Pada Operating System Debian, Ubuntu dan Centos${off}"
 	exit 0
 fi
+declare -A nama_bulan
+nama_bulan[jan]="Januari"
+nama_bulan[feb]="Februari"
+nama_bulan[mar]="Maret"
+nama_bulan[apr]="April"
+nama_bulan[may]="Mei"
+nama_bulan[jun]="Juni"
+nama_bulan[jul]="Juli"
+nama_bulan[aug]="Agustus"
+nama_bulan[sep]="September"
+nama_bulan[oct]="Oktober"
+nama_bulan[nov]="November"
+nama_bulan[dec]="Desember"
+bulan_ini=`date +%b`
+
 color3='\e[031;1m'
 color2='\e[34;1m'
 red='\e[1;31m'
@@ -30,10 +45,10 @@ ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
-jam=$(TZ='Asia/Jakarta' date +%T)
+jam=$(TZ='Asia/Jakarta' date +%R)
 hari=$(date +"%A")
 tnggl=$(date +"%d")
-bln=$(date +"%B")
+bln=${nama_bulan[$bulan_ini]}
 thn=$(date +"%Y")
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -80,16 +95,17 @@ echo -e "${red}═════════════════════�
 echo -e "                        MENU SYSTEM " | lolcat
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 echo -e "${cyan}"
-echo -e "  9 ⸩  Masukkan Host          19 ⸩  Limit Speed"
-echo -e " 10 ⸩  Record Domain          20 ⸩  Ram VPS"
-echo -e " 11 ⸩  Sertifikat V2RAY       21 ⸩  Ganti Password"
-echo -e " 12 ⸩  Ubah Port VPN          22 ⸩  Reboot"
-echo -e " 13 ⸩  Autobackup VPS         23 ⸩  Speedtest"
-echo -e " 14 ⸩  Backup VPS             24 ⸩  Informasi System"
-echo -e " 15 ⸩  Restore VPS            25 ⸩  Info Script"
-echo -e " 16 ⸩  Menu Webmin            26 ⸩  Restart Service"
-echo -e " 17 ⸩  Auto Reboot            27 ⸩  Multi Login SSH"
-echo -e " 18 ⸩  Edit Banner SSH        28 ⸩  Restart Script"
+echo -e "  9 ⸩  Masukkan Host          20 ⸩  Limit Speed"
+echo -e " 10 ⸩  Record Domain          21 ⸩  Ram VPS"
+echo -e " 11 ⸩  Sertifikat V2RAY       22 ⸩  Ganti Password"
+echo -e " 12 ⸩  Ubah Port VPN          23 ⸩  Reboot"
+echo -e " 13 ⸩  Autobackup VPS         24 ⸩  Speedtest"
+echo -e " 14 ⸩  Backup VPS             25 ⸩  Informasi System"
+echo -e " 15 ⸩  Restore VPS            26 ⸩  Info Script"
+echo -e " 16 ⸩  Menu Webmin            27 ⸩  Restart Service"
+echo -e " 17 ⸩  Auto Reboot            28 ⸩  Multi Login SSH"
+echo -e " 18 ⸩  Edit Banner SSH        29 ⸩  Restart Script"
+echo -e " 19 ⸩  Status Service      30 ⸩ Monitor Bandwith"
 echo -e "${off}"
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 echo -e "  ${cyan}x ⸩  Keluar Dari Terminal${off}"
@@ -102,90 +118,127 @@ case $num in
 1)
 tessh
 ;;
+
 2)
 wgg
 ;;
+
 3)
 ltp
 ;;
+
 4)
 ssstp
 ;;
+
 5)
 sssr
 ;;
+
 6)
 wss
 ;;
+
 7)
 vls
 ;;
+
 8)
 trj
 ;;
+
 9)
 add-host
 ;;
+
 10)
 hostnya
 ;;
+
 11)
 certv2ray
 ;;
+
 12)
 change-port
 ;;
+
 13)
 autobackup
 ;;
+
 14)
 backup
 ;;
+
 15)
 restore
 ;;
+
 16)
 wbmn
 ;;
+
 17)
 auto-reboot
 ;;
+
 18)
 nano /etc/issue.net
 ;;
+
 19)
+status
+;;
+
+20)
 limit-speed
 ;;
-20)
+
+21)
 ram
 ;;
-21)
+
+22)
 passwd
 ;;
-22)
+
+23)
 reboot
 ;;
-23)
+
+24)
 speedtest
 ;;
-24)
+
+25)
 info
 ;;
-25)
+
+26)
 about
 ;;
-26)
+
+27)
 restart
 ;;
-27)
+
+28)
 autokill
 ;;
-28)
+
+29)
 updatee
 ;;
+
+30)
+bw
+;;
+
 x)
 exit
 ;;
+
 *)
 echo -e "${mer}Nomor Yang Anda Masukkan Salah!${off}"
 sleep 1
