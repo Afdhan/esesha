@@ -21,18 +21,18 @@ else
 	exit 0
 fi
 declare -A nama_bulan
-nama_bulan[jan]="Januari"
-nama_bulan[feb]="Februari"
-nama_bulan[mar]="Maret"
-nama_bulan[apr]="April"
-nama_bulan[may]="Mei"
-nama_bulan[jun]="Juni"
-nama_bulan[jul]="Juli"
-nama_bulan[aug]="Agustus"
-nama_bulan[sep]="September"
-nama_bulan[oct]="Oktober"
-nama_bulan[nov]="November"
-nama_bulan[dec]="Desember"
+nama_bulan[Jan]="Januari"
+nama_bulan[Feb]="Februari"
+nama_bulan[Mar]="Maret"
+nama_bulan[Apr]="April"
+nama_bulan[May]="Mei"
+nama_bulan[Jun]="Juni"
+nama_bulan[Jul]="Juli"
+nama_bulan[Aug]="Agustus"
+nama_bulan[Sep]="September"
+nama_bulan[Oct]="Oktober"
+nama_bulan[Nov]="November"
+nama_bulan[Dec]="Desember"
 bulan_ini=`date +%b`
 
 color3='\e[031;1m'
