@@ -380,6 +380,7 @@ sec=30
                 systemctl restart openvpn
                 systemctl restart dropbear
 fi
+echo ""
 echo -e "${cyan}=======================================================================================${off}"
 echo -e " - Mod By Dhansss X NezaVPN" | lolcat
-echo-e ""
+echo -e ""
