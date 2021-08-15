@@ -78,7 +78,7 @@ wget -O renew-ss "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-ss.
 wget -O add-host "https://raw.githubusercontent.com/Afdhan/esesha/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/Afdhan/esesha/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
-wget -O bw "https://raw.githubusercontent.com/Afdhan/esesha/main/bw.sh"
+wget -O bw "https://raw.githubusercontent.com/Afdhan/esesha/main/bandwith.sh"
 wget -O usernew "https://raw.githubusercontent.com/Afdhan/esesha/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/Afdhan/esesha/main/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/Afdhan/esesha/main/hapus.sh"
