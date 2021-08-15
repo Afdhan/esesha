@@ -12,7 +12,7 @@ baris2="  - Powered By Dhansss X NezaVPN "
 
 echo -e ""
 echo -e "${cyan}======================================${off}"
-echo -e "                 BANDWITH MONITOR " | lolcat
+echo -e        "           BANDWITH MONITOR " | lolcat
 echo -e "${cyan}======================================${off}"
 echo -e "${green}"
 echo -e "     1 ⸩   Lihat Total Bandwith Tersisa"
@@ -24,7 +24,7 @@ echo -e "     6 ⸩   Tabel Penggunaan Setiap Tahun"
 echo -e "     7 ⸩   Tabel Penggunaan Tertinggi"
 echo -e "     8 ⸩   Statistik Penggunaan Setiap Jam"
 echo -e "     9 ⸩   Lihat Penggunaan Aktif Saat Ini"
-echo -e "   10 ⸩   Lihat Trafik Penggunaan Aktif Saat Ini [5s]"
+echo -e "    10 ⸩   Lihat Trafik Penggunaan Aktif Saat Ini [5s]"
 echo -e "     x ⸩   Keluar"
 echo -e "${off}"
 echo -e "${cyan}======================================${off}"
@@ -35,7 +35,7 @@ echo -e "${off}"
 case $noo in
 1)
 echo -e "${cyan}======================================${off}"
-echo -e "      TOTAL BANDWITH SERVER TERSISA" | lolcat
+echo -e "    TOTAL BANDWITH SERVER TERSISA" | lolcat
 echo -e "${cyan}======================================${off}"
 echo -e ""
 
@@ -48,7 +48,7 @@ echo -e "$baris2" | lolcat
 
 2)
 echo -e "${cyan}======================================${off}"
-echo -e "PENGGUNAAN BANDWITH SETIAP 5 MENIT" | lolcat
+echo -e "  PENGGUNAAN BANDWITH SETIAP 5 MENIT" | lolcat
 echo -e "${cyan}======================================${off}"
 echo -e ""
 
@@ -87,7 +87,7 @@ echo -e "$baris2" | lolcat
 
 5)
 echo -e "${cyan}======================================${off}"
-echo -e "  PENGGUNAAN BANDWITH SETIAP BULAN" | lolcat
+echo -e "   PENGGUNAAN BANDWITH SETIAP BULAN" | lolcat
 echo -e "${cyan}======================================${off}"
 echo -e ""
 
@@ -100,7 +100,7 @@ echo -e "$baris2" | lolcat
 
 6)
 echo -e "${cyan}======================================${off}"
-echo -e " PENGGUNAAN BANDWITH SETIAP TAHUN" | lolcat
+echo -e "   PENGGUNAAN BANDWITH SETIAP TAHUN" | lolcat
 echo -e "${cyan}======================================${off}"
 echo -e ""
 
@@ -113,7 +113,7 @@ echo -e "$baris2" | lolcat
 
 7)
 echo -e "${cyan}======================================${off}"
-echo -e "     PENGGUNAAN BANDWITH TERTINGGI" | lolcat
+echo -e "    PENGGUNAAN BANDWITH TERTINGGI" | lolcat
 echo -e "${cyan}======================================${off}"
 echo -e ""
 
@@ -141,7 +141,7 @@ echo -e "$baris2" | lolcat
 echo -e "${cyan}======================================${off}"
 echo -e "  LIVE PENGGUNAAN BANDWITH SAAT INI" | lolcat
 echo -e "${cyan}======================================${off}"
-echo -e "CTRL+C Untuk Berhenti!"
+echo -e " ${green}CTRL+C Untuk Berhenti!${off}"
 echo -e ""
 
 vnstat -l
@@ -153,7 +153,7 @@ echo -e "$baris2" | lolcat
 
 10)
 echo -e "${cyan}======================================${off}"
-echo -e "    LIVE TRAFIK PENGGUNAAN BANDWITH " | lolcat
+echo -e "   LIVE TRAFIK PENGGUNAAN BANDWITH " | lolcat
 echo -e "${cyan}======================================${off}"
 echo -e ""
 
@@ -171,6 +171,7 @@ menu
 
 *)
 sleep 1
+echo -e "${red}Nomor Yang Anda Masukkan Salah!${off}"
 bw
 ;;
 esac
