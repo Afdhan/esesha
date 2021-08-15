@@ -78,7 +78,7 @@ wget -O renew-ss "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-ss.
 wget -O add-host "https://raw.githubusercontent.com/Afdhan/esesha/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/Afdhan/esesha/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Afdhan/esesha/main/menu.sh"
-wget -O menuu "https://raw.githubusercontent.com/Afdhan/esesha/main/menuu.sh"
+wget -O bw "https://raw.githubusercontent.com/Afdhan/esesha/main/bw.sh"
 wget -O usernew "https://raw.githubusercontent.com/Afdhan/esesha/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/Afdhan/esesha/main/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/Afdhan/esesha/main/hapus.sh"
@@ -132,13 +132,14 @@ wget -O add-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/add-wg.sh"
 wget -O del-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/del-wg.sh"
 wget -O cek-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/cek-wg.sh"
 wget -O renew-wg "https://raw.githubusercontent.com/Afdhan/esesha/main/renew-wg.sh"
+wget -O status "https://raw.githubusercontent.com/Afdhan/esesha/main/status.sh"
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
 chmod +x renew-ss
 chmod +x add-host
 chmod +x menu
-chmod +x menuu
+chmod +x bw
 chmod +x usernew
 chmod +x trial
 chmod +x hapus
@@ -194,6 +195,7 @@ chmod +x add-wg
 chmod +x del-wg
 chmod +x cek-wg
 chmod +x renew-wg
+chmod +x status
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 cd
