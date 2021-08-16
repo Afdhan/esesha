@@ -1,28 +1,37 @@
 #!/bin/bash
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+#echo "10 * * * * xp-ws" >> /etc/crontab
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
-echo -e "${green}Akses Diizinkan...${NC}"
+clear
+echo -e "${green}Akses Diizinkan...${off}"
 sleep 1
 else
 clear
-echo -e "${red}Akses Diblokir!${NC}";
+echo -e "${red}Akses Diblokir!${off}"
 echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
 exit 0
 fi
 clear
-sleep 0.5
-figlet -f slant E.R.R.O.R ! | lolcat
-sleep 2
-exit 0
-
-
-
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
@@ -31,11 +40,19 @@ domain=$IP
 fi
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
-user=Trial-`</dev/urandom tr -dc X-Z0-9 | head -c2`
+until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+		user=TRIAL_`</dev/urandom tr -dc X-Z0-9 | head -c2`
+		CLIENT_EXISTS=$(grep -w $user /etc/v2ray/config.json | wc -l)
+
+		if [[ ${CLIENT_EXISTS} == '1' ]]; then
+			clear
+			trialws
+		fi
+	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
-tnggl=$(date +"%R")
-read -p "Expired (hours): " ktf
-exp=`date -d "$ktf hour" +"%R"`
+read -p "Expired (jam): " aktf
+sekar=$(TZ='Asia/Jakarta' date +%R)
+exp=`date -d "$aktf hour" +"%R"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
 sed -i '/#none$/a\### '"$user $exp"'\
@@ -59,7 +76,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "bimbel.ruangguru.com",
+      "add": "IP_Bug_Anda",
       "port": "${none}",
       "id": "${uuid}",
       "aid": "2",
@@ -79,29 +96,33 @@ systemctl restart v2ray@none
 service cron restart
 clear
 echo -e ""
-echo -e "=================================" | lolcat
-echo -e "       Trial V2RAY/VMESS"
-echo -e "=================================" | lolcat
-echo -e "Remarks        : ${user}"
-echo -e "Domain         : ${domain}"
-echo -e "Port TLS       : ${tls}"
-echo -e "Port NON-TLS   : ${none}"
-echo -e "ID             : ${uuid}"
-echo -e "AlterID        : 2"
-echo -e "Security       : auto"
-echo -e "Network        : ws"
-echo -e "Path           : /v2ray"
-echo -e "=================================" | lolcat
-echo -e "           VMESS TLS"
-echo -e "---------------------------------" | lolcat
-echo -e "${vmesslink1}"
-echo -e "=================================" | lolcat
-echo -e "         VMESS NON-TLS"
-echo -e "---------------------------------" | lolcat
-echo -e "${vmesslink2}"
-echo -e "=================================" | lolcat
-echo -e "Aktif Selama   : $ktf Jam"
-echo -e "Berakhir Pada  : $exp WIB"
-echo -e "---------------------------------" | lolcat
-echo -e "- Mod By M AFDHAN & NezaVPN"
+echo -e "${cyan}=================================${off}"
+echo -e "${purple} ~> TRIAL V2RAY VMESS${off}"
+echo -e "${cyan}=================================${off}"
+echo -e " ${green}ISP            : ${ISP}"
+echo -e " CITY           : ${CITY}"
+echo -e " COUNTRY        : ${COUNTRY}"
+echo -e " Remarks        : ${user}"
+echo -e " Domain         : ${domain}"
+echo -e " Port TLS       : ${tls}"
+echo -e " Port NON-TLS   : ${none}"
+echo -e " ID             : ${uuid}"
+echo -e " AlterID        : 2"
+echo -e " Security       : auto"
+echo -e " Network        : ws"
+echo -e " Path           : /v2ray${off}"
+echo -e "${cyan}=================================${off}"
+echo -e "${purple}~> VMESS TLS${off}"
+echo -e ""
+echo -e "${vmesslink1}" | lolcat
+echo -e "${cyan}=================================${off}"
+echo -e "${purple}~> VMESS NON-TLS${off}"
+echo -e ""
+echo -e "${vmesslink2}" | lolcat
+echo -e "${cyan}=================================${off}"
+echo -e " ${green}Aktif Selama   : $aktf Hari"
+echo -e " Dibuat Pada    : $sekar WIB"
+echo -e " Berakhir Pada  : $exp WIB${off}"
+echo -e "${cyan}=================================${off}"
+echo -e " ${purple}- Mod By Dhansss X NezaVPN${off}"
 echo -e ""
