@@ -194,8 +194,6 @@ chmod +x del-wg
 chmod +x cek-wg
 chmod +x renew-wg
 chmod +x status
-echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
-echo "0 0 * * * root xp" >> /etc/crontab
 cd
 echo "1.0.1" > /home/ver
 clear
