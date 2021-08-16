@@ -10,7 +10,7 @@ do
 exp=$(grep -w "^### $user" "/etc/v2ray/config.json" | cut -d ' ' -f 3)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$jam" +%s)
-exp2=$(( (d1 - d2) / 86400 ))
+exp2=$(( (d1 - d2) / 7860 ))
 if [[ "$exp2" = "0" ]]; then
 sed -i "/^### $user $exp/,/^},{/d" /etc/v2ray/config.json
 sed -i "/^### $user $exp/,/^},{/d" /etc/v2ray/none.json
