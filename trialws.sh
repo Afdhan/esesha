@@ -29,13 +29,6 @@ echo "Hanya Untuk Pengguna Berbayar!"
 echo "Silahkan Hubungi Admin"
 exit 0
 fi
-clear
-sleep 0.5
-figlet -f slant E.R.R.O.R ! | lolcat
-sleep 2
-exit 0
-
-
 
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
