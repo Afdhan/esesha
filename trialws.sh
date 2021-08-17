@@ -120,7 +120,7 @@ echo -e "${purple}~> VMESS NON-TLS${off}"
 echo -e ""
 echo -e "${vmesslink2}" | lolcat
 echo -e "${cyan}=================================${off}"
-echo -e " ${green}Aktif Selama   : $aktf Hari"
+echo -e " ${green}Aktif Selama   : $aktf Jam"
 echo -e " Dibuat Pada    : $sekar WIB"
 echo -e " Berakhir Pada  : $exp WIB${off}"
 echo -e "${cyan}=================================${off}"
