@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 
-data=( `cat /etc/v2ray/config.json | grep '^### TRIAL' | cut -d ' ' -f 2`);
+data=( `cat /etc/v2ray/config.json | grep '^### Trial' | cut -d ' ' -f 2`);
 jam=$(date +'%R')
 for user in "${data[@]}"
 do
