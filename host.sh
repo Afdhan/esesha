@@ -1,3 +1,4 @@
+#!/bin/bash
 grey='\x1b[90m'
 red='\x1b[91m'
 green='\x1b[92m'
