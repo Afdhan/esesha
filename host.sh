@@ -126,7 +126,7 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 -H "X-Auth-Key: ${CF_KEY}" \
 -H "Content-Type: application/json" \
 --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
-echo "${sub}" > 
+
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
 
 sleep 0.5
