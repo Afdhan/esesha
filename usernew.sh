@@ -38,8 +38,7 @@ flag='\x1b[47;41m'
                then
 		    	:
                else
-               echo "echo "Expired- Username : $username are expired at: $tgl $bulantahun and removed : $hariini "" >> /usr/local/bin/deleteduser
-	           
+               
                userdel $username
                fi
                done
@@ -107,10 +106,10 @@ echo -e " Server IP      : $MYIP"
 echo -e " OpenSSH        : 22"
 echo -e " Dropbear       : 109, 143"
 echo -e " SSL/TLS        :$ssl"
-echo -e " WS Dropbear    : 2095"
-echo -e " WS OpenSSH     : 2082"
-echo -e " WS OpenVPN     : 2086"
-echo -e " WS TLS         : 2053"
+echo -e " WS Dropbear    : 8880"
+echo -e " WS OpenSSH     : 2095"
+echo -e " WS OpenVPN     : 2082"
+echo -e " WS TLS         : 443"
 echo -e " Squid          :$sqd"
 echo -e " BadVPN         : 7100, 7200, 7300${off}"
 echo -e "${cyan}=================================${off}"
