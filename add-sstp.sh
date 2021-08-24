@@ -1,3 +1,86 @@
-z="
-";VDz='grep';TDz='l.tx';QHz='ir P';Iz=''\''\x1';wEz='ri):';Hz='0m'\''';MHz='a   ';DGz='er $';WCz=' "Ha';SBz='io/i';fz='33[1';xEz=' " m';UDz='t | ';nEz=' -p ';kDz='a-zA';DEz='CLIE';TFz='")';oCz='ce /';Tz='blue';uGz=' : h';FBz='/cit';XHz='Dhan';bDz='f2|s';SEz=' | w';fCz='lahk';NEz='um-s';jCz='dmin';pCz='var/';gBz=' gre';VFz='+"%b';bz='e='\''\';PBz='-qO-';Bz=''\''\e[';RCz='kses';Zz='6m'\''';cFz=' $th';SHz='=${o';REz='ser-';nz='rl -';lGz='" Po';LEz='ib/p';ZHz='X Ne';yGz='n:81';EGz='exp"';NFz='d "$';GHz='ma  ';yEz='asaa';xDz=' "Us';mDz='9_]+';vz=' -f ';cz='37m'\''';pEz='swor';QEz='ta-u';lDz='-Z0-';TCz='loki';RHz='ada ';Yz='cyan';nDz='$ &&';IGz='user';JBz='coun';KCz='{off';WBz='curl';pDz='LIEN';OHz='" Be';tEz='"Exp';YHz='sss ';AGz='s *';CDz=' ]];';vGz='ttp:';uDz=' do';VHz=' Mod';iBz='YIP ';Kz='gree';KFz='tgl=';LGz='""';UFz='bln=';aFz='gl $';ZCz='k Pe';QGz='f}"';rz='org ';wDz=' -rp';az='whit';aCz='nggu';Lz='n='\''\';hFz='bln2';PHz='rakh';MCz='slee';hGz=' IP ';WFz='thn=';cGz='UNTR';THz='ff}"';gEz=' Mas';ADz='IP" ';Fz='='\''\x';pFz='>> /';CHz='crt$';HGz='ata-';DDz=' the';YFz='expe';hDz=' $us';JEz='r /v';mEz='done';yDz='erna';fEz='arap';xz=' )';SFz='+"%d';CCz=' -e ';JCz='...$';lEz=' 1';SGz=' VPN';lBz='meri';FEz='XIST';LCz='}"';sBz='if [';YDz=' | c';GCz='es D';OGz='====';rCz='prem';KHz='buat';Sz=''\''';FDz='doma';BBz='url ';tBz=' $MY';HHz='f Ha';eBz='e/iz';CGz='"###';GDz='in=$';QCz='ed}A';IFz='%m-%';FHz='Sela';bFz='bln,';MGz='"${c';XFz='+"%Y';bBz='gith';pGz='" Pa';Qz='\x1b';VBz='=$( ';qEz='d: "';jBz='echo';DHz='n}Ak';UEz='[ ${';fBz='in |';RGz=' ~> ';nBz='Hak ';OEz='crip';VCz='off}';cEz='Suda';sGz='pass';NCz='p 1';bHz='N${o';qBz='S...';wBz='IN ]';KEz='ar/l';UBz='IZIN';DFz='e -d';Cz='1;31';RFz='ys" ';XBz=' htt';rDz='ISTS';FCz='}Aks';WEz='= '\''1';dz='bold';ZGz='" CI';GEz='S=$(';BDz='= ""';ECz='reen';iCz='gi A';AFz='ktif';LDz='in)';uCz='pt/i';oGz='me  ';JDz='c/v2';mBz='ksa ';oDz=' ${C';qGz='sswo';BGz='EOF';ABz='=$(c';IHz='ri"';kGz='in"';VEz='S} =';nCz='sour';DCz='"${g';ODz='="$(';Xz='[95m';bCz='na B';uFz='ccou';PEz='t/da';gDz='l [[';PCz='"${r';hBz='p $M';aEz='ma U';tz='t -d';lCz=' 0';hz='b[m'\''';pz='info';nFz='$thn';ZEz=' "Na';yz='CITY';MDz='IP';Mz='x1b[';RBz='nfo.';rGz='rd  ';NDz='sstp';dBz='o/sc';UHz='le}-';xCz='f';BEz='" -e';GGz='pt/d';xBz='; th';iEz='n Na';CFz='`dat';wFz='<EOF';tCz='scri';OBz='get ';BCz='r';ACz='clea';EBz='o.io';kCz='exit';vDz='read';mz='$(cu';pBz='s VP';UCz='r!${';WGz='    ';eEz='a, H';QDz='~/lo';Uz='4m'\''';kz='7;41';cBz='ub.i';GFz='s" +';fFz='=$(d';Oz='yell';eCz=' "Si';ez='='\''\0';YCz='Untu';JGz='-sst';KDz='ray/';eFz='tgl2';NGz='yan}';MFz='te -';xFz='r * ';NBz='=$(w';rFz='/sst';HEz=' -w ';WDz=' -i ';aBz='han.';sEz='s';gGz='rver';xGz='omai';oEz='"Pas';LBz=')';Rz='[93m';nGz='" Us';ZBz='/afd';iDz='er =';lFz=' $bl';eDz='/g'\'')';sDz='} ==';TGz='" ${';jFz='tngg';cDz='ed '\''';NHz='l"';Ez='grey';Wz='le='\''';oFz='2"';iFz='thn2';jGz='t   ';qCz='lib/';XGz=' : $';IBz='TRY=';TBz='p);';QBz=' ipi';EEz='NT_E';kEz='ain!';EFz=' "$m';wCz='.con';mGz='rt  ';sz='| cu';HFz='"%Y-';wGz='//$d';gCz='an H';XCz='nya ';Az='red=';RDz='g-in';IDz=' /et';MBz='MYIP';dFz='n"';vBz=' $IZ';JHz='" Di';jz='1b[4';PFz='akti';Nz='92m'\''';IEz='$use';LHz=' Pad';LFz='$(da';gFz='ate ';BHz='ver.';TEz='c -l';kBz=' "Me';Jz='b[91';CEz=' use';XDz='SSTP';EDz='n';Gz='1b[9';GBz='y )';oz='s ip';dCz='yar!';DBz='pinf';qFz='home';hCz='ubun';kFz='l="$';EHz='tif ';bGz='" CO';KGz='p"';iz='flag';jDz='~ ^[';WHz=' By ';UGz='n}IS';YGz='ISP"';KBz='try ';SDz='stal';YEz=' ""';yCz='[ "$';yFz='$pas';lz='ISP=';OCz='else';dEz='h Ad';fDz='unti';oBz='Akse';wz='2-10';aDz='d: -';SCz=' Dib';OFz='masa';qz='.io/';yBz='en';vCz='pvps';uEz='ired';tFz='tp_a';bEz='ser ';ZDz='ut -';HCz='iizi';BFz='exp=';sCz='ium-';ZFz='="$t';PGz='${of';tGz='" Ce';uBz='IP =';AHz='/ser';dGz='Y   ';QFz='f da';uz=' " "';rBz='"';HBz='COUN';YBz='ps:/';mFz='n2, ';JFz='d"`';aGz='TY  ';gz='off=';XEz=''\'' ]]';FFz=' day';iGz=' Hos';jEz='ma L';AEz='me: ';eGz='TRY"';ICz='nkan';tDz=' '\''0'\''';Vz='purp';vEz=' (ha';mCz='fi';fGz='" Se';MEz='remi';hEz='ukka';Dz='m'\''';FGz='>>"/';dDz='s/ /';cCz='erba';Pz='ow='\''';HDz='(cat';sFz='p/ss';CBz='-s i';qDz='T_EX';PDz='cat ';VGz='P   ';vFz='nt <';rEz=' pas';aHz='zaVP';
-eval "$Az$Bz$Cz$Dz$z$Ez$Fz$Gz$Hz$z$Az$Iz$Jz$Dz$z$Kz$Lz$Mz$Nz$z$Oz$Pz$Qz$Rz$Sz$z$Tz$Fz$Gz$Uz$z$Vz$Wz$Qz$Xz$Sz$z$Yz$Fz$Gz$Zz$z$az$bz$Mz$cz$z$dz$ez$fz$Dz$z$gz$Iz$hz$z$iz$Fz$jz$kz$Dz$z$lz$mz$nz$oz$pz$qz$rz$sz$tz$uz$vz$wz$xz$z$yz$ABz$BBz$CBz$DBz$EBz$FBz$GBz$z$HBz$IBz$mz$nz$oz$pz$qz$JBz$KBz$LBz$z$MBz$NBz$OBz$PBz$QBz$RBz$SBz$TBz$z$UBz$VBz$WBz$XBz$YBz$ZBz$aBz$bBz$cBz$dBz$eBz$fBz$gBz$hBz$iBz$LBz$z$jBz$kBz$lBz$mBz$nBz$oBz$pBz$qBz$rBz$z$sBz$tBz$uBz$vBz$wBz$xBz$yBz$z$ACz$BCz$z$jBz$CCz$DCz$ECz$FCz$GCz$HCz$ICz$JCz$KCz$LCz$z$MCz$NCz$z$OCz$z$ACz$BCz$z$jBz$CCz$PCz$QCz$RCz$SCz$TCz$UCz$VCz$rBz$z$jBz$WCz$XCz$YCz$ZCz$aCz$bCz$cCz$dCz$rBz$z$jBz$eCz$fCz$gCz$hCz$iCz$jCz$rBz$z$kCz$lCz$z$mCz$z$ACz$BCz$z$nCz$oCz$pCz$qCz$rCz$sCz$tCz$uCz$vCz$wCz$xCz$z$sBz$yCz$ADz$BDz$CDz$DDz$EDz$z$FDz$GDz$HDz$IDz$JDz$KDz$FDz$LDz$z$OCz$z$FDz$GDz$MDz$z$mCz$z$NDz$ODz$PDz$QDz$RDz$SDz$TDz$UDz$VDz$WDz$XDz$YDz$ZDz$aDz$bDz$cDz$dDz$eDz$rBz$z$fDz$gDz$hDz$iDz$jDz$kDz$lDz$mDz$nDz$oDz$pDz$qDz$rDz$sDz$tDz$CDz$uDz$z$vDz$wDz$xDz$yDz$AEz$BEz$CEz$BCz$z$DEz$EEz$FEz$GEz$VDz$HEz$IEz$JEz$KEz$LEz$MEz$NEz$OEz$PEz$QEz$REz$NDz$SEz$TEz$LBz$z$sBz$UEz$DEz$EEz$FEz$VEz$WEz$XEz$xBz$yBz$z$jBz$YEz$z$jBz$ZEz$aEz$bEz$cEz$dEz$eEz$fEz$gEz$hEz$iEz$jEz$kEz$rBz$z$kCz$lEz$z$mCz$z$mEz$z$vDz$nEz$oEz$pEz$qEz$rEz$sEz$z$vDz$nEz$tEz$uEz$vEz$wEz$xEz$yEz$AFz$z$BFz$CFz$DFz$EFz$yEz$AFz$FFz$GFz$HFz$IFz$JFz$z$KFz$LFz$MFz$NFz$OFz$PFz$QFz$RFz$SFz$TFz$z$UFz$LFz$MFz$NFz$OFz$PFz$QFz$RFz$VFz$TFz$z$WFz$LFz$MFz$NFz$OFz$PFz$QFz$RFz$XFz$TFz$z$YFz$ZFz$aFz$bFz$cFz$dFz$z$eFz$fFz$gFz$SFz$TFz$z$hFz$fFz$gFz$VFz$TFz$z$iFz$fFz$gFz$XFz$TFz$z$jFz$kFz$eFz$lFz$mFz$nFz$oFz$z$PDz$pFz$qFz$rFz$sFz$tFz$uFz$vFz$wFz$z$IEz$xFz$yFz$AGz$z$BGz$z$jBz$CCz$CGz$hDz$DGz$EGz$FGz$pCz$qCz$rCz$sCz$tCz$GGz$HGz$IGz$JGz$KGz$z$ACz$BCz$z$jBz$CCz$LGz$z$jBz$CCz$MGz$NGz$OGz$OGz$OGz$OGz$OGz$OGz$OGz$OGz$PGz$QGz$z$jBz$CCz$MGz$NGz$RGz$XDz$SGz$PGz$QGz$z$jBz$CCz$MGz$NGz$OGz$OGz$OGz$OGz$OGz$OGz$OGz$OGz$PGz$QGz$z$jBz$CCz$TGz$Kz$UGz$VGz$WGz$WGz$XGz$YGz$z$jBz$CCz$ZGz$aGz$WGz$WGz$XGz$yz$rBz$z$jBz$CCz$bGz$cGz$dGz$WGz$XGz$HBz$eGz$z$jBz$CCz$fGz$gGz$hGz$WGz$XGz$MBz$rBz$z$jBz$CCz$fGz$gGz$iGz$jGz$XGz$FDz$kGz$z$jBz$CCz$lGz$mGz$WGz$WGz$XGz$NDz$rBz$z$jBz$CCz$nGz$yDz$oGz$WGz$XGz$IGz$rBz$z$jBz$CCz$pGz$qGz$rGz$WGz$XGz$sGz$rBz$z$jBz$CCz$tGz$mGz$WGz$WGz$uGz$vGz$wGz$xGz$yGz$AHz$BHz$CHz$KCz$LCz$z$jBz$CCz$MGz$NGz$OGz$OGz$OGz$OGz$OGz$OGz$OGz$OGz$PGz$QGz$z$jBz$CCz$TGz$Kz$DHz$EHz$FHz$GHz$XGz$OFz$PFz$HHz$IHz$z$jBz$CCz$JHz$KHz$LHz$MHz$XGz$jFz$NHz$z$jBz$CCz$OHz$PHz$QHz$RHz$XGz$YFz$PGz$QGz$z$jBz$CCz$MGz$NGz$OGz$OGz$OGz$OGz$OGz$OGz$OGz$OGz$SHz$THz$z$jBz$CCz$TGz$Vz$UHz$VHz$WHz$XHz$YHz$ZHz$aHz$bHz$THz$z$jBz$CCz$LGz"
+#!/bin/bash
+red='\e[1;31m'
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
+echo "Memeriksa Hak Akses VPS..."
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e "${green}Akses Diizinkan...${off}"
+sleep 1
+else
+clear
+echo -e "${red}Akses Diblokir!${off}"
+echo "Hanya Untuk Pengguna Berbayar!"
+echo "Silahkan Hubungi Admin"
+exit 0
+fi
+clear
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/v2ray/domain)
+else
+domain=$IP
+fi
+sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
+until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+		read -rp "Username: " -e user
+		CLIENT_EXISTS=$(grep -w $user /var/lib/premium-script/data-user-sstp | wc -l)
+
+		if [[ ${CLIENT_EXISTS} == '1' ]]; then
+			echo ""
+			echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
+                        exit 1
+		fi
+	done
+read -p "Password: " pass
+read -p "Expired (hari): " masaaktif
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
+cat >> /home/sstp/sstp_account <<EOF
+$user * $pass *
+EOF
+echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
+clear
+echo -e ""
+echo -e "${cyan}================================${off}"
+echo -e "${cyan} ~> SSTP VPN${off}"
+echo -e "${cyan}================================${off}"
+echo -e " ${green}ISP            : $ISP"
+echo -e " CITY           : $CITY"
+echo -e " COUNTRY        : $COUNTRY"
+echo -e " Server IP      : $MYIP"
+echo -e " Server Host    : $domain"
+echo -e " Port           : $sstp"
+echo -e " Username       : $user"
+echo -e " Password       : $pass"
+echo -e " Cert           : http://$domain:81/server.crt${off}"
+echo -e "${cyan}================================${off}"
+echo -e " ${green}Aktif Selama   : $masaaktif Hari"
+echo -e " Dibuat Pada    : $tnggl"
+echo -e " Berakhir Pada  : $expe${off}"
+echo -e "${cyan}=================================${off}"
+echo -e " ${purple}- Mod By Dhansss X NezaVPN${off}"
+echo -e ""

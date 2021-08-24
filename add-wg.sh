@@ -1,3 +1,120 @@
-z="
-";HCz='}"';AIz=' Cli';rGz='D_KE';iz='7;41';UGz='bln2';lDz='= '\''0';fGz='$(wg';bHz='PUB_';IJz='UNTR';Vz='[95m';CGz='akti';WIz='HOME';gDz='& ${';xGz='nter';wGz=' "[I';nEz='d/wg';WFz='NT_D';TGz='ate ';DCz='iizi';bIz='nt-$';GIz='/wir';tEz='ep "';pJz='" Be';JDz='SERV';LCz='clea';YEz=' 1';RCz='loki';xDz='S=$(';CKz='zaVP';XDz=' ${C';NJz='rver';kFz=' " m';KCz='else';oDz='read';vJz='le}-';hIz='ubli';RFz='6.66';yIz='P   ';mIz='yan}';VIz='cp $';CBz='o.io';sBz='IP =';ZJz='	: h';Xz='6m'\''';ZCz='nggu';JFz='/" -';Kz='x1b[';ADz='pvps';CCz='es D';PJz='{MYI';OEz='ma S';TFz='.$((';EIz='_ADD';cz='='\''\0';QEz=' Ada';NHz='DRES';nDz='; do';FHz='IENT';VGz='thn2';eBz=' gre';tFz='"%Y-';FFz=' $3}';XEz='in!"';uIz='REGU';OCz='ed}A';RIz='g-qu';LBz='=$(w';DEz='c/wi';YFz='="17';WCz='nya ';pDz=' -rp';qHz=' >>"';YDz='LIEN';wEz='_CON';TJz='{SER';yBz='"${g';nJz='a   ';kEz='WG_C';DFz=' '\''{p';lz='rl -';Bz='='\''\x';QCz=' Dib';vFz='d"`';cHz='KEY';Cz='1b[9';YHz='y = ';NIz='emct';KJz='{COU';CIz=' $ex';Gz='b[91';QJz='P}"';bDz='=~ ^';tCz='var/';dFz='NS_2';tDz='" -e';QIz='t "w';bCz='erba';JJz='Y   ';ZFz='6.10';sEz='( gr';yHz='"###';wIz='" ${';qEz='LAST';IDz='n';BIz='ent ';BGz='masa';BDz='.con';jCz='exit';yJz='Dhan';OGz='bln,';iJz='f Ha';PDz='/v2r';aIz='clie';lIz='"${c';XIz='/$SE';CEz=' /et';REz=', Ha';YGz=' $bl';Fz=''\''\x1';iHz='oint';dBz='in |';ZGz='n2, ';SEz='rap ';jFz='ri):';kHz='wedI';kDz='S} =';HBz='coun';hEz='RVER';mDz=''\'' ]]';QGz='n"';AFz='il -';YBz='han.';UDz='P';XFz='NS_1';TDz='P=$I';sFz='s" +';SIz='ick@';VHz='r]';DKz='N${o';RDz='omai';gEz=':$SE';GGz='")';gBz='YIP ';qIz='"${p';MGz='="$t';ECz='nkan';aGz='$thn';oBz='S...';SGz='=$(d';cJz=':81/';hGz='key)';VJz='n}Wi';eGz='KEY=';ZBz='gith';RBz='p);';eJz='n}Ak';dDz='A-Z0';PBz='nfo.';cCz='yar!';kIz='""';GHz='_PRI';EHz=' $CL';AGz='d "$';GKz='oot/';HJz='" CO';bBz='o/sc';pCz='wire';WDz='l [[';oCz='etc/';LGz='expe';KIz='G_NI';sGz='Y=$(';FJz='{CIT';rz='t -d';wHz='ent-';fDz='+$ &';YCz='k Pe';tHz='R_WG';dJz='f${o';uFz='%m-%';vDz='ENT_';sDz='me: ';LFz=' "."';yz='url ';ZIz='NIC-';DBz='/cit';FKz='f /r';HHz='V_KE';dHz='Pres';CJz='{ISP';jEz='T"';uJz='f}"';LEz='= '\''1';AEz=' -w ';TCz='off}';hJz='ma  ';wz='CITY';mGz='KEY"';SJz='t   ';NGz='gl $';yCz='pt/i';nHz='.0.0';oGz='bkey';lHz='Ps =';xJz=' By ';OBz=' ipi';BEz='$CLI';jJz='ri"';JCz='p 1';RJz=' Hos';qFz=' "$m';tIz='> WI';NCz='"${r';fEz='B_IP';DHz='ey =';fBz='p $M';QFz='10.6';HEz='conf';Mz='yell';WEz='a La';cIz='NT_N';aJz='ttp:';Uz='le='\''';uCz='lib/';aEz='ENDP';UJz='IP}$';jGz='EY=$';sJz='ada ';oHz='/0,:';HKz='wg0-';AHz=']';xz='=$(c';BHz='Priv';xFz='$(da';IHz='Y';Nz='ow='\''';nBz='s VP';KGz='+"%Y';FGz='+"%d';uDz=' CLI';RHz='S_1,';CHz='ateK';dIz='AME.';MDz='P=$(';CFz=' awk';TBz='=$( ';SDz='n);';WBz='ps:/';ICz='slee';Rz='blue';iGz='UB_K';GJz='Y}"';MFz='4 )';yFz='te -';DJz='" CI';KHz='ess ';hCz='gi A';cBz='e/iz';LIz='C.co';ABz='-s i';FDz='= ""';iCz='dmin';sCz='rams';hz='1b[4';THz='2';nIz='====';Tz='purp';GFz=''\'' | ';cFz='0"';FBz='COUN';dGz='RIV_';aFz='3.13';UCz='";';iFz=' (ha';IBz='try ';Pz='[93m';gJz='Sela';Yz='whit';fJz='tif ';eFz='1"';lGz='o "$';uz='2-10';wDz='NAME';wFz='tgl=';PHz='DNS ';HDz=' the';vEz=' $WG';FEz='ard/';eHz='hare';vIz='ARD$';xIz='n}IS';JHz='Addr';ODz='/etc';qJz='rakh';Qz=''\''';CDz='f';DIz='p';wBz='en';iIz='c_ht';EJz='TY  ';GDz=' ]];';Ez='red=';qCz='guar';GEz='wg0.';hBz='echo';iBz=' "Me';rHz='$HOM';rDz='erna';SFz='.2"';iDz='NT_E';Jz='n='\''\';az='37m'\''';BKz='X Ne';Dz='0m'\''';IGz='+"%b';fCz='an H';MBz='get ';pz='org ';bFz='0.13';qDz=' "Us';wCz='ium-';rBz=' $MY';oFz='`dat';yDz='grep';oJz='l"';PFz='SS="';XJz='ard ';PCz='kses';UEz='kkan';NBz='-qO-';OFz='DDRE';MEz=' ""';xBz=' -e ';ZHz='$SER';nCz='ce /';ACz='reen';wJz=' Mod';eCz='lahk';Az='grey';hHz='Endp';mEz='G="/';EBz='y )';XBz='/afd';oIz='=${o';Wz='cyan';vCz='prem';YJz='URL ';Zz='e='\''\';rEz='IP=$';tJz='${of';qGz='HARE';XGz='l="$';uBz='IN ]';cEz='="$S';kBz='ksa ';NDz='cat ';gCz='ubun';ZDz='T_NA';EFz='rint';VDz='unti';VFz='))"';jIz='ml/$';VEz=' Nam';lFz='asaa';cDz='[a-z';VBz=' htt';MJz='" Se';pGz='RE_S';JEz='c -l';kJz='" Di';NFz='NT_A';IFz='-d "';KEz='[ ${';mFz='ktif';HGz='bln=';bGz='2"';KDz='ER_P';XHz='icKe';rIz='urpl';yEz='| ta';LDz='UB_I';EDz='IP" ';Lz='92m'\''';qBz='if [';hDz='CLIE';BCz='}Aks';Sz='4m'\''';tGz='wg g';ez='off=';bEz='OINT';jz='ISP=';mCz='sour';Hz='m'\''';bJz='//$S';UIz='IC"';oz='.io/';HFz='cut ';QDz='ay/d';jDz='XIST';IEz=' | w';fHz='dKey';aDz='ME} ';DGz='f da';lCz='fi';PIz='star';UFz='IP+1';BFz='n1 |';pEz='nf"';mz='s ip';LJz='NTRY';yGz='face';FIz='RESS';JBz=')';XCz='Untu';vBz='; th';eIz=' /ho';rCz='d/pa';oEz='0.co';vHz='-cli';gIz='ps/p';rJz='ir P';tBz=' $IZ';HIz='egua';vGz='k)';mHz=' 0.0';uGz='enps';AJz='    ';jBz='meri';RGz='tgl2';GBz='TRY=';dz='33[1';NEz=' "Na';DDz='[ "$';OHz='S/24';KFz='f 1 ';KBz='MYIP';TIz='WG_N';SHz='DNS_';rFz=' day';TEz='Masu';eEz='R_PU';sz=' " "';WGz='tngg';BBz='pinf';pHz=':/0"';fz='b[m'\''';aCz='na B';SCz='r!${';OJz=' IP ';pBz='"';iEz='_POR';uHz='_NIC';pFz='e -d';WJz='reGu';SBz='IZIN';EGz='ys" ';lJz='buat';mJz=' Pad';MCz='r';tz=' -f ';sHz='E/$S';aHz='VER_';sIz='e} ~';QHz='T_DN';lEz='ONFI';JGz='thn=';aBz='ub.i';gz='flag';kCz=' 0';FCz='...$';ZEz='done';VCz=' "Ha';AKz='sss ';kz='$(cu';UBz='curl';PGz=' $th';jHz='Allo';qz='| cu';UHz='[Pee';OIz='l re';eDz='-9_]';fFz=' -p ';dEz='ERVE';JIz='ER_W';bz='bold';mBz='Akse';YIz='_WG_';EEz='regu';fIz='me/v';Iz='gree';pIz='ff}"';gHz=' = $';EKz='rm -';hFz='ired';lBz='Hak ';xEz='FIG ';xHz='f"';BJz=' : $';PEz='udah';IIz='rd/$';Oz='\x1b';cGz='NT_P';WHz='Publ';GCz='{off';kGz='(ech';uEz='/32"';gFz='"Exp';dCz=' "Si';nz='info';nGz='g pu';gGz=' gen';vz=' )';nFz='exp=';xCz='scri';MHz='T_AD';QBz='io/i';LHz='= $C';MIz='syst';
-eval "$Az$Bz$Cz$Dz$z$Ez$Fz$Gz$Hz$z$Iz$Jz$Kz$Lz$z$Mz$Nz$Oz$Pz$Qz$z$Rz$Bz$Cz$Sz$z$Tz$Uz$Oz$Vz$Qz$z$Wz$Bz$Cz$Xz$z$Yz$Zz$Kz$az$z$bz$cz$dz$Hz$z$ez$Fz$fz$z$gz$Bz$hz$iz$Hz$z$jz$kz$lz$mz$nz$oz$pz$qz$rz$sz$tz$uz$vz$z$wz$xz$yz$ABz$BBz$CBz$DBz$EBz$z$FBz$GBz$kz$lz$mz$nz$oz$HBz$IBz$JBz$z$KBz$LBz$MBz$NBz$OBz$PBz$QBz$RBz$z$SBz$TBz$UBz$VBz$WBz$XBz$YBz$ZBz$aBz$bBz$cBz$dBz$eBz$fBz$gBz$JBz$z$hBz$iBz$jBz$kBz$lBz$mBz$nBz$oBz$pBz$z$qBz$rBz$sBz$tBz$uBz$vBz$wBz$z$hBz$xBz$yBz$ACz$BCz$CCz$DCz$ECz$FCz$GCz$HCz$z$ICz$JCz$z$KCz$z$LCz$MCz$z$hBz$xBz$NCz$OCz$PCz$QCz$RCz$SCz$TCz$UCz$z$hBz$VCz$WCz$XCz$YCz$ZCz$aCz$bCz$cCz$pBz$z$hBz$dCz$eCz$fCz$gCz$hCz$iCz$pBz$z$jCz$kCz$z$lCz$z$LCz$MCz$z$mCz$nCz$oCz$pCz$qCz$rCz$sCz$z$mCz$nCz$tCz$uCz$vCz$wCz$xCz$yCz$ADz$BDz$CDz$z$qBz$DDz$EDz$FDz$GDz$HDz$IDz$z$JDz$KDz$LDz$MDz$NDz$ODz$PDz$QDz$RDz$SDz$z$KCz$z$JDz$KDz$LDz$TDz$UDz$z$lCz$z$VDz$WDz$XDz$YDz$ZDz$aDz$bDz$cDz$dDz$eDz$fDz$gDz$hDz$iDz$jDz$kDz$lDz$mDz$nDz$z$oDz$pDz$qDz$rDz$sDz$tDz$uDz$vDz$wDz$z$hDz$iDz$jDz$xDz$yDz$AEz$BEz$vDz$wDz$CEz$DEz$EEz$FEz$GEz$HEz$IEz$JEz$JBz$z$qBz$KEz$hDz$iDz$jDz$kDz$LEz$mDz$vBz$wBz$z$hBz$MEz$z$hBz$NEz$OEz$PEz$QEz$REz$SEz$TEz$UEz$VEz$WEz$XEz$z$jCz$YEz$z$lCz$z$ZEz$z$aEz$bEz$cEz$dEz$eEz$fEz$gEz$hEz$iEz$jEz$z$kEz$lEz$mEz$oCz$pCz$qCz$nEz$oEz$pEz$z$qEz$rEz$sEz$tEz$uEz$vEz$wEz$xEz$yEz$AFz$BFz$CFz$DFz$EFz$FFz$GFz$HFz$IFz$JFz$KFz$qz$rz$LFz$tz$MFz$z$qBz$DDz$qEz$EDz$FDz$GDz$HDz$IDz$z$hDz$NFz$OFz$PFz$QFz$RFz$SFz$z$KCz$z$hDz$NFz$OFz$PFz$QFz$RFz$TFz$qEz$UFz$VFz$z$lCz$z$hDz$WFz$XFz$YFz$ZFz$aFz$bFz$cFz$z$hDz$WFz$dFz$YFz$ZFz$aFz$bFz$eFz$z$oDz$fFz$gFz$hFz$iFz$jFz$kFz$lFz$mFz$z$nFz$oFz$pFz$qFz$lFz$mFz$rFz$sFz$tFz$uFz$vFz$z$wFz$xFz$yFz$AGz$BGz$CGz$DGz$EGz$FGz$GGz$z$HGz$xFz$yFz$AGz$BGz$CGz$DGz$EGz$IGz$GGz$z$JGz$xFz$yFz$AGz$BGz$CGz$DGz$EGz$KGz$GGz$z$LGz$MGz$NGz$OGz$PGz$QGz$z$RGz$SGz$TGz$FGz$GGz$z$UGz$SGz$TGz$IGz$GGz$z$VGz$SGz$TGz$KGz$GGz$z$WGz$XGz$RGz$YGz$ZGz$aGz$bGz$z$hDz$cGz$dGz$eGz$fGz$gGz$hGz$z$hDz$cGz$iGz$jGz$kGz$lGz$hDz$cGz$dGz$mGz$IEz$nGz$oGz$JBz$z$hDz$cGz$pGz$qGz$rGz$sGz$tGz$uGz$vGz$z$hBz$wGz$xGz$yGz$AHz$z$BHz$CHz$DHz$EHz$FHz$GHz$HHz$IHz$z$JHz$KHz$LHz$YDz$MHz$NHz$OHz$z$PHz$LHz$YDz$QHz$RHz$BEz$vDz$SHz$THz$z$UHz$VHz$z$WHz$XHz$YHz$ZHz$aHz$bHz$cHz$z$dHz$eHz$fHz$gHz$hDz$cGz$pGz$qGz$rGz$IHz$z$hHz$iHz$gHz$aEz$bEz$z$jHz$kHz$lHz$mHz$nHz$oHz$pHz$qHz$rHz$sHz$dEz$tHz$uHz$vHz$wHz$BEz$vDz$wDz$BDz$xHz$z$hBz$xBz$yHz$AIz$BIz$BEz$vDz$wDz$CIz$DIz$z$UHz$VHz$z$WHz$XHz$YHz$BEz$vDz$bHz$cHz$z$dHz$eHz$fHz$gHz$hDz$cGz$pGz$qGz$rGz$IHz$z$jHz$kHz$lHz$EHz$FHz$EIz$FIz$uEz$qHz$ODz$GIz$HIz$IIz$JDz$JIz$KIz$LIz$pEz$z$MIz$NIz$OIz$PIz$QIz$RIz$SIz$ZHz$aHz$TIz$UIz$z$VIz$WIz$XIz$hEz$YIz$ZIz$aIz$bIz$hDz$cIz$dIz$HEz$eIz$fIz$gIz$hIz$iIz$jIz$hDz$cIz$dIz$HEz$z$LCz$MCz$z$ICz$JCz$z$hBz$xBz$kIz$z$hBz$xBz$lIz$mIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$oIz$pIz$z$hBz$xBz$qIz$rIz$sIz$tIz$uIz$vIz$GCz$HCz$z$hBz$xBz$lIz$mIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$oIz$pIz$z$hBz$xBz$wIz$Iz$xIz$yIz$AJz$AJz$BJz$CJz$HCz$z$hBz$xBz$DJz$EJz$AJz$AJz$BJz$FJz$GJz$z$hBz$xBz$HJz$IJz$JJz$AJz$BJz$KJz$LJz$HCz$z$hBz$xBz$MJz$NJz$OJz$AJz$BJz$PJz$QJz$z$hBz$xBz$MJz$NJz$RJz$SJz$BJz$TJz$aHz$bHz$UJz$GCz$HCz$z$hBz$xBz$lIz$mIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$oIz$pIz$z$hBz$xBz$wIz$Iz$VJz$WJz$XJz$YJz$ZJz$aJz$bJz$dEz$eEz$fEz$cJz$BEz$vDz$wDz$BDz$dJz$pIz$z$hBz$xBz$lIz$mIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$oIz$pIz$z$hBz$xBz$wIz$Iz$eJz$fJz$gJz$hJz$BJz$BGz$CGz$iJz$jJz$z$hBz$xBz$kJz$lJz$mJz$nJz$BJz$WGz$oJz$z$hBz$xBz$pJz$qJz$rJz$sJz$BJz$LGz$tJz$uJz$z$hBz$xBz$lIz$mIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$nIz$oIz$pIz$z$hBz$xBz$wIz$Tz$vJz$wJz$xJz$yJz$AKz$BKz$CKz$DKz$pIz$z$hBz$xBz$kIz$z$EKz$FKz$GKz$HKz$aIz$bIz$hDz$cIz$dIz$HEz"
+#!/bin/bash
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
+echo "Memeriksa Hak Akses VPS..."
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Akses Diizinkan...${off}"
+sleep 1
+else
+clear
+echo -e "${red}Akses Diblokir!${off}";
+echo "Hanya Untuk Pengguna Berbayar!"
+echo "Silahkan Hubungi Admin"
+exit 0
+fi
+clear
+# Load params
+source /etc/wireguard/params
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+SERVER_PUB_IP=$(cat /etc/v2ray/domain);
+else
+SERVER_PUB_IP=$IP
+fi
+	
+	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+		read -rp "Username: " -e CLIENT_NAME
+		CLIENT_EXISTS=$(grep -w $CLIENT_NAME /etc/wireguard/wg0.conf | wc -l)
+
+		if [[ ${CLIENT_EXISTS} == '1' ]]; then
+			echo ""
+			echo "Nama Sudah Ada, Harap Masukkan Nama Lain!"
+			exit 1
+		fi
+	done
+	ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
+	WG_CONFIG="/etc/wireguard/wg0.conf"
+	LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
+	if [[ "$LASTIP" = "" ]]; then
+	CLIENT_ADDRESS="10.66.66.2"
+	else
+	CLIENT_ADDRESS="10.66.66.$((LASTIP+1))"
+	fi
+
+	# Adguard DNS by default
+	CLIENT_DNS_1="176.103.130.130"
+
+	CLIENT_DNS_2="176.103.130.131"
+	
+	read -p "Expired (hari): " masaaktif
+	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+        tgl=$(date -d "$masaaktif days" +"%d")
+        bln=$(date -d "$masaaktif days" +"%b")
+        thn=$(date -d "$masaaktif days" +"%Y")
+        expe="$tgl $bln, $thn"
+        tgl2=$(date +"%d")
+        bln2=$(date +"%b")
+        thn2=$(date +"%Y")
+        tnggl="$tgl2 $bln2, $thn2"
+	# Generate key pair for the client
+	CLIENT_PRIV_KEY=$(wg genkey)
+	CLIENT_PUB_KEY=$(echo "$CLIENT_PRIV_KEY" | wg pubkey)
+	CLIENT_PRE_SHARED_KEY=$(wg genpsk)
+
+	# Create client file and add the server as a peer
+	echo "[Interface]
+PrivateKey = $CLIENT_PRIV_KEY
+Address = $CLIENT_ADDRESS/24
+DNS = $CLIENT_DNS_1,$CLIENT_DNS_2
+
+[Peer]
+PublicKey = $SERVER_PUB_KEY
+PresharedKey = $CLIENT_PRE_SHARED_KEY
+Endpoint = $ENDPOINT
+AllowedIPs = 0.0.0.0/0,::/0" >>"$HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf"
+
+	# Add the client as a peer to the server
+	echo -e "### Client $CLIENT_NAME $exp
+[Peer]
+PublicKey = $CLIENT_PUB_KEY
+PresharedKey = $CLIENT_PRE_SHARED_KEY
+AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
+	systemctl restart "wg-quick@$SERVER_WG_NIC"
+	cp $HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf /home/vps/public_html/$CLIENT_NAME.conf
+	clear
+        sleep 1
+	echo -e ""
+	echo -e "${cyan}=================================${off}"
+        echo -e "${purple} ~> WIREGUARD${off}"
+        echo -e "${cyan}=================================${off}"
+        echo -e " ${green}ISP            : ${ISP}"
+        echo -e " CITY           : ${CITY}"
+        echo -e " COUNTRY        : ${COUNTRY}"
+        echo -e " Server IP      : ${MYIP}"
+        echo -e " Server Host    : ${SERVER_PUB_IP}${off}"
+        echo -e "${cyan}=================================${off}"
+	echo -e " ${green}WireGuard URL 	: http://$SERVER_PUB_IP:81/$CLIENT_NAME.conf${off}"
+	echo -e "${cyan}=================================${off}"
+	echo -e " ${green}Aktif Selama   : $masaaktif Hari"
+echo -e " Dibuat Pada    : $tnggl"
+echo -e " Berakhir Pada  : $expe${off}"
+echo -e "${cyan}=================================${off}"
+echo -e " ${purple}- Mod By Dhansss X NezaVPN${off}"
+echo -e ""
+	rm -f /root/wg0-client-$CLIENT_NAME.conf

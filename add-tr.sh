@@ -1,3 +1,85 @@
-z="
-";BGz='$thn';bz='bold';WHz='n}Ak';Uz='le='\''';fCz='ubun';cGz='urpl';xEz='ktif';KGz='star';CEz='read';wz='CITY';ODz='c/v2';dDz=' | c';pFz=' $th';EEz=' "Pa';ZCz='na B';OGz='an:/';eHz=' Pad';KEz='_EXI';LFz='n/co';gHz='l"';yEz='sed ';VDz='log-';QCz=' Dib';dGz='e} ~';UEz='wc -';fz='b[m'\''';qCz='uid.';sCz='sour';mFz='="$t';AEz=']; d';rDz='9_]+';XBz='/afd';KDz='doma';LHz='{dom';MCz='else';LEz='STS=';iEz='arap';FDz='IP" ';Zz='e='\''\';QHz='y   ';KHz='st  ';aEz=']]; ';gGz=' VPN';nDz='er =';GDz='= ""';tCz='ce /';DFz='id""';nFz='gl $';bEz='then';uCz='var/';lEz='n Na';TDz='$(ca';uGz='UNTR';nBz='s VP';oCz='troj';rGz='{CIT';TBz='=$( ';THz='{tro';bDz='i Tr';lDz='l [[';dBz='in |';kCz='fi';kEz='ukka';GBz='TRY=';kFz='+"%Y';DHz='P}"';gBz='YIP ';IHz='r}"';WCz='Untu';mEz='ma L';TEz='f | ';Az='grey';UGz='{tr}';QEz='/tro';RBz='p);';Qz=''\''';tFz='ate ';jz='ISP=';hDz='ed '\''';hGz='${of';VHz='ink}';WDz='inst';lz='rl -';EHz='" Re';YEz=' == ';JFz='tc/t';QGz='ser}';Xz='6m'\''';pGz='" CI';BFz='/"'\''"';xGz='NTRY';kHz='ada ';PFz='`dat';sHz='N${o';gDz='f2|s';Pz='[93m';YHz='Sela';JHz='" Ho';fDz='d: -';CCz='reen';mGz='    ';XCz='k Pe';aGz='ff}"';kDz='unti';yGz='" Se';YCz='nggu';nz='info';GGz=' >> ';oGz='{ISP';DDz='f';ez='off=';rCz='txt)';Bz='='\''\x';UHz='janl';tDz=' ${u';pz='org ';Lz='92m'\''';QBz='io/i';Rz='blue';DCz='}Aks';Wz='cyan';cFz='akti';jHz='ir P';gz='flag';FBz='COUN';UDz='t ~/';xFz='l="$';tz=' -f ';Mz='yell';wGz='{COU';Gz='b[91';wBz='en';OHz='rt  ';yFz=' $bl';Ez='red=';TFz='s" +';JBz=')';sz=' " "';VBz=' htt';dEz=' "Na';OBz=' ipi';TCz='off}';AFz='-i '\''';Iz='gree';oBz='S...';XEz='STS}';ZHz='ma  ';UCz=' "Ha';jEz=' Mas';wFz='tngg';SHz='nk  ';BDz='pvps';Tz='purp';PBz='nfo.';NBz='-qO-';xBz='clea';jFz='thn=';tBz=' $IZ';qEz=' -p ';mDz=' $us';LCz='p 1';vGz='Y   ';YFz='$(da';JDz='n';Oz='\x1b';xCz='ium-';PHz='" Ke';gEz='h Ad';gFz='")';mz='s ip';Cz='1b[9';ABz='-s i';DBz='/cit';LBz='=$(w';pBz='"';HGz='syst';cBz='e/iz';HDz=' ]];';aDz='ep -';LGz='t tr';KBz='MYIP';vCz='lib/';qz='| cu';OCz='ed}A';UFz='"%Y-';XHz='tif ';MFz='nfig';jGz='" ${';qGz='TY  ';jCz=' 0';YDz='txt ';PEz='/etc';JCz='}"';jDz='/g'\'')';hCz='dmin';FCz='iizi';sEz='ired';ZBz='gith';GHz='s   ';hEz='a, H';WBz='ps:/';Sz='4m'\''';aBz='ub.i';lHz='le}-';jBz='meri';RHz='" Li';kGz='n}IS';iDz='s/ /';pDz='a-zA';bGz='"${p';HHz='{use';RFz=' "$m';Dz='0m'\''';ZFz='te -';vEz=' " m';iz='7;41';rBz=' $MY';dCz='lahk';MEz='$(gr';SDz='tr="';aHz='f Ha';hBz='echo';EGz='er $';VFz='%m-%';vz=' )';qHz='X Ne';uEz='ri):';MDz='(cat';wCz='prem';GCz='nkan';ICz='{off';sGz='Y}"';QFz='e -d';RDz='IP';ZDz='| gr';tEz=' (ha';rFz='tgl2';qFz='n"';IBz='try ';mHz=' Mod';KFz='roja';SEz='akun';nCz='etc/';rEz='"Exp';FGz='exp"';YGz='====';eBz=' gre';eCz='an H';bBz='o/sc';CFz='"$uu';TGz='n}:$';wEz='asaa';GFz=''\''""$';FHz='mark';NFz='.jso';vDz='EXIS';dHz='buat';VGz='""';BEz='o';BCz='"${g';WGz='"${c';CBz='o.io';iHz='rakh';SBz='IZIN';nGz=' : $';FEz='sswo';ADz='pt/i';wDz='TS} ';XFz='tgl=';IFz=''\'' /e';yDz='0'\'' ]';Fz=''\''\x1';bHz='ri"';cEz=' ""';REz='jan/';qBz='if [';fEz='Suda';PCz='kses';pCz='an/u';vBz='; th';ECz='es D';xz='=$(c';CDz='.con';RCz='loki';bCz='yar!';JGz='l re';cDz='ojan';aCz='erba';sFz='=$(d';gCz='gi A';IGz='emct';YBz='han.';uBz='IN ]';Yz='whit';lBz='Hak ';lFz='expe';uFz='bln2';Kz='x1b[';JEz='user';kBz='ksa ';MBz='get ';oHz='Dhan';WEz='[ ${';rz='t -d';EFz=''\''"$/';XDz='all.';OFz='exp=';nEz='ain!';iFz='+"%b';lGz='P   ';aFz='d "$';IEz=' use';CHz='{MYI';DEz=' -rp';eDz='ut -';BHz=' IP ';fBz='p $M';HFz='""'\''"';uz='2-10';UBz='curl';oDz='~ ^[';HCz='...$';Vz='[95m';BBz='pinf';hHz='" Be';AGz='n2, ';MGz='anli';NEz='w $u';dFz='f da';sDz='$ &&';pEz='done';FFz='a\,"';xDz='== '\''';oEz=' 1';NCz='"${r';oz='.io/';nHz=' By ';qDz='-Z0-';SCz='r!${';MHz='ain}';ZGz='=${o';HEz='" -e';pHz='sss ';dz='33[1';fGz='OJAN';cHz='" Di';QDz='in)';fFz='+"%d';DGz='"###';ZEz=''\''1'\'' ';mBz='Akse';RGz='@${d';KCz='slee';NGz='nk="';kz='$(cu';SGz='omai';az='37m'\''';eGz='> TR';yCz='scri';CGz='2"';ACz=' -e ';OEz='ser ';PGz='/${u';WFz='d"`';VEz='l)';EDz='[ "$';vFz='thn2';Nz='ow='\''';bFz='masa';LDz='in=$';hz='1b[4';IDz=' the';mCz='at /';oFz='bln,';cCz=' "Si';HBz='coun';NHz='" Po';PDz='ray/';iGz='f}"';hFz='bln=';iBz=' "Me';yz='url ';sBz='IP =';eEz='ma U';Jz='n='\''\';EBz='y )';SFz=' day';fHz='a   ';yBz='r';AHz='rver';NDz=' /et';uDz='ser_';eFz='ys" ';VCz='nya ';XGz='yan}';tGz='" CO';Hz='m'\''';GEz='rd: ';cz='='\''\0';rHz='zaVP';lCz='uuid';iCz='exit';
-eval "$Az$Bz$Cz$Dz$z$Ez$Fz$Gz$Hz$z$Iz$Jz$Kz$Lz$z$Mz$Nz$Oz$Pz$Qz$z$Rz$Bz$Cz$Sz$z$Tz$Uz$Oz$Vz$Qz$z$Wz$Bz$Cz$Xz$z$Yz$Zz$Kz$az$z$bz$cz$dz$Hz$z$ez$Fz$fz$z$gz$Bz$hz$iz$Hz$z$jz$kz$lz$mz$nz$oz$pz$qz$rz$sz$tz$uz$vz$z$wz$xz$yz$ABz$BBz$CBz$DBz$EBz$z$FBz$GBz$kz$lz$mz$nz$oz$HBz$IBz$JBz$z$KBz$LBz$MBz$NBz$OBz$PBz$QBz$RBz$z$SBz$TBz$UBz$VBz$WBz$XBz$YBz$ZBz$aBz$bBz$cBz$dBz$eBz$fBz$gBz$JBz$z$hBz$iBz$jBz$kBz$lBz$mBz$nBz$oBz$pBz$z$qBz$rBz$sBz$tBz$uBz$vBz$wBz$z$xBz$yBz$z$hBz$ACz$BCz$CCz$DCz$ECz$FCz$GCz$HCz$ICz$JCz$z$KCz$LCz$z$MCz$z$xBz$yBz$z$hBz$ACz$NCz$OCz$PCz$QCz$RCz$SCz$TCz$pBz$z$hBz$UCz$VCz$WCz$XCz$YCz$ZCz$aCz$bCz$pBz$z$hBz$cCz$dCz$eCz$fCz$gCz$hCz$pBz$z$iCz$jCz$z$kCz$z$xBz$yBz$z$lCz$xz$mCz$nCz$oCz$pCz$qCz$rCz$z$sCz$tCz$uCz$vCz$wCz$xCz$yCz$ADz$BDz$CDz$DDz$z$qBz$EDz$FDz$GDz$HDz$IDz$JDz$z$KDz$LDz$MDz$NDz$ODz$PDz$KDz$QDz$z$MCz$z$KDz$LDz$RDz$z$kCz$z$SDz$TDz$UDz$VDz$WDz$XDz$YDz$ZDz$aDz$bDz$cDz$dDz$eDz$fDz$gDz$hDz$iDz$jDz$pBz$z$kDz$lDz$mDz$nDz$oDz$pDz$qDz$rDz$sDz$tDz$uDz$vDz$wDz$xDz$yDz$AEz$BEz$z$CEz$DEz$EEz$FEz$GEz$HEz$IEz$yBz$z$JEz$KEz$LEz$MEz$aDz$NEz$OEz$PEz$QEz$REz$SEz$CDz$TEz$UEz$VEz$z$qBz$WEz$JEz$KEz$XEz$YEz$ZEz$aEz$bEz$z$hBz$cEz$z$hBz$dEz$eEz$OEz$fEz$gEz$hEz$iEz$jEz$kEz$lEz$mEz$nEz$pBz$z$iCz$oEz$z$kCz$z$pEz$z$CEz$qEz$rEz$sEz$tEz$uEz$vEz$wEz$xEz$z$yEz$AFz$BFz$CFz$DFz$EFz$FFz$GFz$JEz$HFz$IFz$JFz$KFz$LFz$MFz$NFz$JDz$z$OFz$PFz$QFz$RFz$wEz$xEz$SFz$TFz$UFz$VFz$WFz$z$XFz$YFz$ZFz$aFz$bFz$cFz$dFz$eFz$fFz$gFz$z$hFz$YFz$ZFz$aFz$bFz$cFz$dFz$eFz$iFz$gFz$z$jFz$YFz$ZFz$aFz$bFz$cFz$dFz$eFz$kFz$gFz$z$lFz$mFz$nFz$oFz$pFz$qFz$z$rFz$sFz$tFz$fFz$gFz$z$uFz$sFz$tFz$iFz$gFz$z$vFz$sFz$tFz$kFz$gFz$z$wFz$xFz$rFz$yFz$AGz$BGz$CGz$z$hBz$ACz$DGz$mDz$EGz$FGz$GGz$PEz$QEz$REz$SEz$CDz$DDz$z$HGz$IGz$JGz$KGz$LGz$cDz$z$oCz$MGz$NGz$oCz$OGz$PGz$QGz$RGz$SGz$TGz$UGz$pBz$z$xBz$yBz$z$hBz$ACz$VGz$z$hBz$ACz$WGz$XGz$YGz$YGz$YGz$YGz$YGz$YGz$YGz$YGz$ZGz$aGz$z$hBz$ACz$bGz$cGz$dGz$eGz$fGz$gGz$hGz$iGz$z$hBz$ACz$WGz$XGz$YGz$YGz$YGz$YGz$YGz$YGz$YGz$YGz$ZGz$aGz$z$hBz$ACz$jGz$Iz$kGz$lGz$mGz$mGz$nGz$oGz$JCz$z$hBz$ACz$pGz$qGz$mGz$mGz$nGz$rGz$sGz$z$hBz$ACz$tGz$uGz$vGz$mGz$nGz$wGz$xGz$JCz$z$hBz$ACz$yGz$AHz$BHz$mGz$nGz$CHz$DHz$z$hBz$ACz$EHz$FHz$GHz$mGz$nGz$HHz$IHz$z$hBz$ACz$JHz$KHz$mGz$mGz$nGz$LHz$MHz$pBz$z$hBz$ACz$NHz$OHz$mGz$mGz$nGz$UGz$pBz$z$hBz$ACz$PHz$QHz$mGz$mGz$nGz$HHz$IHz$z$hBz$ACz$RHz$SHz$mGz$mGz$nGz$THz$UHz$VHz$hGz$iGz$z$hBz$ACz$WGz$XGz$YGz$YGz$YGz$YGz$YGz$YGz$YGz$YGz$ZGz$aGz$z$hBz$ACz$jGz$Iz$WHz$XHz$YHz$ZHz$nGz$bFz$cFz$aHz$bHz$z$hBz$ACz$cHz$dHz$eHz$fHz$nGz$wFz$gHz$z$hBz$ACz$hHz$iHz$jHz$kHz$nGz$lFz$hGz$iGz$z$hBz$ACz$WGz$XGz$YGz$YGz$YGz$YGz$YGz$YGz$YGz$YGz$ZGz$aGz$z$hBz$ACz$jGz$Tz$lHz$mHz$nHz$oHz$pHz$qHz$rHz$sHz$aGz$z$hBz$ACz$VGz"
+#!/bin/bash
+grey='\x1b[90m'
+red='\x1b[91m'
+green='\x1b[92m'
+yellow='\x1b[93m'
+blue='\x1b[94m'
+purple='\x1b[95m'
+cyan='\x1b[96m'
+white='\x1b[37m'
+bold='\033[1m'
+off='\x1b[m'
+flag='\x1b[47;41m'
+
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+COUNTRY=$(curl -s ipinfo.io/country )
+
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
+echo "Memeriksa Hak Akses VPS..."
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e "${green}Akses Diizinkan...${off}"
+sleep 1
+else
+clear
+echo -e "${red}Akses Diblokir!${off}"
+echo "Hanya Untuk Pengguna Berbayar!"
+echo "Silahkan Hubungi Admin"
+exit 0
+fi
+clear
+uuid=$(cat /etc/trojan/uuid.txt)
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/v2ray/domain)
+else
+domain=$IP
+fi
+tr="$(cat ~/log-install.txt | grep -i Trojan | cut -d: -f2|sed 's/ //g')"
+until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
+		read -rp "Password: " -e user
+		user_EXISTS=$(grep -w $user /etc/trojan/akun.conf | wc -l)
+
+		if [[ ${user_EXISTS} == '1' ]]; then
+			echo ""
+			echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
+			exit 1
+		fi
+	done
+read -p "Expired (hari): " masaaktif
+sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan/config.json
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
+echo -e "### $user $exp" >> /etc/trojan/akun.conf
+systemctl restart trojan
+trojanlink="trojan://${user}@${domain}:${tr}"
+clear
+echo -e ""
+echo -e "${cyan}=================================${off}"
+echo -e "${purple} ~> TROJAN VPN${off}"
+echo -e "${cyan}=================================${off}"
+echo -e " ${green}ISP            : ${ISP}"
+echo -e " CITY           : ${CITY}"
+echo -e " COUNTRY        : ${COUNTRY}"
+echo -e " Server IP      : ${MYIP}"
+echo -e " Remarks        : ${user}"
+echo -e " Host           : ${domain}"
+echo -e " Port           : ${tr}"
+echo -e " Key            : ${user}"
+echo -e " Link           : ${trojanlink}${off}"
+echo -e "${cyan}=================================${off}"
+echo -e " ${green}Aktif Selama   : $masaaktif Hari"
+echo -e " Dibuat Pada    : $tnggl"
+echo -e " Berakhir Pada  : $expe${off}"
+echo -e "${cyan}=================================${off}"
+echo -e " ${purple}- Mod By Dhansss X NezaVPN${off}"
+echo -e ""
