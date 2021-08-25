@@ -103,6 +103,7 @@ d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 if [[ "$exp2" = "0" ]]; then
 usere="Trojan-GO_$user"
+rm -f /home/vps/public_html/$user-IgniterGO.json
 sed -i "/^### $user $exp/d" "/etc/trojan-go/akun.conf"
 sed -i '/^,"'"$usere"'"$/d' /etc/trojan-go/config.json
 fi
