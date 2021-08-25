@@ -87,11 +87,27 @@ d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 if [[ "$exp2" = "0" ]]; then
+user2="Trojan-GFW_$user"
 sed -i "/^### $user $exp/d" "/etc/trojan/akun.conf"
-sed -i '/^,"'"$user"'"$/d' /etc/trojan/config.json
+sed -i '/^,"'"$user2"'"$/d' /etc/trojan/config.json
 fi
 done
 systemctl restart trojan
+data=( `cat /etc/trojan-go/akun.conf | grep '^###' | cut -d ' ' -f 2`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^### $user" "/etc/trojan-go/akun.conf" | cut -d ' ' -f 3)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" = "0" ]]; then
+usere="Trojan-GO_$user"
+sed -i "/^### $user $exp/d" "/etc/trojan-go/akun.conf"
+sed -i '/^,"'"$usere"'"$/d' /etc/trojan-go/config.json
+fi
+done
+systemctl restart trojan-go
 data=( `cat /etc/wireguard/wg0.conf | grep '^### Client' | cut -d ' ' -f 3`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
