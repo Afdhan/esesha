@@ -28,6 +28,7 @@ v2none=$(systemctl status v2ray@none | grep -i "active (running)")
 vless=$(systemctl status v2ray@vless | grep -i "active (running)")
 vnone=$(systemctl status v2ray@vnone | grep -i "active (running)")
 trojan=$(systemctl status trojan | grep -i "active (running)")
+trojang=$(systemctl status trojan-go | grep -i "active (running)")
 ipsec=$(systemctl status ipsec | grep -i "active (running)")
 shadow=$(systemctl status shadowsocks-libev | grep -i "active (running)")
 ssr=$(systemctl status ssrmu | grep -i "active (running)")
@@ -122,11 +123,20 @@ fi
 
 if [[ $trojan == "" ]]; then
       strojan=$ERROR
-      ingfo+=("Trojan")
+      ingfo+=("TrojanGFW")
       dahlah+=("err9")
 else
       strojan=$AKTIF
       mantap+=("hore9")
+fi
+
+if [[ $trojang == "" ]]; then
+      strojang=$ERROR
+      ingfo+=("TrojanGO")
+      dahlah+=("erre")
+else
+      strojang=$AKTIF
+      mantap+=("horee")
 fi
 
 if [[ $ipsec == "" ]]; then
@@ -313,7 +323,8 @@ echo -e "   - VLess TLS                             : $svless "
 echo -e "   - VLess NON-TLS                         : $svnone "
 echo -e "   - Shadowsocks                           : $sshadow "
 echo -e "   - Wireguard                             : $swg "
-echo -e "   - Trojan                                : $strojan "
+echo -e "   - TrojanGFW                             : $strojan "
+echo -e "   - TrojanGO                              : $strojang "
 echo -e "   - IPSec                                 : $sipsec "
 echo -e "   - SSR                                   : $sssr "
 echo -e "   - SSTP                                  : $ssstp "
@@ -374,6 +385,7 @@ sec=30
                 systemctl restart v2ray@vless
                 systemctl restart v2ray@vnone
                 systemctl restart trojan
+                systemctl restart trojan-go
                 systemctl restart ssh
                 systemctl restart ssrmu
                 systemctl restart stunnel4
