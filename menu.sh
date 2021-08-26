@@ -105,17 +105,18 @@ echo -e "${red}═════════════════════�
 echo -e "                        MENU SYSTEM " | lolcat
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 echo -e "${cyan}"
-echo -e "  9 ⸩  Masukkan Host          20 ⸩  Limit Speed"
-echo -e " 10 ⸩  Record Domain          21 ⸩  Ram VPS"
-echo -e " 11 ⸩  Sertifikat V2RAY       22 ⸩  Ganti Password"
-echo -e " 12 ⸩  Ubah Port VPN          23 ⸩  Reboot"
-echo -e " 13 ⸩  Autobackup VPS         24 ⸩  Speedtest"
-echo -e " 14 ⸩  Backup VPS             25 ⸩  Informasi System"
-echo -e " 15 ⸩  Restore VPS            26 ⸩  Info Script"
-echo -e " 16 ⸩  Menu Webmin            27 ⸩  Restart Service"
-echo -e " 17 ⸩  Auto Reboot            28 ⸩  Multi Login SSH"
-echo -e " 18 ⸩  Edit Banner SSH        29 ⸩  Restart Script"
-echo -e " 19 ⸩  Status Service         30 ⸩  Monitor Bandwith"
+echo -e "  9 ⸩  Masukkan Host          21 ⸩  Limit Speed"
+echo -e " 10 ⸩  Record Domain          22 ⸩  Ram VPS"
+echo -e " 11 ⸩  Sertifikat V2RAY       23 ⸩  Ganti Password"
+echo -e " 12 ⸩  Ubah Port VPN          24 ⸩  Reboot"
+echo -e " 13 ⸩  Autobackup VPS         25 ⸩  Speedtest"
+echo -e " 14 ⸩  Backup VPS             26 ⸩  Informasi System"
+echo -e " 15 ⸩  Restore VPS            27 ⸩  Info Script"
+echo -e " 16 ⸩  Menu Webmin            28 ⸩  Restart Service"
+echo -e " 17 ⸩  Auto Reboot            29 ⸩  Multi Login SSH"
+echo -e " 18 ⸩  Edit Banner SSH        30 ⸩  Restart Script"
+echo -e " 19 ⸩  Status Service         31 ⸩  Monitor Bandwith"
+echo -e " 20 ⸩  Pointing VPS           32 ⸩  Bersihkan LOG"
 echo -e "${off}"
 echo -e "${red}══════════════════════════════════════════════════════════${NC}"
 echo -e "  ${cyan}x ⸩  Keluar Dari Terminal${off}"
@@ -202,47 +203,55 @@ status
 ;;
 
 20)
-limit-speed
+poin
 ;;
 
 21)
-ram
+limit-speed
 ;;
 
 22)
-passwd
+ram
 ;;
 
 23)
-reboot
+passwd
 ;;
 
 24)
-speedtest
+reboot
 ;;
 
 25)
-info
+speedtest
 ;;
 
 26)
-about
+info
 ;;
 
 27)
-restart
+about
 ;;
 
 28)
-autokill
+restart
 ;;
 
 29)
-updatee
+autokill
 ;;
 
 30)
+updatee
+;;
+
+31)
 bw
+;;
+
+32)
+clear-log
 ;;
 
 x)
