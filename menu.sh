@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#Kami tidak bertanggung jawab jika anda mengedit/merubah ini!
-
 clear
 figlet -f slant AFDHAN - NEZA   VPN PROJECT \~ | lolcat
 mer='\x1b[91m'
@@ -20,6 +18,18 @@ else
 	echo -e "${mer}Scripy Install Hanya Bekerja Pada Operating System Debian, Ubuntu dan Centos${off}"
 	exit 0
 fi
+
+declare -A nama_hari
+nama_hari[Monday]="Senin"
+nama_hari[Tuesday]="Selasa"
+nama_hari[Wednesday]="Rabu"
+nama_hari[Thursday]="Kamis"
+nama_hari[Friday]="Jumat"
+nama_hari[Saturday]="Sabtu"
+nama_hari[Sunday]="Minggu"
+hari_ini=`date +%A`
+
+
 declare -A nama_bulan
 nama_bulan[Jan]="Januari"
 nama_bulan[Feb]="Februari"
@@ -46,7 +56,7 @@ CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 jam=$(TZ='Asia/Jakarta' date +%R)
-hari=$(date +"%A")
+hari=${nama_hari[$hari_ini]}
 tnggl=$(date +"%d")
 bln=${nama_bulan[$bulan_ini]}
 thn=$(date +"%Y")
