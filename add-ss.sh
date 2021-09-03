@@ -141,7 +141,7 @@ clear
 	echo -e "${red}===================================${off}"
 	echo -e " Aktif Selama   : $masaaktif Hari"
 echo -e " Dibuat Pada    : $tnggl"
-echo -e " Berakhir Pada  : $expe${off}"
+echo -e " Berakhir Pada  : $expe"
 echo -e "${red}=================================${off}"
 echo -e " ${blue}- Mod By Dhansss X NezaVPN${off}"
 echo -e ""
