@@ -44,7 +44,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 		if [[ ${CLIENT_EXISTS} == '2' ]]; then
 			echo ""
-			echo "Nama Sudah Ada, Harap Masukkan Nama Lain!"
+			echo "Nama User Sudah Ada, Harap Masukkan Nama Lain!"
 			exit 1
 		fi
 	done
