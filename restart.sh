@@ -22,6 +22,7 @@ echo -e "     6 ⸩  Mulai Ulang Squid"
 echo -e "     7 ⸩  Mulai Ulang Nginx"
 echo -e "     8 ⸩  Mulai Ulang BadVPN"
 echo -e "     9 ⸩  Mulai Ulang WebSocket"
+echo -e "    10 ⸩  Mulai Ulang SSLH"
 echo -e "     x ⸩  Keluar"
 echo -e "${off}"
 echo -e "${cyan}======================================${off}"
@@ -42,6 +43,7 @@ case $Restart in
                 /etc/init.d/cron restart
                 /etc/init.d/nginx restart
                 /etc/init.d/squid restart
+                /etc/init.d/sslh restart
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 1000
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000
@@ -139,6 +141,14 @@ case $Restart in
                 echo -e ""
                 echo -e " WebSocket Services Diperbarui" | lolcat
                 echo -e ""
+                ;;
+                10)
+                clear
+                /etc/init.d/sslh restart
+                echo -e ""
+                echo -e " SSLH Services Diperbarui" | lolcat
+                echo -e ""
+                exit
                 ;;
                 x)
                 clear
