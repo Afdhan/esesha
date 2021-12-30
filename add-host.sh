@@ -158,3 +158,9 @@ END
  systemctl restart nginx
 echo "Berhasil Menambahkan Domain VPS" | lolcat
 figlet -f slant AFDHAN - NEZA | lolcat
+
+read -p "Perbarui Sertifikat V2ray? (Y/N) : " up
+if [[ $up == "Y" || $up == "y" ]]; then
+certv2ray
+else echo ""
+fi
