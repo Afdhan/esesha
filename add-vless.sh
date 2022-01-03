@@ -67,6 +67,22 @@ vlesslink1="vless://${uuid}@${domain}:$tls?path=/DhanZaa&security=tls&encryption
 vlesslink2="vless://${uuid}@${domain}:$none?path=/DhanZaa&encryption=none&type=ws#${user}"
 systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
+
+cat > /etc/v2ray/vless-$user.json<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "${tls}",
+      "id": "${uuid}",
+      "aid": "2",
+      "net": "ws",
+      "path": "/DhanZaa",
+      "type": "none",
+      "host": "",
+      "tls": "tls"
+}
+EOF
 clear
 echo -e ""
 echo -e "${red}=================================${off}"
