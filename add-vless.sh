@@ -75,7 +75,6 @@ cat > /etc/v2ray/vless-$user.json<<EOF
       "add": "${domain}",
       "port": "${tls}",
       "id": "${uuid}",
-      "aid": "2",
       "net": "ws",
       "path": "/DhanZaa",
       "type": "none",
