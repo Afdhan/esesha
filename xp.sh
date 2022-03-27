@@ -134,7 +134,7 @@ exp2=$(( (d1 - d2) / 86400 ))
 if [[ "$exp2" = "0" ]]; then
 sed -i "/^### $user $exp/,/^},{/d" /etc/v2ray/config.json
 sed -i "/^### $user $exp/,/^},{/d" /etc/v2ray/none.json
-rm -f /etc/v2ray/$user-tls.json /etc/v2ray/$user-none.json
+rm -f /etc/v2ray/$user-tls.json /etc/v2ray/$user-none.json /etc/v2ay/$user-cfg.json
 fi
 done
 systemctl restart v2ray
