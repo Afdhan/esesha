@@ -33,7 +33,8 @@ clear
                else
                echo "echo "Expired- Username : $username are expired at: $tgl $bulantahun and removed : $hariini "" >> /usr/local/bin/deleteduser
 	           echo "Username $username Expired Pada $tgl $bulantahun Dihapus Dari VPS Pada $hariini"
-               userdel $username
+               rm -f /etc/port-$username.json
+	       userdel $username
                fi
                done
                echo " "
